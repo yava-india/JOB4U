@@ -1,0 +1,28 @@
+.box input[type = "text"], input[type = "email"],input[type = "number"]{
+    text-align: center;
+    border: 2px solid black;
+    padding: 7px 5px;
+    width: 200px;
+    outline: none;
+    border-radius: 0px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "email"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "number"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box{
+    padding:20px;
+}
