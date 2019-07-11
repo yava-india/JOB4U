@@ -16,8 +16,8 @@ step6 : Create database in mysql and edit database file with your database usern
 	create database mydatabase;
 step6 :run project by(should be inside myproject directory):
 
-  python manage.py makemigrations (to find the changes to db)
-  
-  python manage.py migrate  (appy the changes to db)
-  
-  python manage.py runserver 
+	python manage.py makemigrations (to find the changes to db)
+
+	python manage.py migrate  (appy the changes to db)
+
+	python manage.py runserver 
