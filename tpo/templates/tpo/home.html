@@ -3,84 +3,84 @@
 {% block content%}
 
 
-	<div id="first">
-<div align=center  >
+<div id="first">
+	<div align=center  >
 
 <!--<img   src= {% static 'tpo/company2.png' %} height=80 width=260 >-->
 <h3> Google campus drive</h3>
 </div>
+	{% if messages %}
+	    {% for message in messages %}
+	    <div class="alert alert-{{ message.tags }}">
+		{{ message }}
+		</div>
+	    {% endfor %}
+	{% endif %}
 <br>
 
-<div  align=right >
-<div style="float:left ; 	">
-<h3> Registration Confirmation</h3>
-<form method="POST" class="box" align="center">
-{% csrf_token %}
-<p>
+	<div  align=right >
+	<div style="float:left ; ">
+	<h3> Registration Confirmation</h3>
+	<form method="POST" class="box" align="center">
+		{% csrf_token %}
+		<p>
+		    <input type="number" name="confmob"  placeholder="Mobile Number" >
+		</p>
 
-    <input type="number" name="username" onkeypress="return isnumber(event)" placeholder="Mobile Number" >
-</p>
+		<button type="submit" name="confirm" style="background-color: #4CAF50; /* Green */
+		border: none;
+		color: white;
+		padding: 11px 28px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		cursor: pointer;
+		  "/> Confirm Presence</button>
+	</form>
 
-<button type="submit" style="background-color: #4CAF50; /* Green */
-border: none;
-color: white;
-padding: 11px 28px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-cursor: pointer;
-  "/> Confirm Presence</button>
-</form>
+	</div>
 
+	<div style="float:right; " >
+		<h3 >New  Registration &nbsp;</h3>
+
+
+
+
+
+		<form method="POST" class="box" align="center" >
+
+			{% csrf_token %}
+
+			<p>
+			    <input type="text"  name="Student_Name" placeholder="Name" required></p>
+			<p>
+			    <input type="number" name="Mobile Number" placeholder="Mobile Number" required></p>
+			<p>
+			    <input type="email" name="Email" placeholder="Email" required></p>
+			<p>
+			    <input type="text" name="College_Name" placeholder="College Name" required></p>
+			<p>
+			    <input type="text" name="Branch" placeholder="Branch" required></p>
+			<p>
+			    <input type="text" name="Slot" placeholder="Slot"></p>
+
+
+		
+
+			<button type="submit" name="register" style="background-color: #f44336; /* Green */
+			border: none;
+			color: white;
+			padding: 11px 28px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			cursor: pointer;
+
+			  "/> Register </button>
+			</form>
+		 </div>
+	 </div>
 </div>
 
-<div style="float:right; " >
-<h3 >New  Registration &nbsp;</h3>
-
-<form method="POST" class="box" align="center" >
-
-{% csrf_token %}
-
-<p>
-    <input type="text" name="Student_Name" placeholder="Name"></p>
-<p>
-    <input type="number" onkeypress="return isnumber(event)" name="Mobile Number" placeholder="Mobile Number"></p>
-<p>
-    <input type="email" name="Email" placeholder="Email"></p>
-<p>
-    <input type="text" name="College Name" placeholder="College Name"></p>
-<p>
-    <input type="text" name="Branch" placeholder="Branch"></p>
-<p>
-    <input type="text" name="Slot" placeholder="Slot"></p>
-
-<script>
-	function isnumber(event){
-		var keycode = event.keyCode;
-		if(keycode => 48 && keycode <= 57)
-		{
-			return true;
-		}
-			return false;
-	}
-</script>
-
-<button type="submit" style="background-color: #f44336; /* Green */
-border: none;
-color: white;
-padding: 11px 28px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-cursor: pointer;
-
-  "/> Register </button>
-</form>
- </div>
- </div>
-
-
-
-</div>
 
 {% endblock content%}

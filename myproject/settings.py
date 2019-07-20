@@ -71,6 +71,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myproject.wsgi.application'
 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
@@ -80,11 +85,12 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mydatabase',
         'USER':'root',
-        'PASSWORD':'root',
+        'PASSWORD':'mynewpassword',
         'HOST':'localhost',
         'PORT':'3306',
     }
 }
+
 
 
 #Email Settings

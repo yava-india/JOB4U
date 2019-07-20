@@ -8,6 +8,7 @@
     transition: 0.25s;
 }
 
+
 .box input[type = "text"]:focus{
     width: 280px;
     border-color: #2ecc71;
