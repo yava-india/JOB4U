@@ -8,11 +8,11 @@
 
 	<!--<link rel="stylesheet" href="{ %static "tpo/main.css" %}"> -->
 
-	
+
 
     <!-- Bootstrap CSS -->
 
-    <link rel="stylesheet" type="text/css" href="{% static 'tpo/main.css'%}"> 
+    <link rel="stylesheet" type="text/css" href="{% static 'tpo/main1.css'%}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Registration Link
     </title>
@@ -20,15 +20,15 @@
 </head>
 
 
-<body  style="font-family:Arial ; padding:30px " >
-<style> </style>
-    <div class="container" align=center >
-        <a href="/">
-        <img src = "{% static 'tpo/apsitlogo.png'%}" height=10% width=10% >
-        </a><br><br>
-        <h2 align=center  >A.P. SHAH INSTITUTE OF TECHNOLOGY</h2>
+<body>
 
-       
+    <div class="container" >
+        <a href="/">
+        <img src = "{% static 'tpo/apsitlogo.png'%}">
+        </a>
+        <h2 class="onlyCenter">A.P. SHAH INSTITUTE OF TECHNOLOGY</h2>
+
+
         {% block content %} {% endblock%}
     </div>
 

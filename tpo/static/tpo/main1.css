@@ -1,0 +1,111 @@
+body{
+  font-family:Arial, Helvetica, sans-serif ;
+   padding:30px;
+}
+
+.container{
+  width: 100%;
+}
+
+.container img{
+  width:10%;
+  height: 10%;
+  margin-left: 48%;
+  margin-bottom: 2.0em;
+}
+
+.onlyCenter{
+  text-align: center;
+  display: block;
+  margin-bottom: 1.6em;
+}
+
+.companyName{
+  margin-bottom: 2.5em;
+}
+
+.floatLeft{
+  float: left;
+}
+
+.floatRight{
+  float: right;
+}
+
+.button1{
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 11px 28px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+}
+
+.button2{
+  background-color: Red; /* Red */
+  border: none;
+  color: white;
+  padding: 11px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.clear1{
+  clear:both;
+}
+
+.box input[type = "text"], input[type = "email"],input[type = "number"]{
+    text-align: center;
+    border: 2px solid black;
+    padding: 7px 5px;
+    width: 200px;
+    outline: none;
+    border-radius: 0px;
+    transition: 0.25s;
+}
+
+
+.box input[type = "text"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "email"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "number"]:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box{
+    padding:20px;
+}
+
+@media(max-width:800px){
+	.floatLeft{
+    float: none;
+    display: block;
+  }
+
+  .floatRight{
+    float: none;
+    display: block;
+  }
+
+  .onlyCenter{
+    text-align: left;
+  }
+
+  .container img{
+    margin-left: 15%;
+    width: 100px;
+  }
+
+}
