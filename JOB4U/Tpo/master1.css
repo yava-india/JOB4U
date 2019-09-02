@@ -1,0 +1,286 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+header{
+  background-color: rgba(11, 29, 55, 0.7);
+  width: 100%;
+  height: 45px;
+  position: fixed;
+  z-index: 10;
+}
+
+.header-left{
+  float: left;
+}
+
+.header-left h2{
+  display: inline-block;
+  color: white;
+  margin: 10px 25px;
+  cursor: pointer;
+}
+
+.header-right{
+  float: right;
+  text-align: center;
+}
+
+
+/* The side navigation menu */
+.sidenav{
+  height: 100%; /* 100% Full-height */
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #000; /* Black*/
+  overflow-x: hidden;
+  overflow-y: hidden; /* Disable horizontal scroll */
+  padding-top: 100px; /* Place content 60px from the top */
+  transition:all 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+
+/* The navigation menu links */
+.navbar-items a{
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 20px;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  color: #b4ff46;
+  /* width: 100%; */
+  display: block;
+  margin-top: 60px ;
+  padding: 15px;
+}
+
+
+.navbar-items a:hover{
+  transition:all 0.5s;
+  background-color: #b4ff46;
+  color: white;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 40px;
+  padding: 0px 10px;
+  margin: 0px;
+  color: white;
+}
+
+.icon{
+  color: white;
+  margin-right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/
+
+/*
+.header-right li{
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+  display: inline-block;
+  float: left;
+}
+
+.header-right a{
+  font-family: 'Red Hat Display', sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  color: white;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+*/
+
+
+/*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------
+
+/*      Our-Recruiters
+
+#Our-Recruiters > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Our-Recruiters > a:hover {
+  color: #FFF;
+}
+
+#Our-Recruiters > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Our-Recruiters > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Drives
+
+#Drives > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Drives > a:hover {
+  color: #FFF;
+}
+
+#Drives > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Drives > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Image-Gallery
+
+#Image-Gallery > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Image-Gallery > a:hover {
+  color: #FFF;
+}
+
+#Image-Gallery > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Image-Gallery > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Video-Gallery
+
+#Video-Gallery > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Video-Gallery > a:hover {
+  color: #FFF;
+}
+
+#Video-Gallery > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Video-Gallery > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Reach-Us
+
+#Reach-Us > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Reach-Us > a:hover {
+  color: #FFF;
+}
+
+#Reach-Us > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Reach-Us > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------*/
+
+.top-wrapper{
+  /* background-image: url(""); */
+  width: 100%;
+  height: 720px;
+  background-size:cover;
+}
