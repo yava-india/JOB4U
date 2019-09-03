@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+body{
+  background-color: #000;
+}
+
 header{
   background-color: rgba(11, 29, 55, 0.7);
   width: 100%;
@@ -295,7 +299,7 @@ header{
 
 .top-wrapper video{
   object-fit: cover;
-  height: 650px;
+  height: 900px;
   width: 100%;
   z-index: -100;
 }
