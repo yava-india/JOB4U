@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mydatabase',
         'USER':'root',
-        'PASSWORD':'root',
+        'PASSWORD':'mynewpassword',
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -98,8 +98,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'anujssmishra@gmail.com'
-EMAIL_HOST_PASSWORD = 'your password'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'password'
 
 
 # Password validation
@@ -124,3 +124,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = 'tpo-admin-panel'
