@@ -3,6 +3,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
+  overflow-x: hidden;
 }
 
 body{
@@ -35,25 +36,37 @@ header{
 
 .icons{
   display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.icons a{
+  display: inline-block;
+  /* margin: 0px 15px; */
+  /* width:auto; */
+  /* height: 30px; */
+  padding: 0;
 }
 
 .icons img{
-  margin-top: 10px;
-  display: inline-block;
-  padding: 0px;
-  height: 30px;
-  width: auto;
-  line-height: 30px;
   /* margin-top: 10px; */
-  margin-right:10px;
+  /* display: block; */
+  /* padding: 0px; */
+  height: 30px;
+  /* width: auto; */
+  /* line-height: 30px; */
+  border: 2px solid white;
+  /* margin-top: 10px; */
+  /* margin-right:20px; */
 }
 
 .icon img{
-  padding-top: 2px;
-  height: 35px;
+  /* padding-top: 2px; */
+  /* margin: 0px; */
+  height: 45px;
   width: auto;
-  margin-right: 15px;
-  font-size: 30px;
+  margin-left: 15px;
+  line-height: 30px;
   cursor: pointer;
 }
 
@@ -64,14 +77,27 @@ header{
   position: fixed; /* Stay in place */
   z-index: 10; /* Stay on top */
   top: 0; /* Stay at the top */
-  right: 0;
+  left: 0;
   background-color: #000; /* Black*/
   overflow-x: hidden;
   overflow-y: hidden; /* Disable horizontal scroll */
   padding-top: 100px; /* Place content 60px from the top */
   transition:all 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+  text-align: center;
 }
 
+.sidenav p{
+  position: absolute;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 25px;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  color: #b4ff46;
+  top: 0px;
+  padding: 15px;
+  margin-left: 145px;
+  cursor: default;
+}
 
 /* The navigation menu links */
 .navbar-items a{
@@ -298,17 +324,19 @@ header{
 /*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------*/
 
 .top-wrapper video{
+  top: 0%;
+  /* border: 5px solid white; */
   object-fit: cover;
-  height: 900px;
+  /* height: 700px; */
   width: 100%;
-  z-index: -100;
+  /* z-index: -100; */
 }
 
 .containerinVideo{
   position: absolute;
   text-align: center;
   left: 200px;
-  top: 20%;
+  top: 35%;
   width: 75%;
 }
 
@@ -337,4 +365,36 @@ header{
 .containerinVideo p{
   font-size: 18px;
   cursor: default;
+}
+
+.container{
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  height: 800px;
+  border: 2px solid white;
+}
+
+.upcoming-drives p{
+    margin-top: 30px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    font-family:'Russo One', sans-serif;
+    color: #b4ff46;
+    font-size: 35px;
+}
+
+.Contact-us{
+  position: fixed;
+  bottom: 0px;
+  right: 25px;
+  cursor: pointer;
+  background-color: red;
+  padding: 5px;
+  border : 2px solid red;
+  font-size: 18px;
+}
+
+.Contact-us a{
+  color: white;
 }
