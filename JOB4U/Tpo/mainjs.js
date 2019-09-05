@@ -4,6 +4,10 @@ function openNav() {
   document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
   document.getElementById("myVideo").style.opacity = "0.4";
   document.getElementById("containerinVideo").style.opacity = "0.4";
+  document.getElementById("upcoming-drives").style.opacity = "0.4";
+  document.getElementById("our-recruiters").style.opacity = "0.4";
+  document.getElementById("image-gallery").style.opacity = "0.4";
+  document.getElementById("video-gallery").style.opacity = "0.4";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -12,6 +16,10 @@ function closeNav() {
   document.body.style.backgroundColor = "black" ;
   document.getElementById("myVideo").style.opacity = "1";
   document.getElementById("containerinVideo").style.opacity = "1";
+  document.getElementById("upcoming-drives").style.opacity = "1";
+  document.getElementById("our-recruiters").style.opacity = "1";
+  document.getElementById("image-gallery").style.opacity = "1";
+  document.getElementById("video-gallery").style.opacity = "1";
 }
 
 $('body').on('click', function(){

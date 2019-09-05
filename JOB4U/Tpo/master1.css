@@ -430,10 +430,25 @@ header{
   /* height: 500px; */
 }
 
-.udcontainer img{
+.udcontainer div{
+  display: inline-block;
   width: 33%;
+}
+
+.udcontainer p{
+  letter-spacing: 3px;
+  /* font-family:'Russo One', sans-serif; */
+  /* color: #b4ff46; */
+  font-size: 20px;
+  /* padding: 0px;
+  margin: 0px; */
+}
+
+.udcontainer img{
+  /* width: 100%; */
   padding: 15px;
   height: 300px;
+  margin-bottom: 15px;
 }
 
 /*                    END OF UPCOMING-DRIVES                   */
@@ -468,13 +483,105 @@ header{
   /* height: 500px; */
 }
 
+.orcontainer div{
+  display: inline-block;
+  width: 23%;
+}
+
 .orcontainer img{
+  /* width: 33%; */
+  padding: 15px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+/*                    END OF OUR-RECRUITERS                   */
+
+/*                    START OF IMAGE-GALLERY                   */
+
+#image-gallery{
+  text-align: center;
+}
+
+.igtop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.igbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.igcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.igcontainer div{
+  display: inline-block;
   width: 33%;
+}
+
+
+.igcontainer img{
+  /* width: 33%; */
   padding: 15px;
   height: 300px;
 }
 
-/*                    END OF OUR-RECRUITERS                   */
+/*                    END OF IMAGE-GALLERY                   */
+
+/*                    START OF IMAGE-GALLERY                   */
+
+#video-gallery{
+  text-align: center;
+}
+
+.vgtop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.vgbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.vgcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.vgcontainer iframe{
+  width: 33%;
+  /* background-color: black; */
+  /* padding: 15px; */
+  /* margin: 5px; */
+  height: 300px;
+}
+
+/*                    END OF VIDEO-GALLERY                   */
+
+
 
 #Contact-us{
   position: fixed;
