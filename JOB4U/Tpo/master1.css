@@ -8,7 +8,7 @@
 }
 
 body{
-  /* background-color: #000; */
+  background-color: #000;
 }
 
 header{
@@ -335,12 +335,12 @@ header{
 /*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------*/
 
 
-.top-wrapper{
+#top-wrapper{
     margin: 0px;
     /* border: 5px solid blue; */
 }
 
-.top-wrapper video{
+#top-wrapper video{
   top: 0%;
   /* border: 5px solid white; */
   object-fit: cover;
@@ -385,30 +385,96 @@ header{
   cursor: default;
 }
 
+/*                    START OF UPCOMING-DRIVES                   */
 
 #upcoming-drives{
+  /* position: relative; */
   /* margin: auto; */
   /* width: 80%; */
   text-align: center;
-  height: 800px;
+  /* margin-top: 10px; */
+  /* height: 800px; */
   /* border: 2px solid white; */
 }
 
 .udtop{
-  background-image: url("Images/TPO_Template1.png");
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
   background-size: cover;
-  height: 500px;
+  height: 450px;
 }
 
-.udtop p{
-    margin-top: 30px;
+.sameDesign{
+    padding-top: 50px;
     letter-spacing: 3px;
-    font-weight: normal;
     font-family:'Russo One', sans-serif;
     color: #b4ff46;
     font-size: 35px;
     cursor: default;
 }
+
+.udbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.udcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.udcontainer img{
+  width: 33%;
+  padding: 15px;
+  height: 300px;
+}
+
+/*                    END OF UPCOMING-DRIVES                   */
+
+/*                    START OF OUR-RECRUITERS                   */
+
+#our-recruiters{
+  text-align: center;
+}
+
+.ortop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.orbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.orcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.orcontainer img{
+  width: 33%;
+  padding: 15px;
+  height: 300px;
+}
+
+/*                    END OF OUR-RECRUITERS                   */
 
 #Contact-us{
   position: fixed;
