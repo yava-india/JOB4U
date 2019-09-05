@@ -4,10 +4,11 @@
   list-style: none;
   text-decoration: none;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body{
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 header{
@@ -124,6 +125,10 @@ header{
   background-color: #b4ff46;
   color: #000;
 }
+
+/* .navbar-items a:active{
+
+} */
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
@@ -329,6 +334,12 @@ header{
 
 /*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------*/
 
+
+.top-wrapper{
+    margin: 0px;
+    /* border: 5px solid blue; */
+}
+
 .top-wrapper video{
   top: 0%;
   /* border: 5px solid white; */
@@ -336,6 +347,7 @@ header{
   /* height: 700px; */
   width: 100%;
   /* z-index: -100; */
+  margin: 0;
 }
 
 .containerinVideo{
@@ -373,24 +385,32 @@ header{
   cursor: default;
 }
 
-.container{
-  margin: auto;
-  width: 80%;
+
+#upcoming-drives{
+  /* margin: auto; */
+  /* width: 80%; */
   text-align: center;
   height: 800px;
-  border: 2px solid white;
+  /* border: 2px solid white; */
 }
 
-.upcoming-drives p{
+.udtop{
+  background-image: url("Images/TPO_Template1.png");
+  background-size: cover;
+  height: 500px;
+}
+
+.udtop p{
     margin-top: 30px;
     letter-spacing: 3px;
     font-weight: normal;
     font-family:'Russo One', sans-serif;
     color: #b4ff46;
     font-size: 35px;
+    cursor: default;
 }
 
-.Contact-us{
+#Contact-us{
   position: fixed;
   bottom: 0px;
   right: 25px;
@@ -401,15 +421,15 @@ header{
   /* font-size: 25px; */
 }
 
-.Contact-us a{
+#Contact-us a{
   display: block;
-  font-size: 23px;
+  font-size: 18px;
   background-color: rgba(255, 0, 0, 0.6);
   padding: 15px;
   color: white;
 }
 
-.Contact-us a:hover{
+#Contact-us a:hover{
   transition: all 0.3s;
   background-color: rgba(255, 0, 0, 1);
 }
