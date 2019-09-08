@@ -348,12 +348,14 @@ header{
   width: 100%;
   /* z-index: -100; */
   margin: 0;
+  overflow: hidden;
 }
 
 .containerinVideo{
   position: absolute;
   text-align: center;
   left: 200px;
+  /* border: 1px solid white; */
   top: 35%;
   width: 75%;
 }
@@ -562,6 +564,7 @@ header{
   /* height: 500px; */
   /* border: 1px solid black; */
   background-color: white;
+  /* margin-bottom: 50px; */
 }
 
 .vgcontainer{
@@ -577,9 +580,88 @@ header{
   /* padding: 15px; */
   /* margin: 5px; */
   height: 300px;
+  margin-bottom: 15px;
 }
 
 /*                    END OF VIDEO-GALLERY                   */
+
+
+/*                    START OF IMAGE-GALLERY                   */
+
+#reach-us{
+  text-align: center;
+}
+
+.rutop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.rubottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.rucontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+/* .rucontainer div{
+  display: inline-block;
+  width: 80%;
+} */
+
+.rucontainer p{
+  letter-spacing: 3px;
+  /* font-family:'Russo One', sans-serif; */
+  /* color: #b4ff46; */
+  cursor: default
+  /* padding: 0px;
+  margin: 0px; */
+}
+
+.location{
+  font-size: 18px;
+  font-family:'Russo One', sans-serif;
+}
+
+.rucontainer iframe{
+  width: 80%;
+  height:500px;
+  /* background-color: black; */
+  /* padding: 15px; */
+  margin: 15px;
+  margin-top: 25px;
+  /* height: 300px; */
+}
+
+.credit a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.credit a:hover{
+  color: red;
+}
+
+footer{
+  padding: 15px;
+  text-align: center;
+  background: white;
+}
+
+/*                    END OF REACH-US                   */
 
 
 
@@ -605,4 +687,69 @@ header{
 #Contact-us a:hover{
   transition: all 0.3s;
   background-color: rgba(255, 0, 0, 1);
+}
+
+#cuform{
+  background-image: url("Images/Sample6.jpg");
+  margin: auto;
+  width: 40%;
+  /* width:0px; */
+  display: none;
+  /* border: 1px solid white; */
+  height: 600px;
+  top: 15%;
+  left:30%;
+  right: 50%;
+  position: fixed;
+  /* text-align: center; */
+  /* vertical-align: middle; */
+}
+
+#cuform a{
+  display: inline-block;
+  /* padding: 10px; */
+  cursor: pointer;
+  /* margin-bottom: 10px; */
+}
+
+#cuform div{
+  position: relative;
+  /* margin-top: 10px; */
+}
+
+#cuform p{
+  color: white;
+  padding-left: 10px;
+  cursor: default;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#cuform input{
+  width: 60%;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+#cuform textarea{
+  width: 60%;
+  margin-left: 10px;
+}
+
+ .closebtnForm{
+   /* position: absolute;
+  top: 0;
+  right: 5px; */
+  float: right;
+  font-size: 40px;
+  /* padding: 0px 10px; */
+  margin: 0px;
+  color: white;
+  /* padding: 5px; */
+  /* cursor: pointer; */
+}
+
+.firstFormElement{
+  margin-top: 20px;
 }

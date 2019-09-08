@@ -5,14 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Css Files -->
     <link rel="stylesheet" type = "text/css" href="master1.css">
+    <link rel="stylesheet" type = "text/css" href="Css/Animations.css">
     <link rel="stylesheet" type = "text/css" href="Css/responsive.css">
+
+    <!-- Javascript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="mainjs.js"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <title>JOB4U</title>
 
@@ -75,7 +80,7 @@
 
     <div id = "top-wrapper">
 
-      <video autoplay muted loop id="myVideo">
+      <video autoplay muted loop id="myVideo" class="animated fadeInUp">
         <source src = "Video/BackgroundVideo.mp4" type="video/mp4">
       </video>
 
@@ -203,9 +208,71 @@
             </div>
       </div>
 
+      <div id="reach-us">
+
+          <div class="rutop">
+            <p class= "sameDesign" >REACH-US</p>
+          </div>
+
+            <div class="rubottom">
+
+              <div class="rucontainer">
+
+                <div>
+                  <p class = " location">Survey No. 12, 13, Opp. Big Centre Mall, Ghodbunder Rd, Kasarvadavali</p>
+                  <p class = " location">Thane West, Maharashtra 400615</p>
+
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3314021346278!2d72.96481011485429!3d19.267949286978105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bba2e15f6c7b%3A0x20e1357d640bef7e!2sA.%20P.%20Shah%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1567673295333!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+
+                </div>
+
+              </div>
+
+            </div>
+      </div>
+
+    <footer>
+      <p>&copy; Copyright <strong>APSIT</strong>. All Rights Reserved</div>
+      <p class = "credit">Designed by <a target = "_blank" href="https://in.linkedin.com/in/yash-sampat-9b89a7185?trk=people-guest_profile-result-card_result-card_full-click">Yash Sampat</a>, <a target = "_blank" href="https://in.linkedin.com/in/anujssmishra?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Anuj Mishra</a>, <a target = "_blank" href="https://in.linkedin.com/in/vedant-mhatre-575838185?trk=people-guest_profile-result-card_result-card_full-click">Vedant  Mhatra</a> and <a target = "_blank" href="https://in.linkedin.com/in/aaditya-muley-596121184?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Aaditya Muley</a>
+    </footer>
 
     <div id = "Contact-us">
-        <a href="#">Contact Us</a>
+        <a href="#cuform" onclick="openForm()">Contact Us</a>
+    </div>
+
+    <div id="cuform" class="animated zoomInUp">
+
+      <a href="javascript:void(0)" class="closebtnForm" onclick="closeForm()">&times;</a>
+
+      <div>
+
+        <form action="" method="post" >
+
+          <p class="firstFormElement">Name of Company</p>
+          <input type="text" name="NameofCompany" value="">
+
+          <p>Name of Sender</p>
+          <input type="text" name="NameofSender" value="">
+
+          <p>Designation</p>
+          <input type="date" name="Designation" value="">
+
+          <p>Email</p>
+          <input type="email" name="Email" value="">
+
+          <p>Mobile Number</p>
+          <input type="number" name="Email" value="">
+
+          <p>Subject</p>
+          <input type="text" name="Email" value="">
+
+          <p>Message</p>
+          <textarea name="Message" rows="5" cols="40"></textarea>
+
+        </form>
+
+      </div>
+
     </div>
 
   </body>
