@@ -1,0 +1,155 @@
+@media (max-width: 670px) {
+
+  .icons{
+    margin-right: 13px;
+  }
+
+  .icon img{
+    margin-left: 0px;
+  }
+
+  .containerinVideo{
+    left: 50px;
+    top: 20%;
+  }
+
+  .FaisalSirImage{
+    width: 130px;
+    margin: 5px;
+    border: 2px solid black;
+  }
+
+  .containerinVideo h3{
+    font-size: 25px;
+  }
+
+/*                    START OF UPCOMING-DRIVES                   */
+
+  .udtop{
+    height: 250px;
+  }
+
+  .udcontainer{
+    margin: auto;
+    width: 100%;
+  }
+
+  .sameDesign{
+    font-size: 23px;
+    padding-top: 30px;
+  }
+
+  .udcontainer div{
+    display: inline-block;
+    width: 40%;
+  }
+
+  .udcontainer img{
+    /* width: 100%; */
+    padding: 15px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+/*                    END OF UPCOMING-DRIVES                   */
+
+/*                    START OF OUR-RECRUITERS                   */
+
+  .ortop{
+    height: 250px;
+  }
+
+  .orcontainer{
+    margin: auto;
+    width: 100%;
+  }
+
+  .orcontainer div{
+    display: inline-block;
+    width: 40%;
+  }
+
+  .orcontainer img{
+    /* width: 100%; */
+    padding: 15px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+/*                    END OF OUR-RECRUITERS                   */
+
+/*                    START OF IMAGE-GALLERY                   */
+
+  .igtop{
+    height: 250px;
+  }
+
+  .igcontainer{
+    margin: auto;
+    width: 100%;
+  }
+
+  .igcontainer div{
+    display: inline-block;
+    width: 40%;
+  }
+
+  .igcontainer img{
+    /* width: 100%; */
+    padding: 15px;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+/*                    END OF IMAGE-GALLERY                   */
+
+/*                    START OF VIDEO-GALLERY                   */
+
+  .vgtop{
+    height: 250px;
+  }
+
+  .vgcontainer{
+    margin: auto;
+    width: 100%;
+  }
+
+  .vgcontainer div{
+    display: block;
+    width: 100%;
+  }
+
+  .vgcontainer iframe{
+    width: 100%;
+    /* padding: 15px; */
+    height: 200px;
+    margin-bottom: 0px;
+  }
+
+/*                    END OF VIDEO-GALLERY                   */
+
+/*                    START OF REACH-US                   */
+
+  .rutop{
+    height: 250px;
+  }
+
+  .location{
+    font-size: 14px;
+  }
+
+  .rucontainer iframe{
+    width: 100%;
+    height:300px;
+  }
+
+  #Contact-us{
+    right:5px;
+  }
+
+  #Contact-us a{
+    font-size: 15px;
+    padding: 5px;
+  }
+
+}

@@ -337,6 +337,8 @@ header{
 
 #top-wrapper{
     margin: 0px;
+    position: relative;
+    overflow: hidden;
     /* border: 5px solid blue; */
 }
 
@@ -354,6 +356,7 @@ header{
 .containerinVideo{
   position: absolute;
   text-align: center;
+  vertical-align: middle;
   left: 200px;
   /* border: 1px solid white; */
   top: 35%;
@@ -543,7 +546,7 @@ header{
 
 /*                    END OF IMAGE-GALLERY                   */
 
-/*                    START OF IMAGE-GALLERY                   */
+/*                    START OF VIDEO-GALLERY                   */
 
 #video-gallery{
   text-align: center;
@@ -585,8 +588,7 @@ header{
 
 /*                    END OF VIDEO-GALLERY                   */
 
-
-/*                    START OF IMAGE-GALLERY                   */
+/*                    START OF REACH-US                   */
 
 #reach-us{
   text-align: center;
@@ -659,6 +661,10 @@ footer{
   padding: 15px;
   text-align: center;
   background: white;
+}
+
+footer a{
+  color: black;
 }
 
 /*                    END OF REACH-US                   */
@@ -738,16 +744,20 @@ footer{
 }
 
  .closebtnForm{
-   /* position: absolute;
-  top: 0;
+   /* position: absolute;*/
+  /* top: 0;
   right: 5px; */
   float: right;
   font-size: 40px;
   /* padding: 0px 10px; */
-  margin: 0px;
+  /* margin: 0px; */
   color: white;
   /* padding: 5px; */
   /* cursor: pointer; */
+}
+
+.clear{
+  clear: both;
 }
 
 .firstFormElement{

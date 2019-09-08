@@ -2,8 +2,8 @@
 function openNav() {
   document.getElementById("mySidenav").style.width = "400px";
   document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-  document.getElementById("myVideo").style.opacity = "0.4";
-  document.getElementById("containerinVideo").style.opacity = "0.4";
+  // document.getElementById("myVideo").style.opacity = "0.4";
+  document.getElementById("top-wrapper").style.opacity = "0.4";
   document.getElementById("upcoming-drives").style.opacity = "0.4";
   document.getElementById("our-recruiters").style.opacity = "0.4";
   document.getElementById("image-gallery").style.opacity = "0.4";
@@ -16,8 +16,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0px";
   document.body.style.backgroundColor = "black" ;
-  document.getElementById("myVideo").style.opacity = "1";
-  document.getElementById("containerinVideo").style.opacity = "1";
+  // document.getElementById("myVideo").style.opacity = "1";
+  document.getElementById("top-wrapper").style.opacity = "1";
   document.getElementById("upcoming-drives").style.opacity = "1";
   document.getElementById("our-recruiters").style.opacity = "1";
   document.getElementById("image-gallery").style.opacity = "1";
@@ -29,8 +29,8 @@ function openForm() {
   // document.getElementById("cuform").style.width = "40%";
   document.getElementById("cuform").style.display = "block";
   document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-  document.getElementById("myVideo").style.opacity = "0.4";
-  document.getElementById("containerinVideo").style.opacity = "0.4";
+  document.getElementById("top-wrapper").style.opacity = "0.4";
+  // document.getElementById("containerinVideo").style.opacity = "0.4";
   document.getElementById("upcoming-drives").style.opacity = "0.4";
   document.getElementById("our-recruiters").style.opacity = "0.4";
   document.getElementById("image-gallery").style.opacity = "0.4";
@@ -43,8 +43,8 @@ function closeForm() {
   // document.getElementById("cuform").style.width = "0%";
   document.getElementById("cuform").style.display = "none";
   document.body.style.backgroundColor = "black" ;
-  document.getElementById("myVideo").style.opacity = "1";
-  document.getElementById("containerinVideo").style.opacity = "1";
+  document.getElementById("top-wrapper").style.opacity = "1";
+  // document.getElementById("containerinVideo").style.opacity = "1";
   document.getElementById("upcoming-drives").style.opacity = "1";
   document.getElementById("our-recruiters").style.opacity = "1";
   document.getElementById("image-gallery").style.opacity = "1";
