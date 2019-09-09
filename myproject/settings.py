@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mydatabase',
         'USER':'root',
-        'PASSWORD':'mynewpassword',
+        'PASSWORD':'root',
         'HOST':'localhost',
         'PORT':'3306',
     }
@@ -98,8 +98,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'email@gmail.com'
-EMAIL_HOST_PASSWORD = 'password'
+EMAIL_HOST_USER = 'sampyatpo@gmail.com'
+EMAIL_HOST_PASSWORD = 'Sampya123'
 
 
 # Password validation

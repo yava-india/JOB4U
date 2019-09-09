@@ -12,14 +12,35 @@
 	</div>
 	    {% endfor %}
 			{% endif %}
-		<form method ="POST">
-		{% csrf_token %}
-		<button class = "button1" type="submit" name="email_database">Email database</button>
-		</form>
-		<form action="database" method="POST">
-  		{% csrf_token %}
-		<input class = "button2" type="submit" value="View Database" name="view_database" />
-		</form>
+			
+		<div class = "center">
+		
+			<div class = "borderAP">
+			<h2>Company Name 1</h2>
+			<form method ="POST">
+			{% csrf_token %}
+			<button class="button3" type="submit" name="email_database">Email database</button>
+			</form>
+			<form action="database" method="POST">
+			{% csrf_token %}
+			<input class = "button4" type="submit" value="View Database" name="view_database" />
+			</form>
+			</div>
+			
+			<div class = "borderAP">
+			<h2>Company Name 2</h2>
+			<form method ="POST">
+			{% csrf_token %}
+			<button class="button3" type="submit" name="email_database">Email database</button>
+			</form>
+			<form action="database" method="POST">
+			{% csrf_token %}
+			<input class = "button4" type="submit" value="View Database" name="view_database" />
+			</form>
+			</div>
+			
+		</div>
+		
   		</div>
   	</div>
   		

@@ -32,11 +32,36 @@ body{
   float: right;
 }
 
+.center{
+	text-align: center;
+}
+
+.borderAP{
+	
+	display: inline-block;
+	padding:25px;
+	border: 1px solid #807d75;
+	border-radius: 20px;
+	text-align: center;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+
+
+.borderAP h2{
+	display: inline-block;
+	margin-bottom: 25px;
+}
+
+
 .button1{
+
 background-color: #4CAF50; /* Green */
 border: none;
 color: white;
 padding: 11px 28px;
+margin-bottom: 15px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
@@ -48,6 +73,32 @@ cursor: pointer;
   border: none;
   color: white;
   padding: 11px 28px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.button3{
+
+background-color: #4885ed; /* Green */
+border: none;
+color: white;
+padding: 11px 28px;
+margin-bottom: 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+}
+
+.button4{
+  background-color: white; /* Red */
+  border: 1px solid #000;
+  color: blue;
+  padding: 11px 28px;
+  margin-bottom: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
