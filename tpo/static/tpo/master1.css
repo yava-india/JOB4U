@@ -1,0 +1,765 @@
+*{
+  margin: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #000;
+}
+
+header{
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  /* height: 50px;   */
+  position: fixed;
+  z-index: 10;
+}
+
+.header-left{
+  float: left;
+}
+
+.header-left h2{
+  display: inline-block;
+  color: white;
+  margin: 10px 25px;
+  cursor: pointer;
+}
+
+.header-right{
+  float: right;
+  text-align: center;
+}
+
+.icons{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.icons a{
+  display: inline-block;
+  /* margin: 0px 15px; */
+  /* width:auto; */
+  /* height: 30px; */
+  padding: 0;
+}
+
+.icons img{
+  /* margin-top: 10px; */
+  /* display: block; */
+  /* padding: 0px; */
+  height: 30px;
+  /* width: auto; */
+  /* line-height: 30px; */
+  /* border: 2px solid white; */
+  /* margin-top: 10px; */
+  /* margin-right:20px; */
+}
+
+.icon img{
+  /* padding-top: 2px; */
+  /* margin: 0px; */
+  height: 45px;
+  width: auto;
+  margin-left: 15px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+/* The side navigation menu */
+.sidenav{
+  height: 100%; /* 100% Full-height */
+  width: 0px; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #000; /* Black*/
+  overflow-x: hidden;
+  /* overflow-y: hidden; /* Disable horizontal scroll */ */
+  padding-top: 100px; /* Place content 60px from the top */
+  transition:all 0.3s; /* 0.5 second transition effect to slide in the sidenav */
+  text-align: center;
+}
+
+.sidenav p{
+  display: block;
+  position: absolute;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 30px;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  color: #b4ff46;
+  top: 0px;
+  padding: 15px;
+  margin-left: 145px;
+  cursor: default;
+  /* padding-bottom: 80px; */
+}
+
+.firstnavbar-item{
+  margin-top: 200px;
+}
+
+/* The navigation menu links */
+.navbar-items a{
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 24px;
+  word-spacing: 6px;
+  letter-spacing: 3px;
+  color: #b4ff46;
+  /* width: 100%; */
+  display: block;
+  padding: 40px ;
+  /* padding: 15px; */
+}
+
+
+.navbar-items a:hover{
+  transition:all 0.5s;
+  background-color: #b4ff46;
+  color: #000;
+}
+
+/* .navbar-items a:active{
+
+} */
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  font-size: 40px;
+  padding: 0px 10px;
+  margin: 0px;
+  color: white;
+}
+
+
+/*
+.header-right li{
+  padding: 10px;
+  margin-right: 10px;
+  color: white;
+  display: inline-block;
+  float: left;
+}
+
+.header-right a{
+  font-family: 'Red Hat Display', sans-serif;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  color: white;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+*/
+
+
+/*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------
+
+/*      Our-Recruiters
+
+#Our-Recruiters > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Our-Recruiters > a:hover {
+  color: #FFF;
+}
+
+#Our-Recruiters > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Our-Recruiters > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Drives
+
+#Drives > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Drives > a:hover {
+  color: #FFF;
+}
+
+#Drives > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Drives > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Image-Gallery
+
+#Image-Gallery > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Image-Gallery > a:hover {
+  color: #FFF;
+}
+
+#Image-Gallery > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Image-Gallery > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Video-Gallery
+
+#Video-Gallery > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Video-Gallery > a:hover {
+  color: #FFF;
+}
+
+#Video-Gallery > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Video-Gallery > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      Reach-Us
+
+#Reach-Us > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+#Reach-Us > a:hover {
+  color: #FFF;
+}
+
+#Reach-Us > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#Reach-Us > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*---------------FOR UNDERLINE EFFECT IN HEADING-RIGHT---------------*/
+
+
+#top-wrapper{
+    margin: 0px;
+    position: relative;
+    overflow: hidden;
+    /* border: 5px solid blue; */
+}
+
+#top-wrapper video{
+  top: 0%;
+  /* border: 5px solid white; */
+  object-fit: cover;
+  /* height: 700px; */
+  width: 100%;
+  /* z-index: -100; */
+  margin: 0;
+  overflow: hidden;
+}
+
+.containerinVideo{
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  left: 200px;
+  /* border: 1px solid white; */
+  top: 35%;
+  width: 75%;
+}
+
+.FaisalSirImage{
+
+  border-radius: 50%;
+  width: 250px;
+  margin: 10px;
+  border: 5px solid black;
+}
+
+.containerinVideo h3{
+  font-size: 30px;
+  color: black;
+}
+
+.containerinVideo a{
+  color: black;
+}
+
+.containerinVideo a:hover{
+  color: red;
+  transition: all 0.3s
+}
+
+.containerinVideo p{
+  font-size: 18px;
+  cursor: default;
+}
+
+/*                    START OF UPCOMING-DRIVES                   */
+
+#upcoming-drives{
+  /* position: relative; */
+  /* margin: auto; */
+  /* width: 80%; */
+  text-align: center;
+  /* margin-top: 10px; */
+  /* height: 800px; */
+  /* border: 2px solid white; */
+}
+
+.udtop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.sameDesign{
+    padding-top: 50px;
+    letter-spacing: 3px;
+    font-family:'Russo One', sans-serif;
+    color: #b4ff46;
+    font-size: 35px;
+    cursor: default;
+}
+
+.udbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.udcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.udcontainer div{
+  display: inline-block;
+  width: 33%;
+}
+
+.udcontainer p{
+  letter-spacing: 3px;
+  /* font-family:'Russo One', sans-serif; */
+  /* color: #b4ff46; */
+  font-size: 20px;
+  /* padding: 0px;
+  margin: 0px; */
+}
+
+.udcontainer img{
+  /* width: 100%; */
+  padding: 15px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+/*                    END OF UPCOMING-DRIVES                   */
+
+/*                    START OF OUR-RECRUITERS                   */
+
+#our-recruiters{
+  text-align: center;
+}
+
+.ortop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.orbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.orcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.orcontainer div{
+  display: inline-block;
+  width: 23%;
+}
+
+.orcontainer img{
+  /* width: 33%; */
+  padding: 15px;
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+/*                    END OF OUR-RECRUITERS                   */
+
+/*                    START OF IMAGE-GALLERY                   */
+
+#image-gallery{
+  text-align: center;
+}
+
+.igtop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.igbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.igcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.igcontainer div{
+  display: inline-block;
+  width: 33%;
+}
+
+
+.igcontainer img{
+  /* width: 33%; */
+  padding: 15px;
+  height: 300px;
+}
+
+/*                    END OF IMAGE-GALLERY                   */
+
+/*                    START OF VIDEO-GALLERY                   */
+
+#video-gallery{
+  text-align: center;
+}
+
+.vgtop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.vgbottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+  /* margin-bottom: 50px; */
+}
+
+.vgcontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.vgcontainer iframe{
+  width: 33%;
+  /* background-color: black; */
+  /* padding: 15px; */
+  /* margin: 5px; */
+  height: 300px;
+  margin-bottom: 15px;
+}
+
+/*                    END OF VIDEO-GALLERY                   */
+
+/*                    START OF REACH-US                   */
+
+#reach-us{
+  text-align: center;
+}
+
+.rutop{
+  /* position: relative; */
+  background-image: url("Images/TPO_Template2.png");
+  background-size: cover;
+  height: 450px;
+}
+
+.rubottom{
+  /* position: absolute; */
+  width: 100%;
+  top: 400px;
+  /* margin: auto; */
+  /* height: 500px; */
+  /* border: 1px solid black; */
+  background-color: white;
+}
+
+.rucontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+/* .rucontainer div{
+  display: inline-block;
+  width: 80%;
+} */
+
+.rucontainer p{
+  letter-spacing: 3px;
+  /* font-family:'Russo One', sans-serif; */
+  /* color: #b4ff46; */
+  cursor: default
+  /* padding: 0px;
+  margin: 0px; */
+}
+
+.location{
+  font-size: 18px;
+  font-family:'Russo One', sans-serif;
+}
+
+.rucontainer iframe{
+  width: 80%;
+  height:500px;
+  /* background-color: black; */
+  /* padding: 15px; */
+  margin: 15px;
+  margin-top: 25px;
+  /* height: 300px; */
+}
+
+.credit a{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.credit a:hover{
+  color: red;
+}
+
+footer{
+  padding: 15px;
+  text-align: center;
+  background: white;
+}
+
+footer a{
+  color: black;
+}
+
+/*                    END OF REACH-US                   */
+
+
+
+#Contact-us{
+  position: fixed;
+  bottom: 0px;
+  right: 25px;
+  /* cursor: pointer;
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 15px; */
+  /* border : 2px solid red; */
+  /* font-size: 25px; */
+}
+
+#Contact-us a{
+  display: block;
+  font-size: 18px;
+  background-color: rgba(255, 0, 0, 0.6);
+  padding: 15px;
+  color: white;
+}
+
+#Contact-us a:hover{
+  transition: all 0.3s;
+  background-color: rgba(255, 0, 0, 1);
+}
+
+#cuform{
+  background-image: url("Images/Sample6.jpg");
+  margin: auto;
+  width: 40%;
+  /* width:0px; */
+  display: none;
+  /* border: 1px solid white; */
+  height: 600px;
+  top: 15%;
+  left:30%;
+  right: 50%;
+  position: fixed;
+  /* text-align: center; */
+  /* vertical-align: middle; */
+}
+
+#cuform a{
+  display: inline-block;
+  /* padding: 10px; */
+  cursor: pointer;
+  /* margin-bottom: 10px; */
+}
+
+#cuform div{
+  position: relative;
+  /* margin-top: 10px; */
+}
+
+#cuform p{
+  color: white;
+  padding-left: 10px;
+  cursor: default;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#cuform input{
+  width: 60%;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+
+#cuform textarea{
+  width: 60%;
+  margin-left: 10px;
+}
+
+ .closebtnForm{
+   /* position: absolute;*/
+  /* top: 0;
+  right: 5px; */
+  float: right;
+  font-size: 40px;
+  /* padding: 0px 10px; */
+  /* margin: 0px; */
+  color: white;
+  /* padding: 5px; */
+  /* cursor: pointer; */
+}
+
+.clear{
+  clear: both;
+}
+
+.firstFormElement{
+  margin-top: 20px;
+}
