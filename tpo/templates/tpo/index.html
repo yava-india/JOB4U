@@ -1,0 +1,281 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Css Files -->
+    <link rel="stylesheet" type = "text/css" href="{% static "tpo/master1.css" %}">
+    <link rel="stylesheet" type = "text/css" href="{% static "tpo/Css/Animations.css" %}">
+    <link rel="stylesheet" type = "text/css" href="{% static "tpo/Css/Responsive.css" %}">
+
+    <!-- Javascript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "tpo/mainjs.js" %}"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>JOB4U</title>
+
+  </head>
+
+  <body>
+
+    <!-- <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
+    <iframe frameborder="0" height="100%" width="100%"
+  src="https://youtube.com/embed/6T5LlkZ9NAA?autoplay=1&controls=0&showinfo=0&autohide=1">
+</iframe>
+</div> -->
+
+    <header>
+
+      <div class="header-left">
+
+          <span  class = "icon" onclick="openNav()"><img src="{% static "tpo/Images/menu_icon1.png" %}"></span>
+          <h2>JOB4U</h2>
+
+      </div>
+
+      <div class="header-right">
+
+
+        <div class = "icons"><a href="https://www.facebook.com/tpoApsit/" target="_blank"><img src="{% static "tpo/Images/iconfinder_f-facebook_256_282470.png" %}" alt="Facebook"></a></div>
+        <div class = "icons"><a href="https://www.instagram.com/apsit_thane/" target="_blank"><img src="{% static "tpo/Images/iconfinder_Instagram_1298747.png" %}" alt="Instagram"></a></div>
+        <div class = "icons"><a href="https://twitter.com/APSIT_THANE" target="_blank"><img src="{% static "tpo/Images/iconfinder_twitter_834708.png" %}" alt="Twitter"></a></div>
+        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="{% static "tpo/Images/iconfinder_linkedin_386655.png" %}" alt="LinkedIn"></a></div>
+
+        <!-- Use any element to open the sidenav -->
+        <!-- <span  class = "icon" onclick="openNav()"><img src="Images/menu_icon1.png"></span> -->
+
+        <div id="mySidenav" class="sidenav">
+
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <p>JOB4U</p>
+
+          <div class = "navbar-items firstnavbar-item"><a href="#upcoming-drives" onclick = "closeNav()">UPCOMING DRIVES</a></div>
+          <div class = "navbar-items"><a href="#our-recruiters" onclick = "closeNav()">OUR RECRUITERS</a></div>
+          <div class = "navbar-items"><a href="#image-gallery" onclick = "closeNav()">IMAGE GALLERY</a></div>
+          <div class = "navbar-items"><a href="#video-gallery" onclick = "closeNav()">VIDEO GALLERY</a></div>
+          <div class = "navbar-items"><a href="#reach-us" onclick = "closeNav()">REACH US</a></div>
+
+        </div>
+
+
+          <!-- <ul>
+            <li id="Our-Recruiters"><a href="#">OUR RECRUITERS</a></li>
+            <li id="Drives"><a href="#">DRIVES</a></li>
+            <li id="Image-Gallery"><a href="#">IMAGE GALLERY</a></li>
+            <li id="Video-Gallery"><a href="#">VIDEO GALLERY</a></li>
+            <li id="Reach-Us"><a href="#">REACH US</a></li>
+         </ul> -->
+
+      </div>
+
+    </header>
+
+    <div id = "top-wrapper">
+
+      <video autoplay muted loop id="myVideo" class="animated fadeInUp">
+        <source src = "{% static "tpo/Video/BackgroundVideo.mp4" %}" type="video/mp4">
+      </video>
+
+      <!-- <iframe frameborder="0" height="100%" width="100%"
+    src="https://youtube.com/embed/6T5LlkZ9NAA?autoplay=1&controls=0&showinfo=0&autohide=1">
+  </iframe> -->
+
+      <div id="containerinVideo" class="containerinVideo">
+
+          <img class = "FaisalSirImage" src="{% static "tpo/Images/faisalsir.jpg" %}" alt="Faisal Khan">
+          <h3><a href = "https://www.linkedin.com/in/faisalkhan143/" target="_blank">Faisal Khan</a></h3>
+          <p>Head Placement Officer, APSIT</p>
+
+      </div>
+
+    </div>
+
+    <div id="upcoming-drives">
+
+        <div class="udtop">
+          <p class= "sameDesign">UPCOMING DRIVES</p>
+        </div>
+
+          <div class="udbottom">
+
+            <div class="udcontainer">
+
+                <div>
+                  <p>Google</p>
+                  <a href="/google"><img src="{% static "tpo/Images/google.png" %}" alt=""></a>
+                </div>
+
+                <div>
+                  <p>Headstrait</p>
+                  <a href="/headstrait"><img src="{% static "tpo/Images/headstrait.png" %}" alt=""></a>
+                </div>
+
+                <div>
+                  <p>Amazon</p>
+                  <a href="/amazon"><img src="{% static "tpo/Images/amazon.png" %}" alt=""></a>
+                </div>
+
+                <div>
+                  <p>Company4</p>
+                  <img src="{% static "tpo/Images/faisalsir.jpg" %}" alt="">
+                </div>
+
+                <div>
+                  <p>Company5</p>
+                  <img src="{% static "tpo/Images/faisalsir.jpg" %}" alt="">
+                </div>
+
+                <div>
+                  <p>Company6</p>
+                  <img src="{% static "tpo/Images/faisalsir.jpg" %}" alt="">
+                </div>
+
+            </div>
+
+          </div>
+      </div>
+
+      <div id="our-recruiters">
+
+          <div class="ortop">
+            <p class= "sameDesign" >OUR RECRUITERS</p>
+          </div>
+
+            <div class="orbottom">
+
+              <div class="orcontainer">
+                  <div><img src="{% static "tpo/Images/google.png" %}" alt=""></div>
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                  <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+              </div>
+
+            </div>
+        </div>
+
+      <div id="image-gallery">
+
+          <div class="igtop">
+            <p class= "sameDesign" >IMAGE-GALLERY</p>
+          </div>
+
+            <div class="igbottom">
+
+              <div class="igcontainer">
+                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+
+                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+              </div>
+
+            </div>
+      </div>
+
+      <div id="video-gallery">
+
+          <div class="vgtop">
+            <p class= "sameDesign" >VIDEO-GALLERY</p>
+          </div>
+
+            <div class="vgbottom">
+
+              <div class="vgcontainer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Va6Srkz0g4E" frameborder="0" allow = "autoplay" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/TipovwXENzE" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/me3gw7iwi-w" frameborder="0" allowfullscreen></iframe>
+
+                <iframe src="https://www.youtube.com/embed/VSpB5Vzr6Qg" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/nS0xNZ6Nrbo" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/KRQhY-xn6lE" frameborder="0" allowfullscreen></iframe>
+              </div>
+
+            </div>
+      </div>
+
+      <div id="reach-us">
+
+          <div class="rutop">
+            <p class= "sameDesign">REACH-US</p>
+          </div>
+
+            <div class="rubottom">
+
+              <div class="rucontainer">
+
+                <div>
+                  <p class = " location">Survey No. 12, 13, Opp. Big Centre Mall, Ghodbunder Rd, Kasarvadavali</p>
+                  <p class = " location">Thane West, Maharashtra 400615</p>
+
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.3314021346278!2d72.96481011485429!3d19.267949286978105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7bba2e15f6c7b%3A0x20e1357d640bef7e!2sA.%20P.%20Shah%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1567673295333!5m2!1sen!2sin" frameborder="0" allowfullscreen=""></iframe>
+
+                </div>
+
+              </div>
+
+            </div>
+      </div>
+
+    <footer id="footer">
+      <p>&copy; Copyright <strong>APSIT</strong>. All Rights Reserved</div>
+      <p class = "credit">Designed by <a target = "_blank" href="https://in.linkedin.com/in/yash-sampat-9b89a7185?trk=people-guest_profile-result-card_result-card_full-click">Yash Sampat</a>, <a target = "_blank" href="https://in.linkedin.com/in/anujssmishra?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Anuj Mishra</a>, <a target = "_blank" href="https://in.linkedin.com/in/vedant-mhatre-575838185?trk=people-guest_profile-result-card_result-card_full-click">Vedant  Mhatre</a> and <a target = "_blank" href="https://in.linkedin.com/in/aaditya-muley-596121184?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Aaditya Muley</a>
+    </footer>
+
+    <div id = "Contact-us">
+        <a href="#cuform" onclick="openForm()">Contact Us</a>
+    </div>
+
+    <div id="cuform" class="animated zoomInUp">
+
+      <a href="javascript:void(0)" class="closebtnForm" onclick="closeForm()"><div class="clear">&times;</div></a>
+
+      <div>
+
+        <form action="" method="POST" >
+
+          <p class="firstFormElement">Name of Company</p>
+          <input type="text" name="NameofCompany" value="">
+
+          <p>Name of Sender</p>
+          <input type="text" name="NameofSender" value="">
+
+          <p>Designation</p>
+          <input type="date" name="Designation" value="">
+
+          <p>Email</p>
+          <input type="email" name="Email" value="">
+
+          <p>Mobile Number</p>
+          <input type="number" name="Email" value="">
+
+          <p>Subject</p>
+          <input type="text" name="Email" value="">
+
+          <p>Message</p>
+          <textarea name="Message" rows="5" cols="40"></textarea>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
