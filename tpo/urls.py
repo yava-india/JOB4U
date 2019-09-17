@@ -7,11 +7,14 @@ urlpatterns = [
     path('admin_panel', views.admin_panel, name='tpo-admin-panel'),
     #path('database', views.database, name='tpo-database'),
     path('google', views.google, name='tpo-google'),
-    path('headstrait', views.headstrait, name='tpo-headstrait'),
-    path('amazon', views.amazon, name='tpo-amazon'),
+    #path('headstrait', views.headstrait, name='tpo-headstrait'),
+    #path('amazon', views.amazon, name='tpo-amazon'),
+    path('A_1_Salasar', views.a_1_Salasar, name='tpo-A_1_Salasar'),
     path('amazondb',views.amazondb ,name='tpo-amazondb'),
     path('googledb',views.googledb ,name='tpo-googledb'),
     path('headstraitdb',views.headstraitdb ,name='tpo-headstraitdb'),
+    path('a_1_Salasardb', views.a_1_Salasardb, name='tpo-a1salasar'),
+
 ]
 
 

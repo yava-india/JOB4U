@@ -4,7 +4,7 @@
 {% block content %}
     <div id="content-container" class="container p-none">
         <div class="lgn-container col-lg-8">
-		{% if user.is_authenticated %} 
+		{% if user.is_authenticated %}
 			{% if messages %}
 	    {% for message in messages %}
   <div class="alert alert-{{ message.tags }}">
@@ -12,35 +12,47 @@
 	</div>
 	    {% endfor %}
 			{% endif %}
-			
+
 		<div class = "center">
-		
+
 			<div class = "borderAP">
-			<h2>Amazon</h2>
+			<h2>A 1 Salasar</h2>
 			<form method ="POST">
 			{% csrf_token %}
-			<button class="button3" type="submit" name="email_amazon_db">Email database</button>
+			<button class="button3" type="submit" name="a_1_Salasar_db">Email database</button>
 			</form>
-			<form action="amazondb" method="POST">
+			<form action="a_1_Salasardb" method="POST">
 			{% csrf_token %}
-			<input class = "button4" type="submit" value="View Database" name="view_amazon_db" />
+			<input class = "button4" type="submit" value="View Database"  />
 			</form>
 			</div>
-			
+
+      <div class = "borderAP">
+      <h2>Amazon</h2>
+      <form method ="POST">
+      {% csrf_token %}
+      <button class="button3" type="submit" name="email_amazon_db">Email database</button>
+      </form>
+      <form action="amazondb" method="POST">
+      {% csrf_token %}
+      <input class = "button4" type="submit" value="View Database" name="view_amazon_db" />
+      </form>
+      </div>
+
 			<div class = "borderAP">
 			<h2>Google</h2>
-			
+
 			<form method ="POST">
 			{% csrf_token %}
 			<button class="button3" type="submit" name="email_google_db">Email database</button>
 			</form>
-			
+
 			<form action="googledb" method="POST">
 			{% csrf_token %}
 			<input class = "button4" type="submit" value="View Database" name="view_google_db" />
 			</form>
 			</div>
-			
+
 			<div class = "borderAP">
 			<h2>Headstrait</h2>
 			<form method ="POST">
@@ -52,17 +64,17 @@
 			<input class = "button4" type="submit" value="View Database" name="view_headstrait_db" />
 			</form>
 			</div>
-			
+
 		</div>
-		
+
   		</div>
   	</div>
-  		
+
   		{% else %}
   		<form action="administrator/" method="POST">
   		{% csrf_token %}
 		<input class = "button2" type="submit" value="Log in first" name="Submit" />
-		</form>	
-  		
-  		{% endif %} 
+		</form>
+
+  		{% endif %}
 {% endblock content %}

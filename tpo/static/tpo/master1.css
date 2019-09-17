@@ -456,6 +456,20 @@ header{
   margin-bottom: 15px;
 }
 
+.Company1 a{
+  height: 50%;
+  width: 50%;
+}
+
+.Company1 img{
+  height: 50%;
+  width: 50%;
+}
+
+.Company2 img{
+  /* height: 50%; */
+  width: 100%;
+}
 /*                    END OF UPCOMING-DRIVES                   */
 
 /*                    START OF OUR-RECRUITERS                   */
