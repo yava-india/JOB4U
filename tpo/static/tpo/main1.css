@@ -10,7 +10,7 @@ body{
 .container img{
   width:10%;
   height: 10%;
-  margin-left: 48%;
+  margin-left: 50%;
   margin-bottom: 2.0em;
 }
 
@@ -154,9 +154,6 @@ cursor: pointer;
     text-align: left;
   }
 
-  .container img{
-    margin-left: 15%;
-    width: 100px;
-  }
+  
 
 }

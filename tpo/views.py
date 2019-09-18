@@ -15,7 +15,7 @@ import os
 if not os.path.isfile('./A_1_Salasar.csv'):
 	with open('A_1_Salasar.csv', 'w', newline='') as csvfile:
 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
+		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Reporting Time','Profile'])
 
 if not os.path.isfile('./Google.csv'):
 	with open('Google.csv', 'w', newline='') as csvfile:
@@ -95,7 +95,7 @@ def admin_panel(request):
 	#return render(request, 'tpo/admin_panel.html')
 
 	elif request.method == 'POST' and 'a_1_Salasar_db' in request.POST:
-		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['anujssmishra@gmail.com','vedantmh@gmail.com'])
+		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
 		msg.content_subtype = "html"
 		msg.attach_file('A_1_Salasar.csv')
 		msg.send()
@@ -240,7 +240,8 @@ def a_1_Salasar(request):
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
         pybranch = request.POST['Branch']#[0:20]
-        pyslot = request.POST['Slot']#[0:10]
+        pyreport = request.POST['Report']#[0:10]
+        pyprofile = request.POST['Profile']
 
         if A_1_Salasar.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
@@ -249,12 +250,12 @@ def a_1_Salasar(request):
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/a_1_Salasar.html')
 
-        data2 = A_1_Salasar(name=pyname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, slot=pyslot)
+        data2 = A_1_Salasar(name=pyname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, reporting_time = pyreport, profile=pyprofile, confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         with open('A_1_Salasar.csv', 'a', newline='') as csvfile:
-    	    filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-    	    filewriter.writerow([pyname, pymob,pyemail,pyclgname,pybranch,pyslot])
+            filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            filewriter.writerow([pyname, pymob, pyemail, pyclgname, pybranch, pyreport, pyprofile])
 
         email(pyemail)
         return render(request, 'tpo/a_1_Salasar.html')

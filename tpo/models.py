@@ -39,11 +39,12 @@ class Amazon(models.Model):
 
 class A_1_Salasar(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)
-    name = models.CharField(max_length=30)
+    name = models.CharField(max_length=60)
     # number2 = models.BigIntegerField(validators=[MinValueValidator(7000000000), MaxValueValidator(9999999999)])
-    number2 = models.BigIntegerField()
-    email = models.EmailField(max_length=50)
+    number2 = models.CharField(max_length=100)
+    email = models.CharField(max_length=50)
     clg_name = models.CharField(max_length=100)
     branch = models.CharField(max_length=40)
-    slot = models.CharField(max_length=15, blank=True)
+    reporting_time = models.CharField(max_length=50, blank=True)
+    profile = models.CharField(max_length=50, blank=True)
     confirmation = models.CharField(max_length=6, blank=True)
