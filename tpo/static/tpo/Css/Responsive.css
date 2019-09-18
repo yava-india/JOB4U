@@ -31,7 +31,7 @@
 
   .udcontainer{
     margin: auto;
-    width: 100%;
+    width: 80%;
   }
 
   .sameDesign{
@@ -39,16 +39,24 @@
     padding-top: 30px;
   }
 
-  .udcontainer div{
-    display: inline-block;
-    width: 40%;
+  .udcontainer img{
+    width: 100%;
+    height: auto;
+    padding: 10px;
   }
 
-  .udcontainer img{
-    /* width: 100%; */
-    padding: 15px;
+  .udcontainer p{
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .udCompany1 a{
+    display: block;
+  }
+
+  .orCompany6 img{
     height: 200px;
-    margin-bottom: 15px;
+    width: 100%;
   }
 
 /*                    END OF UPCOMING-DRIVES                   */

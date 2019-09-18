@@ -27,7 +27,7 @@ header{
   display: inline-block;
   color: white;
   margin: 10px 25px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .header-right{
@@ -447,29 +447,49 @@ header{
   font-size: 20px;
   /* padding: 0px;
   margin: 0px; */
-}
-
-.udcontainer img{
-  /* width: 100%; */
-  padding: 15px;
-  height: 300px;
+  display: inline-block;
+  cursor: default;
+  font-size: 16px;
+  font-family:'Russo One', sans-serif;
+  border-bottom:2px solid grey;
   margin-bottom: 15px;
 }
 
-.Company1 a{
-  height: 50%;
-  width: 50%;
+.udcontainer img{
+  width: auto;
+  /* padding: 0px 15px 0px 0px; */
+  height: 250px;
+  /* padding-right:10px */
+  margin-bottom: 5px;
+  margin-right: 5px;
+  /* width: 33%; */
 }
 
-.Company1 img{
-  height: 50%;
-  width: 50%;
+.udcontainer .udCompany1{
+  width: 33%;
 }
 
-.Company2 img{
-  /* height: 50%; */
+/* .udCompany1 img{
+  width: 100%;
+} */
+
+.udcontainer .udCompany2{
+  width: 33%;
+}
+
+.udCompany2 img{
   width: 100%;
 }
+
+.udcontainer .udCompany3{
+  width: 33%;
+}
+
+/* .udCompany3 img{
+  width: 100%;
+} */
+
+
 /*                    END OF UPCOMING-DRIVES                   */
 
 /*                    START OF OUR-RECRUITERS                   */
@@ -504,15 +524,54 @@ header{
 
 .orcontainer div{
   display: inline-block;
-  width: 23%;
+  width: 33%;
 }
 
 .orcontainer img{
-  /* width: 33%; */
+  width: auto;
   padding: 15px;
-  height: 300px;
-  margin-bottom: 15px;
+  height: 250px;
+  /* margin-bottom: 15px; */
 }
+
+.orCompany1 img{
+  /* width: 100%; */
+}
+
+.orCompany2 img{
+  width: 100%;
+}
+
+.orCompany3 img{
+  /* width: 100%; */
+  padding-top: 10px;
+  height:150px;
+}
+
+.orCompany4 img{
+  width: 100%;
+  height: 200px;
+}
+
+.orCompany5 img{
+  /* margin-top: 100px; */
+  height: 300px;
+  /* width: 100%; */
+  padding-top: 30px;
+}
+
+.orCompany6 img{
+  height: 200px;
+  /* width: 100%; */
+}
+
+/* .orcompany7{
+
+}
+
+.orcompany8{
+
+} */
 
 /*                    END OF OUR-RECRUITERS                   */
 

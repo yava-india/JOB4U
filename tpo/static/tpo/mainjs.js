@@ -1,8 +1,18 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-  document.getElementById("mySidenav").style.width = "400px";
+
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+  if(width<="670px")
+  {
+    document.getElementById("mySidenav").style.width = "100%";
+  }
+  else (width>"670px")
+  {
+    document.getElementById("mySidenav").style.width = "400px";
+  }
   document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
-  // document.getElementById("myVideo").style.opacity = "0.4";
+  document.getElementById("myVideo").style.opacity = "0.4";
   document.getElementById("top-wrapper").style.opacity = "0.4";
   document.getElementById("upcoming-drives").style.opacity = "0.4";
   document.getElementById("our-recruiters").style.opacity = "0.4";
