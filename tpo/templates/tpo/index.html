@@ -1,4 +1,3 @@
-{% load static%}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -7,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css Files -->
-    <link rel="stylesheet" type = "text/css" href="{% static "tpo/master1.css" %}">
-    <link rel="stylesheet" type = "text/css" href="{% static "tpo/Css/Animations.css" %}">
-    <link rel="stylesheet" type = "text/css" href="{% static "tpo/Css/Responsive.css" %}">
+    <link rel="stylesheet" type = "text/css" href="Css/master1.css">
+    <link rel="stylesheet" type = "text/css" href="Css/Animations.css">
+    <link rel="stylesheet" type = "text/css" href="Css/responsive.css">
 
     <!-- Javascript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static "tpo/mainjs.js" %}"></script>
+    <script type="text/javascript" src="mainjs.js"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
     <title>JOB4U</title>
 
@@ -26,54 +26,50 @@
 
   <body>
 
-    <!-- <div style="position: fixed; z-index: -99; width: 100%; height: 100%">
-    <iframe frameborder="0" height="100%" width="100%"
-  src="https://youtube.com/embed/6T5LlkZ9NAA?autoplay=1&controls=0&showinfo=0&autohide=1">
-</iframe>
-</div> -->
-
     <header>
 
-      <div class="header-left">
+      <div class="navbar-left">
 
-          <span  class = "icon" onclick="openNav()"><img src="{% static "tpo/Images/menu_icon1.png" %}"></span>
-          <h2>JOB4U</h2>
+        <div><a href = "#top-wrapper"><img src="Images/JOB4U-LOGO.png" alt="JOB4U LOGO"></a></div>
 
-      </div>
+        <div class="Navbar-items">
 
-      <div class="header-right">
-
-
-        <div class = "icons"><a href="https://www.facebook.com/tpoApsit/" target="_blank"><img src="{% static "tpo/Images/iconfinder_f-facebook_256_282470.png" %}" alt="Facebook"></a></div>
-        <div class = "icons"><a href="https://www.instagram.com/apsit_thane/" target="_blank"><img src="{% static "tpo/Images/iconfinder_Instagram_1298747.png" %}" alt="Instagram"></a></div>
-        <div class = "icons"><a href="https://twitter.com/APSIT_THANE" target="_blank"><img src="{% static "tpo/Images/iconfinder_twitter_834708.png" %}" alt="Twitter"></a></div>
-        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="{% static "tpo/Images/iconfinder_linkedin_386655.png" %}" alt="LinkedIn"></a></div>
-
-        <!-- Use any element to open the sidenav -->
-        <!-- <span  class = "icon" onclick="openNav()"><img src="Images/menu_icon1.png"></span> -->
-
-        <div id="mySidenav" class="sidenav">
-
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-          <p>JOB4U</p>
-
-          <div class = "navbar-items firstnavbar-item"><a href="#upcoming-drives" onclick = "closeNav()">UPCOMING DRIVES</a></div>
-          <div class = "navbar-items"><a href="#our-recruiters" onclick = "closeNav()">OUR RECRUITERS</a></div>
-          <div class = "navbar-items"><a href="#image-gallery" onclick = "closeNav()">IMAGE GALLERY</a></div>
-          <div class = "navbar-items"><a href="#video-gallery" onclick = "closeNav()">VIDEO GALLERY</a></div>
-          <div class = "navbar-items"><a href="#reach-us" onclick = "closeNav()">REACH US</a></div>
+          <ul>
+            <li><a href="#about-us">ABOUT US</a></li>
+            <li><a href="#upcoming-drives">UPCOMING DRIVES</a></li>
+            <li><a href="#our-recruiters">OUR RECRUITERS</a></li>
+            <li><a href="#image-gallery">IMAGE GALLERY</a></li>
+            <li><a href="#video-gallery">VIDEO GALLERY</a></li>
+            <li><a href="#reach-us">REACH US</a></li>
+          </ul>
 
         </div>
 
+      </div>
 
-          <!-- <ul>
-            <li id="Our-Recruiters"><a href="#">OUR RECRUITERS</a></li>
-            <li id="Drives"><a href="#">DRIVES</a></li>
-            <li id="Image-Gallery"><a href="#">IMAGE GALLERY</a></li>
-            <li id="Video-Gallery"><a href="#">VIDEO GALLERY</a></li>
-            <li id="Reach-Us"><a href="#">REACH US</a></li>
-         </ul> -->
+      <div class="navbar-right">
+
+        <div class = "icons"><a href="https://www.facebook.com/pg/JOB4U-109796393763186/posts/?ref=page_internal" target="_blank"><img src="Images/iconfinder_f-facebook_256_282470.png" alt="Facebook"></a></div>
+        <div class = "icons"><a href="https://www.instagram.com/job4u_info/" target="_blank"><img src="Images/iconfinder_Instagram_1298747.png" alt="Instagram"></a></div>
+        <div class = "icons"><a href="https://twitter.com/u_job4" target="_blank"><img src="Images/iconfinder_twitter_834708.png" alt="Twitter"></a></div>
+        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="Images/iconfinder_linkedin_386655.png" alt="LinkedIn"></a></div>
+
+      </div>
+
+      <span  class = "icon1" onclick="openNav()"><img src="Images/menu_icon.png"></span>
+
+      <div id="mySidenav" class="sidenav">
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <p>JOB4U</p>
+
+        <div class = "navbar-items firstnavbar-item"><a href="#about-us" onclick = "closeNav()">ABOUT US</a></div>
+        <div class = "navbar-items"><a href="#upcoming-drives" onclick = "closeNav()">UPCOMING DRIVES</a></div>
+        <div class = "navbar-items"><a href="#our-recruiters" onclick = "closeNav()">OUR RECRUITERS</a></div>
+        <div class = "navbar-items"><a href="#image-gallery" onclick = "closeNav()">IMAGE GALLERY</a></div>
+        <div class = "navbar-items"><a href="#video-gallery" onclick = "closeNav()">VIDEO GALLERY</a></div>
+        <div class = "navbar-items"><a href="#reach-us" onclick = "closeNav()">REACH US</a></div>
 
       </div>
 
@@ -81,21 +77,80 @@
 
     <div id = "top-wrapper">
 
-      <video autoplay muted loop id="myVideo" class="animated fadeInUp">
-        <source src = "{% static "tpo/Video/BackgroundVideo.mp4" %}" type="video/mp4">
-      </video>
+      <div class="backgroundImage"></div>
 
-      <!-- <iframe frameborder="0" height="100%" width="100%"
-    src="https://youtube.com/embed/6T5LlkZ9NAA?autoplay=1&controls=0&showinfo=0&autohide=1">
-  </iframe> -->
+      <div class = "quote1">
 
-      <div id="containerinVideo" class="containerinVideo">
-
-          <img class = "FaisalSirImage" src="{% static "tpo/Images/faisalsir.jpg" %}" alt="Faisal Khan">
-          <h3><a href = "https://www.linkedin.com/in/faisalkhan143/" target="_blank">Faisal Khan</a></h3>
-          <p>Head Placement Officer, APSIT</p>
+        <p>" There are no secrets to success.</p>
+        <p>It is the result of preparation, hard work, and learning from failure. "</p>
+        <h4>- Colin Powell</h4>
 
       </div>
+
+      <div class = "quote2">
+
+        <p>" Success is no accident. It is hard work, perseverance, learning, studying, sacrifice and most of all, love of what you are doing or learning to do. "</p>
+        <h4>- Pele</h4>
+
+      </div>
+
+    </div>
+
+
+    <div id="about-us">
+
+        <div class="autop">
+          <p class = "sameDesign extraspace">ABOUT US</p>
+        </div>
+
+          <div class="aubottom">
+
+            <div class="aucontainer">
+
+              <div class="aucontainer2">
+
+                <h2 class = "Vision">Vision</h2>
+                <p>Employment for the Nation</p>
+                <h2 class = "Mission">Mission</h2>
+                <p>We are a young and dynamic team working together to meet the requirements of the students all over India. It is our mission to facilitate students with the best job opportunities and also works towards the overall development of the students to introduce them to the corporate world for their successful career.</p>
+
+              </div>
+
+
+              <div class="aucontainer1">
+
+                <img class = "FaisalSirImage1" src="Images/faisalsir.jpg" alt="JOB4U LOGO">
+                <div class = "textBackground">
+                  <p></p>
+                  <h3><a href = "https://www.linkedin.com/in/faisalkhan143/" target="_blank">Faisal Khan</a></h3>
+                  <p>Head Placement Officer, APSIT</p>
+                  <p>Joint Secretary, MATPO</p>
+                </div>
+
+              </div>
+
+
+                  <div class="aucontainer2temp">
+
+                    <h2>Vision</h2>
+                    <p>Employment for the Nation</p>
+                    <h2>Mission</h2>
+                    <p>We are a young and dynamic team working together to meet the requirements of the students all over India. It is our mission to facilitate students with the best job opportunities and also works towards the overall development of the students to introduce them to the corporate world for their successful career.</p>
+
+                  </div>
+
+              <div class="aucontainer3">
+
+                <!-- <h2>About us</h2> -->
+                <p>
+                 This initiative was taken by Mr Faisal Khan , head of training and placement cell in A.P Shah institute of technology. He is also the joint secretary of MATPO and has a experience of ..... Years. He is considered to be a pioneer in the training and placement department in Mumbai. He has a vision to place the maximum number of students across India. He has successfully placed .... number of students across India till date. He is committed to the task of delivering best job opportunities to the students with a sense of devotion and dedication.
+               </p>
+
+              </div>
+
+            </div>
+
+          </div>
 
     </div>
 
@@ -109,42 +164,39 @@
 
             <div class="udcontainer">
 
-                <div class="udCompany1">
-                  <a href="/A_1_Salasar"><img src="{% static "tpo/Images/salasar-logo.png" %}" alt="A One Salasar"></a>
-                  <p>A One Salasar</p>
-
-                </div>
-
-                <div class="udCompany2">
-                  <!-- <a href="/headstrait"> -->
-                    <img src="{% static "tpo/Images/Capgemini.png" %}" alt="Capgemini">
-                  <!-- </a> -->
-                  <p>Capgemini</p>
-
-                </div>
-
-                <div class="udCompany3">
-                  <!-- <a href="/amazon"> -->
-                    <img src="{% static "tpo/Images/lti.png" %}" alt="Larsen & Turbo Infotech">
-                  <!-- </a> -->
-                  <p>Larsen & Turbo Infotech</p>
-
-                </div>
-
-                <!-- <div>
-                  <p>Company4</p>
-                  <img src="{% static "tpo/Images/faisalsir.jpg" %}" alt="">
+                <div>
+                  <img src="Images/400x400 logos/infosys.png" alt="Infosys-Logo">
+                  <p class = "companyName">Infosys</p>
+                  <!-- <h2>Capgemini</h2>   -->
+                  <p class = "driveOn">Drive on : </p>
+                  <p>14-10-2019</p>
+                  <p>15-10-2019</p>
+    							<p class = "lastDate">16-10-2019</p>
+                  <a href="#">Register Now</a>
+                  <p ></p>
                 </div>
 
                 <div>
-                  <p>Company5</p>
-                  <img src="{% static "tpo/Images/faisalsir.jpg" %}" alt="">
+                  <img src="Images/400x400 logos/wipro.png" alt="Wipro-Logo">
+                  <p class = "companyName">Wipro</p>
+                  <!-- <h2>Capgemini</h2>   -->
+                  <p class = "driveOn">Drive on : </p>
+                  <p>18-10-2019</p>
+                  <p class = "lastDate">19-10-2019</p>
+                  <a href="#">Register Now</a>
+                  <p></p>
                 </div>
 
                 <div>
-                  <p>Company6</p>
-                  <img src="{% static "tpo/Images/faisalsir.jpg" %}" alt="">
-                </div> -->
+                  <img src="Images/400x400 logos/lti.png" alt="LTI-Logo">
+                  <p class = "companyName">LTI</p>
+                  <!-- <h2>Capgemini</h2>   -->
+                  <p class = "driveOn">Drive on : </p>
+                  <p>23-10-2019</p>
+                  <p class = "lastDate">24-10-2019</p>
+                  <a href="#">Register Now</a>
+                  <p></p>
+                </div>
 
             </div>
 
@@ -157,22 +209,22 @@
             <p class= "sameDesign" >OUR RECRUITERS</p>
           </div>
 
-            <div class="orbottom">
+          <div class="orbottom">
 
-              <div class="orcontainer">
-                  <div class="orCompany1"><img src="{% static "tpo/Images/Amazon.png" %}" alt=""></div>
-                  <div class="orCompany2"><img src="{% static "tpo/Images/Tata Consultancy Services.png"  %}" alt=""></div>
-                  <div class="orCompany3"><img src="{% static "tpo/Images/Hp.png" %}" alt=""></div>
-                  <div class="orCompany4"><img src="{% static "tpo/Images/Infosys.png" %}" alt=""></div>
+            <div class="orcontainer">
+                <div><img src="Images/300x200 logo/accenture.png" alt=""></div>
+                <div><img src="Images/300x200 logo/amazon.png" alt=""></div>
+                <div><img src="Images/300x200 logo/capgemin.png" alt=""></div>
+                <div><img src="Images/300x200 logo/ibm.png" alt=""></div>
 
-                  <div class="orCompany5"><img src="{% static "tpo/Images/Hexaware.png" %}" alt=""></div>
-                  <div class="orCompany6"><img src="{% static "tpo/Images/L&T Infotech.png" %}" alt=""></div>
-                  <!-- <div class="orCompany7"><img src="{% static "tpo/Images/Accenture.png" %}" alt=""></div> -->
-                  <!-- <div class="orCompany8"><img src="{% static "tpo/Images/Capgemini.png" %}" alt=""></div> -->
-              </div>
-
+                <div><img src="Images/300x200 logo/infosys.png" alt=""></div>
+                <div><img src="Images/300x200 logo/lti.png" alt=""></div>
+                <div><img src="Images/300x200 logo/wipro.png" alt=""></div>
+                <div><img src="Images/300x200 logo/tcs.png" alt=""></div>
             </div>
-        </div>
+
+          </div>
+      </div>
 
       <div id="image-gallery">
 
@@ -180,20 +232,67 @@
             <p class= "sameDesign" >IMAGE-GALLERY</p>
           </div>
 
-            <div class="igbottom">
+          <div class="igbottom">
 
-              <div class="igcontainer">
-                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
-                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
-                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
+            <div class="slideshow-container">
 
-                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
-                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
-                <div><img src="{% static "tpo/Images/faisalsir.jpg" %}" alt=""></div>
-              </div>
-
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides animated zoomIn firstImage">
+              <img src="Images/content/P1040879.JPG" style="width:100%">
             </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/P1040877.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/BackgroundImage.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/DSC_0016.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/IMG_20190715_180205.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/P1130292.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/DSC_0437.JPG" style="width:100%">
+            </div>
+
+            <div class="mySlides animated zoomIn">
+              <img src="Images/content/Background1.jpg" style="width:100%">
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#x2B9C;</a>
+            <a class="next" onclick="plusSlides(1)">&#x2B9E;</a>
+
+          </div>
+          <br>
+
+          <!-- The dots/circles -->
+          <div style="text-align:center">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+            <!-- <span class="dot" onclick="currentSlide(7)"></span> -->
+          </div>
+
+        </div>
+
       </div>
+
 
       <div id="video-gallery">
 
@@ -243,45 +342,6 @@
       <p>&copy; Copyright <strong>APSIT</strong>. All Rights Reserved</div>
       <p class = "credit">Designed by <a target = "_blank" href="https://in.linkedin.com/in/yash-sampat-9b89a7185?trk=people-guest_profile-result-card_result-card_full-click">Yash Sampat</a>, <a target = "_blank" href="https://in.linkedin.com/in/anujssmishra?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Anuj Mishra</a>, and <a target = "_blank" href="https://in.linkedin.com/in/vedant-mhatre-575838185?trk=people-guest_profile-result-card_result-card_full-click">Vedant  Mhatre</a>
     </footer>
-
-    <!-- <div id = "Contact-us">
-        <a href="#cuform" onclick="openForm()">Contact Us</a>
-    </div> -->
-
-    <!-- <div id="cuform" class="animated zoomInUp">
-
-      <a href="javascript:void(0)" class="closebtnForm" onclick="closeForm()"><div class="clear">&times;</div></a>
-
-      <div>
-
-        <form action="" method="POST" >
-
-          <p class="firstFormElement">Name of Company</p>
-          <input type="text" name="NameofCompany" value="">
-
-          <p>Name of Sender</p>
-          <input type="text" name="NameofSender" value="">
-
-          <p>Designation</p>
-          <input type="date" name="Designation" value="">
-
-          <p>Email</p>
-          <input type="email" name="Email" value="">
-
-          <p>Mobile Number</p>
-          <input type="number" name="Email" value="">
-
-          <p>Subject</p>
-          <input type="text" name="Email" value="">
-
-          <p>Message</p>
-          <textarea name="Message" rows="5" cols="40"></textarea>
-
-        </form>
-
-      </div>
-
-    </div> -->
 
   </body>
 
