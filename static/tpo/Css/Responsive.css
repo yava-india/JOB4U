@@ -1,119 +1,6 @@
 @media (max-width: 670px) {
 
-  .icons{
-    margin-right: 13px;
-  }
-
-  .icon img{
-    margin-left: 0px;
-  }
-
-  .containerinVideo{
-    left: 50px;
-    top: 20%;
-  }
-
-  .FaisalSirImage{
-    width: 130px;
-    margin: 5px;
-    border: 2px solid black;
-  }
-
-  .containerinVideo h3{
-    font-size: 25px;
-  }
-
-/*                    START OF UPCOMING-DRIVES                   */
-
-  .udtop{
-    height: 250px;
-  }
-
-  .udcontainer{
-    margin: auto;
-    width: 80%;
-  }
-
-  .sameDesign{
-    font-size: 23px;
-    padding-top: 30px;
-  }
-
-  .udcontainer img{
-    width: 100%;
-    height: auto;
-    padding: 10px;
-  }
-
-  .udcontainer p{
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  .udCompany1 a{
-    display: block;
-  }
-
-  .orCompany6 img{
-    height: 200px;
-    width: 100%;
-  }
-
-/*                    END OF UPCOMING-DRIVES                   */
-
-/*                    START OF OUR-RECRUITERS                   */
-
-  .ortop{
-    height: 250px;
-  }
-
-  .orcontainer{
-    margin: auto;
-    width: 100%;
-  }
-
-  .orcontainer div{
-    display: inline-block;
-    width: 40%;
-  }
-
-  .orcontainer img{
-    /* width: 100%; */
-    padding: 15px;
-    height: 200px;
-    margin-bottom: 15px;
-  }
-
-/*                    END OF OUR-RECRUITERS                   */
-
-/*                    START OF IMAGE-GALLERY                   */
-
-  .igtop{
-    height: 250px;
-  }
-
-  .igcontainer{
-    margin: auto;
-    width: 100%;
-  }
-
-  .igcontainer div{
-    display: inline-block;
-    width: 40%;
-  }
-
-  .igcontainer img{
-    /* width: 100%; */
-    padding: 15px;
-    height: 200px;
-    margin-bottom: 15px;
-  }
-
-/*                    END OF IMAGE-GALLERY                   */
-
-/*                    START OF VIDEO-GALLERY                   */
-
-  .vgtop{
+   .vgtop{
     height: 250px;
   }
 
@@ -128,18 +15,13 @@
   }
 
   .vgcontainer iframe{
-    width: 100%;
-    /* padding: 15px; */
+    width: 100%; */
     height: 200px;
     margin-bottom: 0px;
   }
 
-/*                    END OF VIDEO-GALLERY                   */
-
-/*                    START OF REACH-US                   */
-
   .rutop{
-    height: 250px;
+    height: 140px;
   }
 
   .location{
@@ -158,6 +40,225 @@
   #Contact-us a{
     font-size: 15px;
     padding: 5px;
+  }
+
+ .backgroundImage{
+   height: 500px;
+ }
+
+  .FaisalSirImage{
+    width: 180px;
+  }
+
+  .FaisalSirImage1{
+    width: 160px;
+  }
+
+  .navbar-left img{
+    margin-top: 5px;
+  }
+
+  .aucontainer2{
+    display: none;
+  }
+
+  .aucontainer2temp{
+    text-align: center;
+    display: block;
+    height: auto;
+    width: 100%;
+    height: auto;
+    border-bottom:  2px solid #E1E1E1;
+    margin-bottom: 30px;
+  }
+
+  .aucontainer1{
+    width: 100%;
+    height: auto;
+    border-bottom:  2px solid #E1E1E1;
+  }
+
+  .aucontainer3{
+    width: 100%;
+    height: auto;
+    height: auto;
+  }
+
+  .aucontainer3 p{
+    margin: 0px;
+  }
+
+  .textBackground{
+    overflow: hidden;
+    background-image: none;
+    color: black;
+    height: auto;
+    width: auto;
+  }
+
+  .textBackground a{
+    color: black;
+  }
+
+  .udcontainer div{
+    width: 100%;
+  }
+
+  .udcontainer img{
+    height: 180px;
+    width: 100%;
+  }
+
+  .companyName{
+    font-size: 20px;
+  }
+
+  .driveOn{
+    font-size: 18px;
+  }
+
+  .udcontainer p{
+    font-size: 16px;
+  }
+
+  .orcontainer div{
+    width: 45%;
+  }
+
+  .orcontainer img{
+    width: 100%;
+  }
+
+  .slideshow-container {
+    height: auto;
+  }
+
+  .prev, .next {
+    color: white;
+    font-size: 20px;
+  }
+
+  .prev:hover, .next:hover{
+    background-color: rgba(0,0,0,0);
+  }
+
+  .autop{
+    height: 140px;
+  }
+
+  .udtop{
+    height: 140px;
+  }
+
+  .ortop{
+    height: 140px;
+  }
+
+  .igtop{
+    height: 140px;
+  }
+
+  .vgtop{
+    height: 140px;
+  }
+
+  .sameDesign{
+    margin: 0px;
+    font-size: 18px;
+  }
+
+  .textBackground h3{
+    font-size: 27px;
+  }
+
+  .textBackground p{
+    font-size: 18px;
+  }
+
+  .vision{
+    font-size: 24px;
+  }
+
+  .aucontainer2temp h2{
+    font-size: 27px;
+  }
+
+  .aucontainer2temp p{
+    font-size: 18px;
+  }
+
+  .aucontainer3 p{
+    font-size: 18px;
+  }
+
+  .Navbar-items{
+    display: none;
+  }
+
+  .navbar-left img{
+    height: 35px;
+    margin-left: 35px;
+  }
+
+  .Navbar-items ul{
+    display: none;
+  }
+
+  .icons{
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 8px;
+  }
+
+  .icons img{
+    height: 27px;
+  }
+
+  .icon1 img{
+    display: block;
+  }
+
+  .quote1{
+    height: 150px;
+    position: absolute;
+    top:25%;
+    left:0px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .quote1 p{
+    font-size: 17px;
+  }
+
+  .quote1 h4{
+    font-size: 20px;
+  }
+
+  .quote2{
+    height: 150px;
+    text-align: center;
+    position: absolute;
+    top:60%;
+    left:0px;
+    width: 100%;
+  }
+
+  .quote2 p{
+    font-size: 17px;
+  }
+
+  .quote2 h4{
+    font-size: 20px;
+  }
+
+  .textBackground h3{
+    color: black;
+  }
+
+  .textBackground p{
+    color: black;
   }
 
 }

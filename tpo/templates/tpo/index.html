@@ -1,3 +1,5 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -6,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Css Files -->
-    <link rel="stylesheet" type = "text/css" href="Css/master1.css">
-    <link rel="stylesheet" type = "text/css" href="Css/Animations.css">
-    <link rel="stylesheet" type = "text/css" href="Css/responsive.css">
+    <link rel="stylesheet" type = "text/css" href="{% static 'tpo/Css/master1.css'%}">
+    <link rel="stylesheet" type = "text/css" href="{% static 'tpo/Css/Animations.css'%}">
+    <link rel="stylesheet" type = "text/css" href="{% static 'tpo/Css/responsive.css'%}">
 
     <!-- Javascript Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="mainjs.js"></script>
+    <script type="text/javascript" src="{% static 'tpo/mainjs.js'%}"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-    <title>JOB4U</title>
+    <title>job4u.info</title>
 
   </head>
 
@@ -30,7 +32,7 @@
 
       <div class="navbar-left">
 
-        <div><a href = "#top-wrapper"><img src="Images/JOB4U-LOGO.png" alt="JOB4U LOGO"></a></div>
+        <div><a href = "#top-wrapper"><img src="{% static 'tpo/Images/JOB4U-LOGO.png'%}" alt="JOB4U LOGO"></a></div>
 
         <div class="Navbar-items">
 
@@ -49,14 +51,14 @@
 
       <div class="navbar-right">
 
-        <div class = "icons"><a href="https://www.facebook.com/pg/JOB4U-109796393763186/posts/?ref=page_internal" target="_blank"><img src="Images/iconfinder_f-facebook_256_282470.png" alt="Facebook"></a></div>
-        <div class = "icons"><a href="https://www.instagram.com/job4u_info/" target="_blank"><img src="Images/iconfinder_Instagram_1298747.png" alt="Instagram"></a></div>
-        <div class = "icons"><a href="https://twitter.com/u_job4" target="_blank"><img src="Images/iconfinder_twitter_834708.png" alt="Twitter"></a></div>
-        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="Images/iconfinder_linkedin_386655.png" alt="LinkedIn"></a></div>
+        <div class = "icons"><a href="https://www.facebook.com/pg/JOB4U-109796393763186/posts/?ref=page_internal" target="_blank"><img src="{% static 'tpo/Images/iconfinder_f-facebook_256_282470.png'%}" alt="Facebook"></a></div>
+        <div class = "icons"><a href="https://www.instagram.com/job4u_info/" target="_blank"><img src="{% static 'tpo/Images/iconfinder_Instagram_1298747.png'%}" alt="Instagram"></a></div>
+        <div class = "icons"><a href="https://twitter.com/u_job4" target="_blank"><img src="{% static 'tpo/Images/iconfinder_twitter_834708.png'%}" alt="Twitter"></a></div>
+        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="{% static 'tpo/Images/iconfinder_linkedin_386655.png'%}" alt="LinkedIn"></a></div>
 
       </div>
 
-      <span  class = "icon1" onclick="openNav()"><img src="Images/menu_icon.png"></span>
+      <span  class = "icon1" onclick="openNav()"><img src="{% static 'tpo/Images/menu_icon.png'%}"></span>
 
       <div id="mySidenav" class="sidenav">
 
@@ -119,7 +121,7 @@
 
               <div class="aucontainer1">
 
-                <img class = "FaisalSirImage1" src="Images/faisalsir.jpg" alt="JOB4U LOGO">
+                <img class = "FaisalSirImage1" src="{% static 'tpo/Images/faisalsir.jpg'%}" alt="JOB4U LOGO">
                 <div class = "textBackground">
                   <p></p>
                   <h3><a href = "https://www.linkedin.com/in/faisalkhan143/" target="_blank">Faisal Khan</a></h3>
@@ -165,19 +167,19 @@
             <div class="udcontainer">
 
                 <div>
-                  <img src="Images/400x400 logos/infosys.png" alt="Infosys-Logo">
+                  <img src="{% static 'tpo/Images/400x400 logos/infosys.png'%}" alt="Infosys-Logo">
                   <p class = "companyName">Infosys</p>
                   <!-- <h2>Capgemini</h2>   -->
                   <p class = "driveOn">Drive on : </p>
                   <p>14-10-2019</p>
                   <p>15-10-2019</p>
     							<p class = "lastDate">16-10-2019</p>
-                  <a href="#">Register Now</a>
+                  <a href="/infosys">Register Now</a>
                   <p ></p>
                 </div>
 
                 <div>
-                  <img src="Images/400x400 logos/wipro.png" alt="Wipro-Logo">
+                  <img src="{% static 'tpo/Images/400x400 logos/wipro.png'%}" alt="Wipro-Logo">
                   <p class = "companyName">Wipro</p>
                   <!-- <h2>Capgemini</h2>   -->
                   <p class = "driveOn">Drive on : </p>
@@ -188,13 +190,13 @@
                 </div>
 
                 <div>
-                  <img src="Images/400x400 logos/lti.png" alt="LTI-Logo">
+                  <img src="{% static 'tpo/Images/400x400 logos/lti.png'%}" alt="LTI-Logo">
                   <p class = "companyName">LTI</p>
                   <!-- <h2>Capgemini</h2>   -->
                   <p class = "driveOn">Drive on : </p>
                   <p>23-10-2019</p>
                   <p class = "lastDate">24-10-2019</p>
-                  <a href="#">Register Now</a>
+                  <a href="/lti">Register Now</a>
                   <p></p>
                 </div>
 
@@ -212,15 +214,15 @@
           <div class="orbottom">
 
             <div class="orcontainer">
-                <div><img src="Images/300x200 logo/accenture.png" alt=""></div>
-                <div><img src="Images/300x200 logo/amazon.png" alt=""></div>
-                <div><img src="Images/300x200 logo/capgemin.png" alt=""></div>
-                <div><img src="Images/300x200 logo/ibm.png" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/accenture.png'%}" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/amazon.png'%}" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/capgemin.png'%}" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/ibm.png'%}" alt=""></div>
 
-                <div><img src="Images/300x200 logo/infosys.png" alt=""></div>
-                <div><img src="Images/300x200 logo/lti.png" alt=""></div>
-                <div><img src="Images/300x200 logo/wipro.png" alt=""></div>
-                <div><img src="Images/300x200 logo/tcs.png" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/infosys.png'%}" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/lti.png'%}" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/wipro.png'%}" alt=""></div>
+                <div><img src="{% static 'tpo/Images/300x200 logo/tcs.png'%}" alt=""></div>
             </div>
 
           </div>
@@ -238,35 +240,35 @@
 
             <!-- Full-width images with number and caption text -->
             <div class="mySlides animated zoomIn firstImage">
-              <img src="Images/content/P1040879.JPG" style="width:100%">
+              <img src="{% static 'tpo/Images/content/P1040879.JPG'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/P1040877.JPG" style="width:100%">
+              <img src="{% static 'tpo/Images/content/P1040877.JPG'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/BackgroundImage.JPG" style="width:100%">
+              <img src="{% static 'tpo/Images/content/BackgroundImage.JPG'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/DSC_0016.JPG" style="width:100%">
+              <img src="{% static 'tpo/Images/content/DSC_0016.JPG'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/IMG_20190715_180205.jpg" style="width:100%">
+              <img src="{% static 'tpo/Images/content/IMG_20190715_180205.jpg'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/P1130292.JPG" style="width:100%">
+              <img src="{% static 'tpo/Images/content/P1130292.JPG'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/DSC_0437.JPG" style="width:100%">
+              <img src="{% static 'tpo/Images/content/DSC_0437.JPG'%}" style="width:100%">
             </div>
 
             <div class="mySlides animated zoomIn">
-              <img src="Images/content/Background1.jpg" style="width:100%">
+              <img src="{% static 'tpo/Images/content/Background1.jpg'%}" style="width:100%">
             </div>
 
             <!-- Next and previous buttons -->
