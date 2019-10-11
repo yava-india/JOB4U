@@ -4,6 +4,12 @@ from django.db import models
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
 
+class IbmResult(models.Model):
+    name = models.CharField(max_length=60)
+    clg_name = models.CharField(max_length=120)
+    gender = models.CharField(max_length=40)
+
+
 class Google(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)
     name = models.CharField(max_length=30)
@@ -48,3 +54,59 @@ class A_1_Salasar(models.Model):
     reporting_time = models.CharField(max_length=50, blank=True)
     profile = models.CharField(max_length=50, blank=True)
     confirmation = models.CharField(max_length=6, blank=True)
+
+class IBM(models.Model):
+    # student_id = models.CharField(max_length=10, blank=True)
+    email = models.CharField(max_length=50)
+    name = models.CharField(max_length=60)
+    # gender = models.CharField(max_length=40)
+    number2 = models.CharField(max_length=100)
+    # percent10 = models.CharField(max_length=40)
+    # percent12 = models.CharField(max_length=40)
+    # degpassyear = models.CharField(max_length=40)
+    branch = models.CharField(max_length=40)
+    # typedegree = models.CharField(max_length=40)
+    # aggpointer = models.CharField(max_length=40)
+    clg_name = models.CharField(max_length=100)
+    # univname = models.CharField(max_length=70)
+    # nation = models.CharField(max_length=40)
+    # exp = models.CharField(max_length=100)
+    # course = models.CharField(max_length=100)
+    # coursecompdate = models.CharField(max_length=40)
+    # reporting_time = models.CharField(max_length=50, blank=True)
+    # profile = models.CharField(max_length=50, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+
+class IBM7oct(models.Model):
+    # student_id = models.CharField(max_length=10, blank=True)
+    email = models.CharField(max_length=50)
+    name = models.CharField(max_length=60)
+    # gender = models.CharField(max_length=40)
+    number2 = models.CharField(max_length=100)
+    branch = models.CharField(max_length=40)
+    clg_name = models.CharField(max_length=100)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+
+
+class Lti_23_oct(models.Model):
+    name = models.CharField(max_length=60)
+    email = models.CharField(max_length=50)
+    number2 = models.CharField(max_length=100)
+    clg_name = models.CharField(max_length=100)
+    branch = models.CharField(max_length=40)
+    qualification = models.CharField(max_length=100)
+    passingyear10 = models.CharField(max_length=40)
+    percent10 = models.CharField(max_length=40)
+    passingyear12 = models.CharField(max_length=40, blank=True)
+    percent12 = models.CharField(max_length=40, blank=True)
+    diplomapassyear = models.CharField(max_length=40, blank=True)
+    diplomapercent = models.CharField(max_length=40, blank=True)
+    pointer = models.CharField(max_length=40)
+    degreepassyear = models.CharField(max_length=40, blank=True)
+    nationality = models.CharField(max_length=40)
+    confirmation = models.CharField(max_length=6, blank=True)
+    tponame = models.CharField(max_length=60, blank=True)
+    tponumber = models.CharField(max_length=100, blank=True)
+    tpoemail = models.CharField(max_length=60, blank=True)

@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4)(7-6=7*e!4ckp((!de8+$1zm0d56@()czi4bhz^c4%)x30(@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['job4u.pythonanywhere.com','www.job4u.info']
 
 
 # Application definition
@@ -83,11 +83,10 @@ MESSAGE_TAGS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',
-        'USER':'root',
+        'NAME': 'job4u$mydatabase',
+        'USER':'job4u',
         'PASSWORD':'mynewpassword',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'HOST':'job4u.mysql.pythonanywhere-services.com',
     }
 }
 
@@ -124,4 +123,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/job4u/tpo_website/static'
 LOGIN_REDIRECT_URL = 'tpo-admin-panel'

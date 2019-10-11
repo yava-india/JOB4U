@@ -1,0 +1,76 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Css File links -->
+    <link rel="stylesheet" href="{% static 'tpo/Company.css'%}">
+
+    <!-- Javascript File links -->
+    <script src="{% static 'tpo/main.js'%}"></script>
+
+    <!-- Google Fonts links -->
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>job4u.info</title>
+
+  </head>
+
+  <body>
+
+    <header>
+        <a href="/lti">
+      <img class = "floatLeft" src="{% static 'tpo/job4u.png'%}" alt="JOB4U-Logo">
+      </a>
+      <!--<img class = "apsitlogo" src="{% static 'tpo/APSIT (1).png'%}" alt="APSIT-LOGO">-->
+      <div class="header-right">
+        <div class = "icons"><a href="https://www.facebook.com/tpoApsit/" target="_blank"><img src="{% static 'tpo/iconfinder_f-facebook_256_282470.png'%}" alt="Facebook"></a></div>
+        <div class = "icons"><a href="https://www.instagram.com/apsit_thane/" target="_blank"><img src="{% static 'tpo/iconfinder_Instagram_1298747.png'%}" alt="Instagram"></a></div>
+        <div class = "icons"><a href="https://twitter.com/APSIT_THANE" target="_blank"><img src="{% static 'tpo/iconfinder_twitter_834708.png'%}" alt="Twitter"></a></div>
+        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="{% static 'tpo/iconfinder_linkedin_386655.png'%}" alt="LinkedIn"></a></div>
+      </div>
+      <!-- <img class = "floatRight" src="APSIT.png" alt="APSIT-LOGO"> -->
+    </header>
+
+    <div class="containerFK">
+
+      <div class="FaisalKhan">
+        <img  class = "faisalKhanjpg" src="{% static 'tpo/faisalsir.jpg'%}" alt="FaisalKhan">
+        <p><a href="https://www.linkedin.com/in/faisalkhan143/" target="_blank"><span class = "makebold">Prof. Faisal Khan</span></a></p>
+        <p>HEAD - TPO, APSIT</p>
+        <p>Joint Secretary, MATPO</p>
+      </div>
+
+    </div>
+<ul>
+    <div class ="FaisalKhan">
+	<table border=2 style="width: 50%;
+    margin-left:auto;
+    margin-right:auto;" align:center>
+		<thead style="background-color: lightblue;">
+			<tr>
+				<th width = "20%"><p>Name<p></th>
+				<th width = "40%"><p>College Name<p></th>
+				<th width = "20%"><p>Gender<p></th>
+
+			</tr>
+    	</thead>
+    	<tbody>
+
+		{% for j in studentdb %}
+		<tr>
+		<td>{{ j.name }}</td>
+		<td>{{ j.clg_name }}</td>
+		<td>{{ j.gender}}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	</div>
+<ul>

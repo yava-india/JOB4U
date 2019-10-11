@@ -1,0 +1,305 @@
+body{
+  font-family: 'Big Shoulders Text', cursive;
+  margin: 0px;
+  /* position: relative; */
+  text-decoration: none;
+}
+
+header{
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-image: linear-gradient(red, yellow); */
+  /* background-color: black; */
+  margin: 0px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  height: 40px;
+}
+
+.containerFK{
+  margin:0px;
+  /* background-color: #D966FF;*/
+  background-image: linear-gradient(darkblue, lightblue);
+  /* max-height: 440px; */
+  position: relative;
+}
+
+.FaisalKhan{
+  margin:auto;
+  /* margin-top: 100px; */
+  text-align: center;
+  width: 80%;
+  /* margin-bottom: 25px; */
+  padding-bottom: 15px;
+}
+
+
+.FaisalKhan a{
+  text-decoration: none;
+  color: black;
+}
+
+.faisalKhanjpg{
+  border-radius: 50%;
+  width: 200px;
+  margin: 10px;
+  /* display: block; */
+  margin-top: 100px;
+  border: 5px solid white;
+}
+
+.FaisalKhan p{
+  cursor: default;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.makebold{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.floatLeft{
+  margin-top: 7px;
+  margin-left: 20px;
+  float: left;
+}
+
+.apsitlogo{
+  margin-left: 570px;
+}
+
+.floatRight{
+  margin-top: 7px;
+  margin-left: 20px;
+  float: right;
+}
+
+.container1{
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 45px;
+}
+
+.container1 h3{
+  cursor: default;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  /* background-image: linear-gradient(darkblue, lightblue); */
+  font-size: 22px;
+}
+
+.collegeLogo{
+  width: 200px;
+  height: 150px;
+}
+
+.companyLogo{
+  /* width: 250px; */
+  width: auto;
+  height: 150px;
+  /* height: auto; */
+}
+
+.container2{
+  text-align: left;
+  width: 80%;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.redColor{
+  color: red;
+  letter-spacing: 1.3px;
+}
+
+#Marks1 {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#Marks2 {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#Marks3 {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.box input[type = "text"], input[type = "email"],input[type = "number"]{
+    text-align: center;
+    border: 2px solid black;
+    padding: 7px 5px;
+    width: 300px;
+    outline: none;
+    border-radius: 0px;
+    transition: 0.25s;
+}
+
+.box input[type = "text"]:focus{
+    width: 400px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "email"]:focus{
+    width: 400px;
+    border-color: #2ecc71;
+}
+
+.box input[type = "number"]:focus{
+    width: 400px;
+    border-color: #2ecc71;
+}
+
+.box{
+    padding:20px;
+}
+
+.box h4{
+  font-size: 18px;
+}
+
+.container2 h5{
+  padding: 0px 0px 0px 25px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
+.container2 h4{
+  font-size: 20px;
+  letter-spacing: 1.7px;
+}
+
+.container2 input{
+  margin-bottom: 18px;
+}
+
+.quali{
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    border: 2px black solid;
+}
+
+.radioButton{
+   width: 100px;
+   margin-top: 15px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: 'Source Sans Pro', sans-serif;
+   height: 30px;
+}
+
+.button1{
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+padding: 11px 28px;
+margin-bottom: 15px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+cursor: pointer;
+}
+
+.header-right{
+  float: right;
+  text-align: center;
+}
+
+.icons{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.icons a{
+  display: inline-block;
+  /* margin: 0px 15px; */
+  /* width:auto; */
+  /* height: 30px; */
+  padding: 0;
+}
+
+.icons img{
+  /* margin-top: 10px; */
+  /* display: block; */
+  /* padding: 0px; */
+  height: 30px;
+  /* width: auto; */
+  /* line-height: 30px; */
+  /* border: 2px solid white; */
+  /* margin-top: 10px; */
+  /* margin-right:20px; */
+}
+
+@media (max-width: 670px){
+
+  .collegeLogo{
+    width:150px;
+    height:100px;
+  }
+
+  .FaisalKhan{
+    left: 160px;
+    top: 100px;
+  }
+
+  .faisalKhanjpg{
+    width: 130px;
+    margin: 5px;
+    margin-top: 50px;
+  }
+
+  .companyLogo{
+    width:150px;
+    height:100px;
+  }
+
+  .box input[type = "text"], input[type = "email"],input[type = "number"]{
+    max-width: 250px;
+  }
+
+  .box input[type = "text"]:focus{
+      max-width: 250px;
+      border-color: #2ecc71;
+  }
+
+  .box input[type = "email"]:focus{
+      max-width: 250px;
+      border-color: #2ecc71;
+  }
+
+  .box input[type = "number"]:focus{
+      max-width: 250px;
+      border-color: #2ecc71;
+  }
+
+  .quali{
+    max-width: 250px;
+  }
+
+  .icons{
+    display: absolute;
+    top:0px;
+    margin-right: 7px;
+  }
+
+  .apsitlogo{
+    margin-top: 8px;
+    margin-left: 10px;
+  }
+
+}

@@ -1,0 +1,71 @@
+{% extends "tpo/base.html"%}
+
+{% block content %}
+
+		{% if user.is_authenticated %}
+
+<h4>Total registrations:{{count}}</h4>
+
+
+<ul>
+	<table border=2>
+		<thead>
+			<tr>
+				<th width = "20%"><p>Name<p></th>
+				<th width = "20%"><p>Mobile Number<p></th>
+				<th width = "20%"><p>Email<p></th>
+				<th width = "20%"><p>College Name<p></th>
+				<th width = "20%"><p>Branch<p></th>
+				<th width = "20%"><p>Qualification<p></th>
+				<th width = "20%"><p>10th Passing Year<p></th>
+				<th width = "20%"><p>10th Percentage<p></th>
+                <th width = "20%"><p>12th Passing Year<p></th>
+                <th width = "20%"><p>12th Percentage<p></th>
+                <th width = "20%"><p>Diploma Passing Year<p></th>
+                <th width = "20%"><p>Diploma Percentage<p></th>
+                <th width = "20%"><p>Aggregate Graduation Pointer<p></th>
+                <th width = "20%"><p>Degree Passing Year<p></th>
+                <th width = "20%"><p>Nationality<p></th>
+				<th width = "20%"><p>TPO Name<p></th>
+				<th width = "20%"><p>TPO Number<p></th>
+				<th width = "20%"><p>TPO Email<p></th>
+
+			</tr>
+    	</thead>
+    	<tbody>
+
+		{% for j in studentdb %}
+		<tr>
+		<td>{{ j.name }}</td>
+		<td>{{ j.number2 }}</td>
+		<td>{{ j.email }}</td>
+		<td>{{ j.clg_name }}</td>
+		<td>{{ j.branch}}</td>
+		<td>{{ j.qualification }}</td>
+		<td>{{ j.passingyear10 }}</td>
+		<td>{{ j.percent10 }}</td>
+        <td>{{ j.passingyear12 }}</td>
+        <td>{{ j.percent12 }}</td>
+        <td>{{ j.diplomapassyear }}</td>
+        <td>{{ j.diplomapercent }}</td>
+        <td>{{ j.pointer }}</td>
+        <td>{{ j.degreepassyear }}</td>
+        <td>{{ j.nationality }}</td>
+		<td>{{ j.tponame }}</td>
+		<td>{{ j.tponumber }}</td>
+		<td>{{ j.tpoemail }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+</ul>
+
+  		{% else %}
+  		<form action="administrator/" method="POST">
+  		{% csrf_token %}
+		<input class = "button2" type="submit" value="Log in first" name="Submit" />
+		</form>
+
+  		{% endif %}
+
+{% endblock content %}

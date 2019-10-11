@@ -1,0 +1,341 @@
+body{
+  overflow:scroll;
+  margin: auto;
+  background-color: #000;
+}
+
+.maincontainer{
+  width: 80%;
+  margin:auto;
+}
+
+.container1{
+  position:relative;
+}
+
+.allWhite{
+  background-color: #FFF;
+}
+
+/*      MAIN maintemplate   */
+
+#maintemplate{
+  width: 100%;
+  height: 375px;
+  display: inline;
+}
+
+#testimonial-img{
+  position: absolute;
+  display: block;
+  margin-left: 42.5%;
+  top: 240px;
+  width: 230px;
+  border-radius: 50%;
+  border: 4px solid #FFF;
+}
+
+#register{
+  float: right;
+  /*margin:5px 150px;*/
+  padding: 5px 25px;
+  border: 2px solid  #b4ff46;
+  background-color: #000;/*#3EB35A;*/
+  color:  #b4ff46;
+  margin:0px;
+  margin-top: 20px;
+  margin-right:10%;
+  font-family: 'Red Hat Display', sans-serif;
+  letter-spacing: 2px;
+  font-weight: 900;
+  border-radius: 5px;
+}
+
+#register:hover {
+  background-color: #b4ff46;
+  border: 2px solid  #b4ff46;
+  color:  #000;
+}
+
+
+/*      NAVIGATION BAR      */
+
+#navbar {
+  position: absolute;
+  margin-left: 50%;
+  top: 0px;
+  float: right;
+  box-sizing: border-box;
+}
+
+.navoptions{
+  list-style: none;
+  font-family:"Montserrat", sans-serif;
+  font-weight: 700;
+  position: fixed;
+
+}
+
+.navoptions li{
+  float: left;
+}
+
+.navoptions a{
+  text-decoration: none;
+  color: #FFF;
+  padding-right: 1.6em;
+}
+
+/*Underline CSS transition*/
+
+/*      For Test1     */
+
+.test1 > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.test1 > a:hover {
+  color: #FFF;
+}
+
+.test1 > a:before {
+  content: "";
+  position: absolute;
+  width: 68%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.test1 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      For Test2     */
+
+.test2 > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.test2 > a:hover {
+  color: #FFF;
+}
+
+.test2 > a:before {
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.test2 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      For Test3     */
+
+.test3 > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.test3 > a:hover {
+  color: #FFF;
+}
+
+.test3 > a:before {
+  content: "";
+  position: absolute;
+  width: 69%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.test3 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*      For Test4     */
+
+.test4 > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.test4 > a:hover {
+  color: #FFF;
+}
+
+.test4 > a:before {
+  content: "";
+  position: absolute;
+  width: 83%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.test4 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*      For Test5     */
+
+.test5 > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.test5 > a:hover {
+  color: #FFF;
+}
+
+.test5 > a:before {
+  content: "";
+  position: absolute;
+  width: 83%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.test5 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*      For Test6     */
+
+.test6 > a {
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.test6 > a:hover {
+  color: #FFF;
+}
+
+.test6 > a:before {
+  content: "";
+  position: absolute;
+  width: 77%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #FFF;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.test6 > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+/*
+a:link {
+  color: green;
+}
+
+a:hover {
+  color: red;
+}
+
+a:visited{
+  background-color: red;
+}
+*/
+#upcomingdrives{
+  background-color: #FFF;
+  list-style: none;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+.floatLeft{
+  display: block;
+  float: left;
+  text-align: center;
+  width: 48%;
+  margin : 5px;
+  box-sizing: border-box;
+}
+
+.floatRight{
+  display: block;
+  float: right;
+  text-align: center;
+  width: 48%;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+section{
+  position: static;
+  margin-top: 200px;
+  box-sizing: border-box;
+}
+
+.border1{
+  border: 5px dotted red;
+}
+
+.clear{
+  clear: both;
+}

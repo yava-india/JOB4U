@@ -2,10 +2,13 @@
 
 {% block content %}
 
-		{% if user.is_authenticated %} 
+		{% if user.is_authenticated %}
 
 <h4>Total registrations:{{count}}</h4>
 <h4>Confirmed Presence by:{{count2}}</h4>
+<!--<h4>Total Apsit registrations:{{apsitcount}}</h4>-->
+<!--<h4>Total Apsit confirmations:{{apsitconf}}</h4>-->
+
 <ul>
 	<table border=2>
 		<thead>
@@ -43,9 +46,9 @@
   		<form action="administrator/" method="POST">
   		{% csrf_token %}
 		<input class = "button2" type="submit" value="Log in first" name="Submit" />
-		</form>	
-  		
-  		{% endif %}  		
+		</form>
+
+  		{% endif %}
 
 {% endblock content %}
 

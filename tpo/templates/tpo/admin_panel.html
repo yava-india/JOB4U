@@ -12,62 +12,61 @@
 	</div>
 	    {% endfor %}
 			{% endif %}
+    </div>
+		<div>
 
-		<div class = "center">
 
-			<div class = "borderAP">
-			<h2>A 1 Salasar</h2>
-			<form method ="POST">
-			{% csrf_token %}
-			<button class="button3" type="submit" name="a_1_Salasar_db">Email database</button>
-			</form>
-			<form action="a_1_Salasardb" method="POST">
-			{% csrf_token %}
-			<input class = "button4" type="submit" value="View Database"  />
-			</form>
+            <div class = "borderAP">
+    			<h2>IBM 7 October</h2>
+    			<form action="ibmdb7" method="POST">
+    			{% csrf_token %}
+    			<input class = "button4" type="submit" value="View Database"  />
+    			</form>
 			</div>
 
-      <div class = "borderAP">
-      <h2>Amazon</h2>
-      <form method ="POST">
-      {% csrf_token %}
-      <button class="button3" type="submit" name="email_amazon_db">Email database</button>
-      </form>
-      <form action="amazondb" method="POST">
-      {% csrf_token %}
-      <input class = "button4" type="submit" value="View Database" name="view_amazon_db" />
-      </form>
-      </div>
 
-			<div class = "borderAP">
-			<h2>Google</h2>
 
-			<form method ="POST">
-			{% csrf_token %}
-			<button class="button3" type="submit" name="email_google_db">Email database</button>
-			</form>
-
-			<form action="googledb" method="POST">
-			{% csrf_token %}
-			<input class = "button4" type="submit" value="View Database" name="view_google_db" />
-			</form>
+            <div class = "borderAP">
+    			<h2>IBM 6 October</h2>
+    			<form action="ibmdb" method="POST">
+    			{% csrf_token %}
+    			<input class = "button4" type="submit" value="View Database"  />
+    			</form>
 			</div>
 
 			<div class = "borderAP">
-			<h2>Headstrait</h2>
-			<form method ="POST">
-			{% csrf_token %}
-			<button class="button3" type="submit" name="email_headstrait_db">Email database</button>
-			</form>
-			<form action="headstraitdb" method="POST">
-			{% csrf_token %}
-			<input class = "button4" type="submit" value="View Database" name="view_headstrait_db" />
-			</form>
+    			<h2>A 1 Salasar</h2>
+
+    			<form action="a_1_Salasardb" method="POST">
+    			{% csrf_token %}
+    			<input class = "button4" type="submit" value="View Database"  />
+    			</form>
 			</div>
 
-		</div>
+            <div class = "borderAP">
+    			<h2>LTI</h2>
 
-  		</div>
+    			<form action="ltidb" method="POST">
+    			{% csrf_token %}
+    			<input class = "button4" type="submit" value="View Database"  />
+    			</form>
+    			</div>
+
+			<!--<div class = "borderAP">-->
+   <!-- 			<h2>Headstrait</h2>-->
+   <!-- 			<form method ="POST">-->
+   <!-- 			{% csrf_token %}-->
+   <!-- 			<button class="button3" type="submit" name="email_headstrait_db">Email database</button>-->
+   <!-- 			</form>-->
+   <!-- 			<form action="headstraitdb" method="POST">-->
+   <!-- 			{% csrf_token %}-->
+   <!-- 			<input class = "button4" type="submit" value="View Database" name="view_headstrait_db" />-->
+   <!-- 			</form>-->
+			<!--</div>-->
+
+
+
+
   	</div>
 
   		{% else %}

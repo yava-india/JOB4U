@@ -1,0 +1,221 @@
+{% load static%}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Css File links -->
+    <link rel="stylesheet" href="{% static 'tpo/Company.css'%}">
+
+    <!-- Javascript File links -->
+    <script src="{% static 'tpo/main.js'%}"></script>
+
+    <!-- Google Fonts links -->
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>job4u.info</title>
+
+  </head>
+
+  <body>
+
+    <header>
+        <a href="/lti">
+      <img class = "floatLeft" src="{% static 'tpo/job4u.png'%}" alt="JOB4U-Logo">
+      </a>
+      <!--<img class = "apsitlogo" src="{% static 'tpo/APSIT (1).png'%}" alt="APSIT-LOGO">-->
+      <div class="header-right">
+        <div class = "icons"><a href="https://www.facebook.com/tpoApsit/" target="_blank"><img src="{% static 'tpo/iconfinder_f-facebook_256_282470.png'%}" alt="Facebook"></a></div>
+        <div class = "icons"><a href="https://www.instagram.com/apsit_thane/" target="_blank"><img src="{% static 'tpo/iconfinder_Instagram_1298747.png'%}" alt="Instagram"></a></div>
+        <div class = "icons"><a href="https://twitter.com/APSIT_THANE" target="_blank"><img src="{% static 'tpo/iconfinder_twitter_834708.png'%}" alt="Twitter"></a></div>
+        <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="{% static 'tpo/iconfinder_linkedin_386655.png'%}" alt="LinkedIn"></a></div>
+      </div>
+      <!-- <img class = "floatRight" src="APSIT.png" alt="APSIT-LOGO"> -->
+    </header>
+
+    <div class="containerFK">
+
+      <div class="FaisalKhan">
+        <img  class = "faisalKhanjpg" src="{% static 'tpo/faisalsir.jpg'%}" alt="FaisalKhan">
+        <p><a href="https://www.linkedin.com/in/faisalkhan143/" target="_blank"><span class = "makebold">Prof. Faisal Khan</span></a></p>
+        <p>HEAD - TPO, APSIT</p>
+        <p>Joint Secretary, MATPO</p>
+      </div>
+
+    </div>
+
+    <div class="container1" id = "formStart">
+          <!-- <img class = "collegeLogo" src="apsitlogo.png" alt="College Logo">
+          <h2>A.P. SHAH INSTITUTE OF TECHNOLOGY</h2> -->
+        <img class = "companyLogo" src="{% static 'tpo/lti.png'%}" alt="Company Name">
+        <h3>LTI Registration Link</h3>
+<h3>
+    			{% if messages %}
+	    {% for message in messages %}
+  <div class="alert alert-{{ message.tags }}">
+			{{ message }}
+	</div>
+	    {% endfor %}
+			{% endif %}
+</h3>
+    </div>
+
+
+
+    <div class="container2" id = "container2">
+
+      <h5><span class = "redColor">* marked fields are compusory</span></h5>
+
+      <form method="POST" name="register" class="box">
+	{% csrf_token %}
+        <div>
+  		    <h4><span class = "redColor">* </span>Name</h4>
+  		    <p>
+  		        <input type="text" name="Student_Name" placeholder="Name  Middlename  Surname" required>
+  		    </p>
+        </div>
+
+        <div>
+  		    <h4><span class = "redColor">* </span>Mobile Number</h4>
+  		    <p>
+  		        <input type="number" name="Mobile Number" placeholder="Eg: 9999999999" required>
+  		    </p>
+        </div>
+
+        <div>
+  		    <h4><span class = "redColor">* </span>Email</h4>
+  		    <p>
+  		        <input type="email" name="Email" placeholder="email@email.com" required>
+  		    </p>
+        </div>
+
+        <div>
+  		    <h4><span class = "redColor">* </span>College Name</h4>
+  		    <p>
+  		        <input type="text" list="clgs" name="College_Name" placeholder="College Name" required>
+  		    </p>
+        </div>
+
+        <div>
+  		    <h4><span class = "redColor">* </span>Branch</h4>
+  		    <select class = "quali" name="branchii">
+              <option value="Information_Technology">Information Technology</option>
+              <option value="Information_Science">Information Science</option>
+              <option value="Computer_Science">Computer Science</option>
+              <option value="Electronics">Electronics</option>
+            </select>
+        </div>
+
+        <div>
+  		    <h4><span class = "redColor">* </span>Qualification</h4>
+
+  	      <select class="quali"  name="qualii">
+		        <option value="Bsc">Bsc</option>
+		        <option value="BCS">BCS</option>
+		        <option value="BCA">BCA</option>
+		        <option value="Diploma">Diploma</option>
+		      </select>
+		     </div>
+
+         <div>
+   		    <h4><span class = "redColor">* </span>10th Passing Year</h4>
+   		    <p>
+   		        <input type="number" name="10passyear" placeholder="Eg:2012" required>
+   		    </p>
+         </div>
+
+         <div>
+   		    <h4><span class = "redColor">* </span>10th Percentage</h4>
+   		    <p>
+   		        <input type="number" name="10percent" placeholder="Eg:80" step="0.01"  onchange = "checkMarks1()" required>
+   		    </p>
+          <p id = "Marks1"></p>
+         </div>
+
+         <div>
+   		    <h4>12th Passing Year</h4>
+   		    <p>
+   		        <input type="number" name="12passyear" placeholder="Eg:2012" >
+   		    </p>
+         </div>
+
+         <div>
+   		    <h4>12th Percentage</h4>
+   		    <p>
+   		        <input type="number" name="12percent" step="0.01" placeholder="Eg:80"  onchange = "checkMarks2()">
+   		    </p>
+          <p id = "Marks2"></p>
+         </div>
+
+         <div>
+   		    <h4>Diploma Passing Year</h4>
+   		    <p>
+   		        <input type="number" name="diplomapassyear" placeholder="Eg:2012" >
+   		    </p>
+ 		     </div>
+
+         <div>
+   		    <h4>Diploma Percentage</h4>
+   		    <p>
+   		        <input type="number" name="diplomapercent" step="0.01" placeholder="Eg:80" onchange = "checkMarks3()" >
+   		    </p>
+          <p id = "Marks3"></p>
+         </div>
+
+        <div>
+  		    <h4><span class = "redColor">* </span>Degree Passing Year (only for students passing in 2020)</h4>
+
+  	      <select class="quali"  name="degreee">
+		        <option value="2020">2020</option>
+		      </select>
+		     </div>
+
+
+         <div>
+   		    <h4><span class = "redColor">* </span>Aggregate Graduation Pointer</h4>
+   		    <p>
+   		        <input type="number" name="aggpointer" step="0.01" placeholder="Eg:8.6" required>
+   		    </p>
+         </div>
+
+         <div>
+   		    <h4><span class = "redColor">* </span>Name of Training and Placement Officer (of your College)</h4>
+   		    <p>
+   		        <input type="text" name="tpo_name" placeholder="Eg: Faisal Khan" required>
+   		    </p>
+         </div>
+
+         <div>
+   		    <h4><span class = "redColor">* </span>Mobile Number of Training and Placement Officer</h4>
+   		    <p>
+   		        <input type="number" name="tpo_number" placeholder="Eg: 9999999999" required>
+   		    </p>
+         </div>
+
+         <div>
+          <h4><span class = "redColor">* </span>Email of Training and Placement Officer</h4>
+          <p>
+              <input type="email" name="tpo_email" placeholder="email@email.com" required>
+          </p>
+         </div>
+
+         <div>
+         <h4><span class = "redColor">* </span>Nationality</h4>
+         <p class = "radioButton"><input name="nation" type="radio" name="nationality" value="Indian" checked> Indian</p>
+         <p class = "radioButton"><input name="nation" type="radio" name="nationality" value="other"> Other</p>
+        </div>
+
+        <button class="button1 " type="submit" name="register" id = "Register"> Register </button>
+
+      </form>
+
+    </div>
+
+  </body>
+
+</html>

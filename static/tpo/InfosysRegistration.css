@@ -1,0 +1,263 @@
+body{
+  font-family: 'Big Shoulders Text', cursive;
+  margin: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  text-decoration: none;
+}
+
+header{
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* text-align: center; */
+  /* background-image: linear-gradient(red, yellow); */
+  /* background-color: black; */
+  margin: 0px;
+  top: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  height: 40px;
+}
+
+.stayLeft{
+  position: absolute;
+  left: 0px;
+}
+
+.makeCenter{
+  position: absolute;
+  top: 0;
+  display: inline;
+  text-align: center;
+  width:100%;
+  margin: 0px;
+}
+
+.makeCenter p{
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px;
+  color: white;
+  font-size: 22px;
+}
+
+.containerFK{
+  margin:0px;
+  /* background-color: #D966FF;*/
+  /* background-image: linear-gradient(#0000b3, lightblue); */
+  background-color:  #80bfff;
+  width: 100%;
+  /* max-height: 440px; */
+  position: relative;
+}
+
+.FaisalKhan{
+  margin:auto;
+  /* margin-top: 100px; */
+  text-align: center;
+  width: 80%;
+  text-shadow: 1.7px 1.7px black;
+  /* margin-bottom: 25px; */
+  padding-bottom: 15px;
+}
+
+
+.FaisalKhan a{
+  text-decoration: none;
+  color: white;
+}
+
+.faisalKhanjpg{
+  border-radius: 50%;
+  width: 200px;
+  margin: 10px;
+  /* display: block; */
+  margin-top: 100px;
+  border: 5px solid white;
+}
+
+.FaisalKhan p{
+  cursor: default;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.makebold{
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.icons{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.icons a{
+  display: inline-block;
+  padding: 0;
+
+}
+
+.icons img{
+  height: 30px;
+}
+
+.header-right{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: center;
+}
+
+.container1{
+  text-align: center;
+  width: 80%;
+  /* background-image: linear-gradient(#0000b3, lightblue); */
+  margin: auto;
+  padding-top: 45px;
+}
+
+.container1 h3{
+  color: white;
+  cursor: default;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  margin: 0px;
+  padding-bottom: 35px;
+  text-shadow: 1.7px 1.7px black;
+  /* margin-bottom: 50px; */
+  /* background-image: linear-gradient(darkblue, lightblue); */
+  font-size: 22px;
+}
+
+.backgroundContainer{
+  width: 100%;
+  /* background-image: linear-gradient(#0000b3, lightblue); */
+  background-image: linear-gradient( #80bfff, #0000b3);
+
+}
+
+.companyLogo{
+  /* width: 250px; */
+  width: auto;
+  height: 200px;
+  /* height: auto; */
+}
+
+#formStart img{
+  margin-top: 50px;
+  border-radius: 50%;
+}
+
+.container{
+  margin: auto;
+  /* background-color: lightblue; */
+  /* margin-top: 50px; */
+  text-align: center;
+  width: 100%;
+}
+
+.container img{
+  width: 45%;
+}
+
+.image1{
+  display: inline-block;
+  /* float: left; */
+  /* width: 700px; */
+  padding: 10px;
+}
+
+.image1 img{
+  height: 520px;
+  width: 600px;
+}
+
+.image2{
+  display: inline-block;
+  /* float: left; */
+  /* width: 700px; */
+  padding: 10px;
+}
+
+.image2 img{
+  height: 520px;
+  width: 600px;
+}
+
+.clear{
+  clear: both;
+}
+
+.container2{
+  margin: auto;
+  /* background-color: lightblue; */
+  text-align: center;
+  width: 100%;
+}
+
+.container2 iframe{
+  margin-top: 80px;
+  width: 1200px;
+}
+
+footer{
+  padding: 15px;
+  text-align: center;
+  background: white;
+}
+
+footer a{
+  color: black;
+}
+
+@media (max-width: 670px){
+
+  .containerFK{
+    width: 100%;
+  }
+
+  .container img{
+    width: 100%;
+  }
+
+  .container2 iframe{
+    width: 100%;
+  }
+
+  .makeCenter span{
+    display: none;
+  }
+
+  .makeCenter p:after{
+    /* content */
+    content: "APSIT";
+    font-size: 25px;
+  }
+
+  .icons{
+    margin-right: 5px;
+  }
+
+}
+
+@media (max-width: 1000px){
+
+  .containerFK{
+    width: 100%;
+  }
+
+  .container img{
+    width: 100%;
+  }
+
+  .container2 iframe{
+    width: 100%;
+  }
+
+}

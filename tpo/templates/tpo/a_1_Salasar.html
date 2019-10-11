@@ -4,9 +4,9 @@
 
 
 <div id="first">
-	<div class = "container">
-		<img  class="onlyCenter" src= {% static 'tpo/Images/salasar-logo.png' %} height=80 width=260 >
-		<h3 class="onlyCenter companyName"> A 1 Salasar campus drive</h3>
+	<div class = "container1">
+		<img src= {% static 'tpo/Images/salasar-logo.png' %}>
+		<h3 class="companyName">A 1 Salasar Campus Drive</h3>
 	</div>
 			{% if messages %}
 	    {% for message in messages %}
@@ -47,9 +47,9 @@
 				<p>
 				    <input type="email" name="Email" placeholder="Email" required></p>
 				<p>
-				    <input type="text" name="College_Name" placeholder="College Name" required></p>
+				    <input type="text" list="clgs" name="College_Name" placeholder="College Name" required></p>
 				<p>
-				    <input type="text" name="Branch" placeholder="Branch" required></p>
+				    <input type="text" list="branches"name="Branch" placeholder="Branch" required></p>
 				<p>
 				    <input type="text" name="Report" placeholder="Reporting Time"></p>
 				<p>
@@ -60,6 +60,24 @@
 				</form>
 
 	</div><!--END OF floatRight-->
+    <datalist id="clgs">
+	<option>A.P. Shah Institute Of Technology</option>
+	<option>Xavier Institute of Engineering</option>
+	<option>New horizon institute of technology and management</option>
+	<option>Terna engineering college</option>
+	<option><option>
+	<option><option>
+	<option><option>
+	</datalist>
+
+    <datalist id="branches">
+        <option>Computer Engineering</option>
+        <option>Information technology</option>
+        <option>Electronics & Telecommunication Engineering</option>
+        <option>Mechanical Engineering</option>
+        <option>Civil Engineering<option>
+        <option><option>
+    </datalist>
 
 	<div class="clear1"></div>
 
