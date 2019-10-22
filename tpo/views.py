@@ -7,6 +7,13 @@ from .models import Lti_23_oct
 from .models import IBM
 from .models import IbmResult
 from .models import IBM7oct
+from .models import infosys15oct
+from .models import infosys16oct
+from .models import Infosys15Result
+from .models import Infosys16Result
+from .models import finalinfosys
+from .models import finallistinfosys
+from .models import zycus
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -15,30 +22,30 @@ import csv
 import os
 
 
-if not os.path.isfile('./A_1_Salasar.csv'):
-	with open('A_1_Salasar.csv', 'w', newline='') as csvfile:
-		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Reporting Time','Profile'])
+# if not os.path.isfile('./A_1_Salasar.csv'):
+# 	with open('A_1_Salasar.csv', 'w', newline='') as csvfile:
+# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Reporting Time','Profile'])
 
-if not os.path.isfile('./Google.csv'):
-	with open('Google.csv', 'w', newline='') as csvfile:
-		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
+# if not os.path.isfile('./Google.csv'):
+# 	with open('Google.csv', 'w', newline='') as csvfile:
+# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
 
-if not os.path.isfile('./Headstrait.csv'):
-	with open('Headstrait.csv', 'w', newline='') as csvfile:
-		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
+# if not os.path.isfile('./Headstrait.csv'):
+# 	with open('Headstrait.csv', 'w', newline='') as csvfile:
+# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
 
-if not os.path.isfile('./Amazon.csv'):
-	with open('Amazon.csv', 'w', newline='') as csvfile:
-		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
+# if not os.path.isfile('./Amazon.csv'):
+# 	with open('Amazon.csv', 'w', newline='') as csvfile:
+# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
 
-if not os.path.isfile('./ibm.csv'):
-	with open('Amazon.csv', 'w', newline='') as csvfile:
-		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch'])
+# if not os.path.isfile('./ibm.csv'):
+# 	with open('Amazon.csv', 'w', newline='') as csvfile:
+# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
+# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch'])
 
 
 
@@ -66,9 +73,26 @@ def thank(request):
 def Infosys(request):
     return render(request,'tpo/infosys.html')
 
+def Infofinalresult(request):
+    studentdb = finalinfosys.objects.all()
+    return render(request,'tpo/infoclglist.html', {'studentdb':studentdb})
+
+def Infofinalnameresult(request):
+    studentdb = finallistinfosys.objects.all()
+    return render(request,'tpo/infofinalnamelist.html', {'studentdb':studentdb})
+
 def IBmresult(request):
     studentdb = IbmResult.objects.all()
     return render(request,'tpo/Ibmresult.html', {'studentdb':studentdb})
+
+def INfosys15result(request):
+    studentdb = Infosys15Result.objects.all()
+    return render(request,'tpo/info3result.html', {'studentdb':studentdb})
+
+def INfosys16result(request):
+    studentdb = Infosys16Result.objects.all()
+    # count = Infosys16Result.objects.all().count()
+    return render(request,'tpo/info2result.html', {'studentdb':studentdb})
 
 def index(request):
 	'''if request.method == 'POST':
@@ -113,6 +137,24 @@ def ibmdatabase(request):
 	count2 = IBM.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/ibmdatabase.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
+def info15database(request):
+	studentdb = infosys15oct.objects.all()
+	count = infosys15oct.objects.all().count()
+	count2 = infosys15oct.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/inforesult.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def info16database(request):
+	studentdb = infosys16oct.objects.all()
+	count = infosys16oct.objects.all().count()
+	count2 = infosys16oct.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/inforesult.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def zycusdatabase(request):
+	studentdb = zycus.objects.all()
+	count = zycus.objects.all().count()
+	count2 = zycus.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/inforesult.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
 def newibmdatabase(request):
 	studentdb = IBM7oct.objects.all()
 	count = IBM7oct.objects.all().count()
@@ -135,27 +177,27 @@ def admin_panel(request):
 		messages.success(request, "Emailed Database.")
 	#return render(request, 'tpo/admin_panel.html')
 
-	elif request.method == 'POST' and 'email_google_db' in request.POST:
-		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
-		msg.content_subtype = "html"
-		msg.attach_file('Google.csv')
-		msg.send()
-		messages.success(request, "Emailed Database.")
-	#return render(request, 'tpo/admin_panel.html')
+# 	elif request.method == 'POST' and 'email_google_db' in request.POST:
+# 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
+# 		msg.content_subtype = "html"
+# 		msg.attach_file('Google.csv')
+# 		msg.send()
+# 		messages.success(request, "Emailed Database.")
+# 	#return render(request, 'tpo/admin_panel.html')
 
-	elif request.method == 'POST' and 'a_1_Salasar_db' in request.POST:
-		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
-		msg.content_subtype = "html"
-		msg.attach_file('A_1_Salasar.csv')
-		msg.send()
-		messages.success(request, "Emailed Database.")
+# 	elif request.method == 'POST' and 'a_1_Salasar_db' in request.POST:
+# 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
+# 		msg.content_subtype = "html"
+# 		msg.attach_file('A_1_Salasar.csv')
+# 		msg.send()
+# 		messages.success(request, "Emailed Database.")
 
-	elif request.method == 'POST' and 'ltiemail_db' in request.POST:
-		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER, ['vedantmh@gmail.com','amvichare@apsit.edu.in','tpo@apsit.edu.in'])
-		msg.content_subtype = "html"
-		msg.attach_file('lti.csv')
-		msg.send()
-		messages.success(request, "Emailed Database.")
+# 	elif request.method == 'POST' and 'ltiemail_db' in request.POST:
+# 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER, ['vedantmh@gmail.com','amvichare@apsit.edu.in','tpo@apsit.edu.in'])
+# 		msg.content_subtype = "html"
+# 		msg.attach_file('lti.csv')
+# 		msg.send()
+# 		messages.success(request, "Emailed Database.")
 
 	elif request.method == 'POST' and 'email_headstrait_db' in request.POST:
 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
@@ -204,6 +246,9 @@ def lti(request):
 			filewriter.writerow([pyname, pymob, pyemail, pyclgname, pybranch, pyqual, py10pass, py10percent, py12pass, py12percent, pydippass, pydippercent, pypointer,pydegreepass, pynation, pytponame, pytpono, pytpoemail])
 		return render(request, 'tpo/result.html')
 
+def newlti(request):
+    return render(request,'tpo/newlti.html')
+
 
 def a_1_Salasar(request):
     if request.method == 'GET':
@@ -251,20 +296,22 @@ def ibm(request):
         return render(request, 'tpo/ibm.html')
 
     if request.method == 'POST' and 'register' in request.POST:
-        pyname = request.POST['Student_Name']#[0:30]
+        pyfname = request.POST['Student_Name']
+        pysname = request.POST['Student_Name2']
         pymob = request.POST['Mobile Number']#[0:10]
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
-        pybranch = request.POST['Branch']#[0:20]
+        pybranch = request.POST['Branch']
+        # pyslot = request.POST['Slot']#[0:20]
 
-        if IBM7oct.objects.filter(number2=pymob).exists():
+        if zycus.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if IBM7oct.objects.filter(email=pyemail).exists():
+        if zycus.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = IBM7oct(name=pyname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, confirmation=1)
+        data2 = zycus(firstname=pyfname, lastname=pysname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         # with open('ibm.csv', 'a', newline='') as csvfile:
@@ -275,8 +322,8 @@ def ibm(request):
 
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
-        if IBM7oct.objects.filter(number2=pymob2).exists():
-            IBM7oct.objects.filter(number2=pymob2).update(confirmation=1)
+        if zycus.objects.filter(number2=pymob2).exists():
+            zycus.objects.filter(number2=pymob2).update(confirmation=1)
             messages.success(request, f"Presence confirmed for {pymob2}")
             return render(request, 'tpo/ibm.html')
         else:

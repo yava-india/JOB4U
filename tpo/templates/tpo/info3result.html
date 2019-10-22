@@ -25,13 +25,11 @@
   <body>
 
     <header>
-        <a href="/lti">
-      <img class = "floatLeft" src="{% static 'tpo/job4u.png'%}" alt="JOB4U-Logo">
-      </a>
-      <!--<img class = "apsitlogo" src="{% static 'tpo/APSIT (1).png'%}" alt="APSIT-LOGO">-->
+      <img  class = "stayLeft" src="{% static 'tpo/job4u.png'%}" alt="JOB4U-Logo">
+      <div class="makeCenter"><p><span>A. P. SHAH INSTITUTE OF TECHNOLOGY</span></p></div>
       <div class="header-right">
-        <div class = "icons"><a href="https://www.facebook.com/tpoApsit/" target="_blank"><img src="{% static 'tpo/iconfinder_f-facebook_256_282470.png'%}" alt="Facebook"></a></div>
-        <div class = "icons"><a href="https://www.instagram.com/apsit_thane/" target="_blank"><img src="{% static 'tpo/iconfinder_Instagram_1298747.png'%}" alt="Instagram"></a></div>
+<div class = "icons"><a href="https://www.facebook.com/tpoApsit/" target="_blank"><img src="{% static 'tpo/iconfinder_f-facebook_256_282470.png'%}" alt="Facebook"></a></div>
+        <div class = "icons"><a href="https://www.instagram.com/job4u_info/" target="_blank"><img src="{% static 'tpo/iconfinder_Instagram_1298747.png'%}" alt="Instagram"></a></div>
         <div class = "icons"><a href="https://twitter.com/APSIT_THANE" target="_blank"><img src="{% static 'tpo/iconfinder_twitter_834708.png'%}" alt="Twitter"></a></div>
         <div class = "icons"><a href="https://www.linkedin.com/in/apsitthane/" target="_blank"><img src="{% static 'tpo/iconfinder_linkedin_386655.png'%}" alt="LinkedIn"></a></div>
       </div>
@@ -45,17 +43,21 @@
         <p><a href="https://www.linkedin.com/in/faisalkhan143/" target="_blank"><span class = "makebold">Prof. Faisal Khan</span></a></p>
         <p>HEAD - TPO, APSIT</p>
         <p>Joint Secretary, MATPO</p>
+        <h3>Short Listed Students of 15th October Infosys Drive<h3>
       </div>
 
     </div>
 <ul>
+
+    <!--<h4>Total :{{studentdb}}</h4>-->
     <div class ="FaisalKhan">
 	<table border=2 style="width: 50%;
     margin-left:auto;
     margin-right:auto;" align:center>
 		<thead style="background-color: lightblue;">
 			<tr>
-				<th width = "20%"><p>Name<p></th>
+				<th width = "20%"><p>First Name<p></th>
+				<th width = "20%"><p>Last Name<p></th>
 				<th width = "40%"><p>College Name<p></th>
 				<!--<th width = "20%"><p>Gender<p></th>-->
 
@@ -65,8 +67,9 @@
 
 		{% for j in studentdb %}
 		<tr>
-		<td>{{ j.name }}</td>
+		<td>{{ j.firstname }}</td>
 		<td>{{ j.clg_name }}</td>
+		<td>{{ j.lastname }}</td>
 		<!--<td>{{ j.gender}}</td>-->
 		</tr>
 		{% endfor %}

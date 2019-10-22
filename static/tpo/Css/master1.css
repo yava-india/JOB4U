@@ -173,6 +173,25 @@ header{
     background: rgba(0, 0, 0, 0.9);
 }
 
+.marquee-lti{
+    position: relative;
+    /*color: white;*/
+    /*margin: 10px;*/
+    top: 90px;
+    /*font-size: 24px;*/
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    /*left: 200px;*/
+    /*width: 400px;*/
+}
+
+.marquee-lti p{
+    color: white;
+    font-size: 30px;
+    margin: 0px;
+}
+
 .quote1{
   overflow: hidden;
   text-align: left;
@@ -445,7 +464,7 @@ header{
 .udtop{
   background-image: url("../Images/TPO_Template4.png");
   background-size: cover;
-  height: 210px;
+  height: 220px;
 }
 
 .sameDesign{
@@ -525,7 +544,7 @@ header{
 .ortop{
   background-image: url("../Images/TPO_Template4.png");
   background-size: cover;
-  height: 270px;
+  height: 220px;
 }
 
 .orbottom{
@@ -562,7 +581,7 @@ header{
 .igtop{
   background-image: url("../Images/TPO_Template4.png");
   background-size: cover;
-  height: 260px;
+  height: 220px;
 }
 
 .igbottom{
@@ -648,7 +667,7 @@ header{
 .vgtop{
   background-image: url("../Images/TPO_Template4.png");
   background-size: cover;
-  height: 210px;
+  height: 220px;
 }
 
 .vgbottom{
@@ -682,7 +701,7 @@ header{
 .rutop{
   background-image: url("../Images/TPO_Template4.png");
   background-size: cover;
-  height: 210px;
+  height: 220px;
 }
 
 .rubottom{

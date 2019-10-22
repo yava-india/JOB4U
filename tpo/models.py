@@ -4,11 +4,67 @@ from django.db import models
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
 
+class zycus(models.Model):
+    firstname = models.CharField(max_length=60)
+    lastname = models.CharField(max_length=60)
+    number2 = models.CharField(max_length=100)
+    email = models.CharField(max_length=50)
+    clg_name = models.CharField(max_length=100)
+    branch = models.CharField(max_length=40)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+
+class finalinfosys(models.Model):
+    clg_name = models.CharField(max_length=120)
+    count = models.CharField(max_length=40)
+
+class finallistinfosys(models.Model):
+    firstname = models.CharField(max_length=60)
+    middlename = models.CharField(max_length=60)
+    lastname = models.CharField(max_length=60)
+    clg_name = models.CharField(max_length=120)
+    branch = models.CharField(max_length=40)
+
+
 class IbmResult(models.Model):
     name = models.CharField(max_length=60)
+    # lastname = models.CharField(max_length=60)
     clg_name = models.CharField(max_length=120)
     gender = models.CharField(max_length=40)
 
+class Infosys15Result(models.Model):
+    firstname = models.CharField(max_length=60)
+    lastname = models.CharField(max_length=60, blank=True)
+    clg_name = models.CharField(max_length=120)
+
+class Infosys16Result(models.Model):
+    firstname = models.CharField(max_length=60)
+    lastname = models.CharField(max_length=60, blank=True)
+    clg_name = models.CharField(max_length=120)
+
+class infosys15oct(models.Model):
+    email = models.CharField(max_length=50)
+    firstname = models.CharField(max_length=60)
+    lastname = models.CharField(max_length=60)
+    number2 = models.CharField(max_length=100)
+    #  = models.CharField(max_length=40)
+    # typedegre= models.CharField(max_length=40)
+    # aggpointer = models.CharField(max_length=40)
+    clg_name = models.CharField(max_length=100)
+    slot = models.CharField(max_length=50, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+class infosys16oct(models.Model):
+    email = models.CharField(max_length=50)
+    firstname = models.CharField(max_length=60)
+    lastname = models.CharField(max_length=60)
+    number2 = models.CharField(max_length=100)
+    #  = models.CharField(max_length=40)
+    # typedegre= models.CharField(max_length=40)
+    # aggpointer = models.CharField(max_length=40)
+    clg_name = models.CharField(max_length=100)
+    slot = models.CharField(max_length=50, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
 
 class Google(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)

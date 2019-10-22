@@ -55,6 +55,22 @@ header{
   position: relative;
 }
 
+.containerFK-lti{
+  margin:0px;
+   /*background-color: #0000b3;*/
+   background-image: linear-gradient(#0000b3, lightblue);
+  /*background-color:  #80bfff;*/
+  /* max-height: 440px; */
+  position: relative;
+}
+
+.marquee-lti{
+    color: red;
+    margin: 10px;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
 .FaisalKhan{
   margin:auto;
   /* margin-top: 100px; */
@@ -65,6 +81,23 @@ header{
   padding-bottom: 15px;
 }
 
+.resultTableContainer{
+    padding-inline-start: 0px;
+    margin: auto;
+}
+
+.resultTable{
+    margin: auto;
+    width: 100%;
+}
+
+.resultTable th{
+    max-width = "19%";
+}
+
+.resultTable td{
+    text-align: center;
+}
 
 .FaisalKhan a{
   text-decoration: none;
@@ -73,13 +106,13 @@ header{
 
 .faisalKhanjpg{
   background-color: white;
-  border-radius: 10%;
+  border-radius: 50%;
   /*border-radius: 50%;*/
   width: 200px;
   margin: 10px;
   /* display: block; */
   margin-top: 100px;
-  border: 5px solid white;
+  border: 5px solid black;
 }
 
 .FaisalKhan p{
@@ -111,6 +144,13 @@ header{
   height: 30px;
 }
 
+.job4uLogo a{
+  height: 30px;
+  width: 90px;
+  display: inline-block;
+  padding: 0;
+}
+
 .header-right{
   position: absolute;
   top: 0px;
@@ -140,9 +180,65 @@ header{
   font-size: 22px;
 }
 
+.container1 h2{
+  color: white;
+  cursor: default;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  margin: 0px;
+  padding-bottom: 20px;
+  text-shadow: 1.7px 1.7px black;
+  /* margin-bottom: 50px; */
+  /* background-image: linear-gradient(darkblue, lightblue); */
+  font-size: 22px;
+}
+
+.container1-lti{
+  text-align: center;
+  width: 80%;
+  /* background-image: linear-gradient(#0000b3, lightblue); */
+  margin: auto;
+  /*padding-top: 45px;*/
+}
+
+.container1-lti h3{
+  color: black;
+  cursor: default;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  margin: 0px;
+  padding-bottom: 35px;
+  /*text-shadow: 1.7px 1.7px black;*/
+  /* margin-bottom: 50px; */
+  /* background-image: linear-gradient(darkblue, lightblue); */
+  font-size: 22px;
+}
+
+.container1-lti h2{
+  color: black;
+  cursor: default;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  margin: 0px;
+  padding-bottom: 20px;
+  /*text-shadow: 1.7px 1.7px black;*/
+  /* margin-bottom: 50px; */
+  /* background-image: linear-gradient(darkblue, lightblue); */
+  font-size: 22px;
+}
+
 .backgroundContainer{
   width: 100%;
    background-image: linear-gradient(#0000b3, #80bfff);
+  /*background-image: linear-gradient( #80bfff, #0000b3);*/
+
+}
+.backgroundContainer1{
+  /*width: 100%;*/
+  /* background-image: linear-gradient(#0000b3, #80bfff);*/
   /*background-image: linear-gradient( #80bfff, #0000b3);*/
 
 }
@@ -154,9 +250,30 @@ header{
   /* height: auto; */
 }
 
+.companyLogolti{
+  /* width: 250px; */
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  /* height: auto; */
+}
+
 #formStart img{
   margin-top: 50px;
   border-radius: 50%;
+}
+
+#formStart1 img{
+  margin-top: 50px;
+  /*border-radius: 50%;*/
+}
+
+.companyLogolti{
+  /* width: 250px; */
+  width: auto;
+  height: 150px;
+  background-color: white;
+  /* height: auto; */
 }
 
 .container{
@@ -179,8 +296,10 @@ header{
 }
 
 .image1 img{
-  height: 520px;
-  width: 600px;
+  /*height: 500px;*/
+  height: auto;
+  width: 550px;
+  /*width: auto;*/
 }
 
 .image2{
@@ -191,8 +310,38 @@ header{
 }
 
 .image2 img{
-  height: 520px;
-  width: 600px;
+  /*height: 500px;*/
+  height: auto;
+  width: 550px;
+  /*width: auto;*/
+}
+
+.image1-lti{
+  display: inline-block;
+  /* float: left; */
+  /* width: 700px; */
+  padding: 10px;
+}
+
+.image1-lti img{
+  /*height: 500px;*/
+  height: 600px;
+  width: 550px;
+  /*width: auto;*/
+}
+
+.image2-lti{
+  display: inline-block;
+  /* float: left; */
+  /* width: 700px; */
+  padding: 10px;
+}
+
+.image2-lti img{
+  /*height: 500px;*/
+  height: 600px;
+  width: 550px;
+  /*width: auto;*/
 }
 
 .clear{
@@ -209,6 +358,7 @@ header{
 
 .container2 iframe{
   margin-top: 80px;
+  overflow-y: hidden;
   /*width: 1200px;*/
 }
 
@@ -245,6 +395,36 @@ footer a{
 
   .container img{
     width: 100%;
+    /*width: auto;*/
+  }
+
+  .image1 img{
+      width: 100%;
+      /*width: auto;*/
+      /*height: 550px;*/
+      height: auto;
+  }
+
+  .image2 img{
+      width: 100%;
+      /*width: auto;*/
+      /*height: 550px;*/
+      height: auto;
+  }
+
+
+  .image1-lti img{
+      width: 100%;
+      /*width: auto;*/
+      /*height: 550px;*/
+      height: auto;
+  }
+
+  .image2-lti img{
+      width: 100%;
+      /*width: auto;*/
+      /*height: 550px;*/
+      height: auto;
   }
 
   .container2 iframe{
@@ -275,6 +455,26 @@ footer a{
   font-size: 15px;
   padding: 10px;
   color: white;
+ }
+
+ .marquee-lti{
+    color: red;
+    font-size: 24px;
+    padding-top: 40px;
+ }
+
+ .faisalKhanjpg{
+    width: 150px;
+ }
+
+ .resultTable p{
+    padding: 0px;
+    font-size: 12px;
+ }
+
+ .resultTable td{
+    padding: 0px;
+    font-size: 12px;
  }
 
 }

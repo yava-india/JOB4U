@@ -6,7 +6,7 @@
 <div id="first">
 	<div class = "container"  >
 		<!--<img   src= {% static 'tpo/company2.png' %} height=80 width=260 >-->
-		<h3 class="onlyCenter companyName"> IBM campus drive</h3>
+		<h3 class="companyName"> Zycus campus drive</h3>
 	</div>
 			{% if messages %}
 	    {% for message in messages %}
@@ -41,20 +41,39 @@
 				{% csrf_token %}
 
 				<p>
-				    <input type="text"  name="Student_Name" placeholder="Name" required></p>
+				    <input type="text"  name="Student_Name" placeholder="First Name" required></p>
+				<p>
+				    <input type="text"  name="Student_Name2" placeholder="Last Name" required></p>
 				<p>
 				    <input type="number" name="Mobile Number" placeholder="Mobile Number" required></p>
 				<p>
 				    <input type="email" name="Email" placeholder="Email" required></p>
 				<p>
 				    <input type="text" name="College_Name" placeholder="College Name" required></p>
+				<!--<p>-->
+				<!--    <input type="text" list="slots" name="Slot" placeholder="Slot" required></p>-->
 				<p>
-				    <input type="text" name="Branch" placeholder="Branch" required></p>
+				    <input type="text" list="branches"name="Branch" placeholder="Branch" required></p>
 
 
 				<button class="button2 " type="submit" name="register"> Register </button>
 
 				</form>
+
+    <!--<datalist id="slots">-->
+    <!--    <option>Slot 1</option>-->
+    <!--    <option>Slot 2</option>-->
+    <!--    <option>Slot 3</option>-->
+    <!--    <option>Slot 4</option>-->
+    <!--</datalist>-->
+<datalist id="branches">
+        <option>Computer Engineering</option>
+        <option>Information technology</option>
+        <option>Electronics & Telecommunication Engineering</option>
+        <option>Mechanical Engineering</option>
+        <option>Civil Engineering<option>
+        <option><option>
+    </datalist>
 
 	</div><!--END OF floatRight-->
 

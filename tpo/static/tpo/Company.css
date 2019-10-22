@@ -17,6 +17,46 @@ header{
   height: 40px;
 }
 
+
+.icons{
+  display: inline-block;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.icons a{
+  display: inline-block;
+  padding: 0;
+
+}
+
+.icons img{
+  height: 30px;
+}
+
+.stayLeft{
+  position: absolute;
+  left: 0px;
+}
+
+.makeCenter{
+  position: absolute;
+  top: 0;
+  display: inline;
+  text-align: center;
+  width:100%;
+  margin: 0px;
+}
+
+.makeCenter p{
+  margin: 0px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px;
+  color: white;
+  font-size: 22px;
+}
+
+
 .containerFK{
   margin:0px;
   /* background-color: #D966FF;*/
@@ -52,8 +92,16 @@ header{
 .FaisalKhan p{
   cursor: default;
   font-family: 'Muli', sans-serif;
-  font-size: 20px;
+  font-size: 26px;
   margin: 0px;
+}
+
+.FaisalKhan h3{
+  cursor: default;
+  font-family: 'Muli', sans-serif;
+  font-size: 28px;
+  margin-top: 35px;
+  color: black;
 }
 
 .makebold{
@@ -300,6 +348,20 @@ cursor: pointer;
   .apsitlogo{
     margin-top: 8px;
     margin-left: 10px;
+  }
+
+  .makeCenter span{
+    display: none;
+  }
+
+  .makeCenter p:after{
+    /* content */
+    content: "APSIT";
+    font-size: 25px;
+  }
+
+  .icons{
+    margin-right: 5px;
   }
 
 }

@@ -48,9 +48,9 @@
     <div class="containerFK">
 
       <div class="FaisalKhan">
-        <img  class = "faisalKhanjpg" src="{% static 'tpo/faisalsir.jpg'%}" alt="Faisal Khan">
-        <p><a href="http://mu.ac.in/portal/" target="_blank"><span class = "makebold">Faisal Khan</span></a></p>
-        <p> Head Placement Officer, APSIT</p>
+        <img  class = "faisalKhanjpg" src="{% static 'tpo/MumbaiUniversityLogo.png'%}" alt="">
+        <p><a href="http://mu.ac.in/portal/" target="_blank"><span class = "makebold">Mumbai University</span></a></p>
+        <!--<p> Head Placement Officer, APSIT</p>-->
         <!--<p>2020 Batch</p>-->
         <!-- <img class = "apsitlogo" src="APSIT (1).png" alt="APSIT-LOGO"> -->
       </div>
@@ -62,52 +62,36 @@
 
     <div class="container1" id = "formStart">
 
-        <img class = "companyLogo" src="{% static 'tpo/zycus 300x300.png'%}" alt="Company Name">
-        <h2>Zycus Recruitment Drive for MU Graduates</h2>
-        <h2>2020 Batch</h2>
-        <h3>Eligibility Criteria</h3>
-
+        <img class = "companyLogo" src="{% static 'tpo/infosys.png'%}" alt="Company Name">
     </div>
+ </div>
 
-    <div class="container">
 
-      <div class="image1">
+ <ul>
+	<table border=2>
+		<thead>
+			<tr>
+				<th width = "20%"><p>College Name<p></th>
+				<th width = "20%"><p>No. of selected students<p></th>
+			</tr>
+    	</thead>
+    	<tbody>
 
-        <img src="{% static 'tpo/zycus eligibility 1.PNG'%}" alt="">
+		{% for j in studentdb %}
+		<tr>
+		<td>{{ j.clg_name }}</td>
+		<td>{{ j.count }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+<ul>
 
-      </div>
 
-      <div class="image2">
-
-        <img src="{% static 'tpo/zycus eligibility 1.PNG'%}" alt="">
-
-      </div>
-
-    </div>
-
-    <div class="clear"></div>
-
-    <div class="container2">
-
-    <!--<iframe id = "googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSegu96l38HHXwxMqhollWkp8BDmiUM5LeX0M0yaTW9B9q3TIQ/viewform?embedded=true" width="800" height="2369" frameborder="0" marginheight="0" marginwidth="0" onload="window.parent.parent.scrollTo(0,0)">Loading…</iframe>-->
-    <!--<iframe id = "googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeW0Ow-hVfbvmYJhivGxUmUUu6-1gwydIEHOlNlJNA_uZi8iQ/viewform?embedded=true" width="1500" height="4237" frameborder="0" marginheight="0" marginwidth="0" onload="window.parent.parent.scrollTo(0,0)">Loading…</iframe>-->
-    <iframe id = "googleForm" src="https://docs.google.com/forms/d/e/1FAIpQLSeW0Ow-hVfbvmYJhivGxUmUUu6-1gwydIEHOlNlJNA_uZi8iQ/viewform?embedded=true" width="100%" height="4300" frameborder="0" marginheight="0" marginwidth="0" onload="window.parent.parent.scrollTo(0,0)" >Loading…</iframe>
-
-    </div>
-
-    <div class="linkForm">
-
-      <a href="#googleForm">Click To fill Form</a>
-
-    </div>
-
-  </div>
 
   <footer id="footer">
     <p>&copy; Copyright <strong>TPO APSIT</strong>. All Rights Reserved</div>
     <p class = "credit">Designed by <a target = "_blank" href="https://in.linkedin.com/in/yash-sampat-9b89a7185?trk=people-guest_profile-result-card_result-card_full-click">Yash Sampat</a>, <a target = "_blank" href="https://in.linkedin.com/in/anujssmishra?trk=public_profile_browsemap_profile-result-card_result-card_full-click">Anuj Mishra</a>, and <a target = "_blank" href="https://in.linkedin.com/in/vedant-mhatre-575838185?trk=people-guest_profile-result-card_result-card_full-click">Vedant  Mhatre</a>
   </footer>
-
-  </body>
-
-</html>
+ </body>
+ </html>
