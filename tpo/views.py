@@ -73,6 +73,9 @@ def thank(request):
 def Infosys(request):
     return render(request,'tpo/infosys.html')
 
+def harm(request):
+    return render(request,'tpo/harm.html')
+
 def Infofinalresult(request):
     studentdb = finalinfosys.objects.all()
     return render(request,'tpo/infoclglist.html', {'studentdb':studentdb})
