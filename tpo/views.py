@@ -14,6 +14,7 @@ from .models import Infosys16Result
 from .models import finalinfosys
 from .models import finallistinfosys
 from .models import zycus
+from .models import virtusa
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -140,6 +141,12 @@ def ibmdatabase(request):
 	count2 = IBM.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/ibmdatabase.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
+def virtusadatabase(request):
+	studentdb = virtusa.objects.all()
+	count = virtusa.objects.all().count()
+	count2 = virtusa.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/virtusadb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
 def info15database(request):
 	studentdb = infosys15oct.objects.all()
 	count = infosys15oct.objects.all().count()
@@ -210,44 +217,7 @@ def admin_panel(request):
 		messages.success(request, "Emailed Database.")
 	return render(request, 'tpo/admin_panel.html')
 
-def lti(request):
-	if request.method == 'GET':
-		return render(request, 'tpo/lti.html')
-	if request.method == 'POST' and 'register' in request.POST:
-		pyname = request.POST['Student_Name']  # [0:30]
-		pymob = request.POST['Mobile Number']  # [0:10]
-		pyemail = request.POST['Email']  # [0:30]
-		pyclgname = request.POST['College_Name']  # [0:40]
-		pybranch = request.POST['branchii']
-		pyqual = request.POST['qualii']
-		py10pass = request.POST['10passyear']
-		py10percent = request.POST['10percent']
-		py12pass = request.POST['12passyear']
-		py12percent = request.POST['12percent']
-		pydippass = request.POST['diplomapassyear']
-		pydippercent = request.POST['diplomapercent']
-		pypointer = request.POST['aggpointer']
-		pynation = request.POST['nation']
-		pytponame = request.POST['tpo_name']
-		pytpono = request.POST['tpo_number']
-		pytpoemail = request.POST['tpo_email']
-		pydegreepass = 2020
 
-# 		print(pyqual)
-		if Lti_23_oct.objects.filter(number2=pymob).exists():
-			messages.error(request, f"{pymob} already registered, use another")
-			return render(request, 'tpo/result.html')
-		if Lti_23_oct.objects.filter(email=pyemail).exists():
-			messages.error(request, f"{pyemail} already registered, use another")
-			return render(request, 'tpo/result.html')
-
-		data2 = Lti_23_oct(name=pyname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, qualification=pyqual, passingyear10=py10pass, percent10=py10percent, passingyear12=py12pass, percent12=py12percent, diplomapassyear=pydippass, diplomapercent=pydippercent, pointer=pypointer,degreepassyear=2020, nationality=pynation, tponame=pytponame, tponumber=pytpono, tpoemail=pytpoemail)
-		data2.save()
-		messages.success(request, "Successfully registered.")
-		with open('lti.csv', 'a', newline='') as csvfile:
-			filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-			filewriter.writerow([pyname, pymob, pyemail, pyclgname, pybranch, pyqual, py10pass, py10percent, py12pass, py12percent, pydippass, pydippercent, pypointer,pydegreepass, pynation, pytponame, pytpono, pytpoemail])
-		return render(request, 'tpo/result.html')
 
 def newlti(request):
     return render(request,'tpo/newlti.html')
@@ -300,21 +270,22 @@ def ibm(request):
 
     if request.method == 'POST' and 'register' in request.POST:
         pyfname = request.POST['Student_Name']
-        pysname = request.POST['Student_Name2']
+        # pysname = request.POST['Student_Name2']
         pymob = request.POST['Mobile Number']#[0:10]
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
         pybranch = request.POST['Branch']
-        # pyslot = request.POST['Slot']#[0:20]
+        pydeg = request.POST['Deg_type']
+        pypass = request.POST['Passyear']
 
-        if zycus.objects.filter(number2=pymob).exists():
+        if virtusa.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if zycus.objects.filter(email=pyemail).exists():
+        if virtusa.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = zycus(firstname=pyfname, lastname=pysname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, confirmation=1)
+        data2 = virtusa(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, degtype=pydeg, passyear=pypass, confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         # with open('ibm.csv', 'a', newline='') as csvfile:
@@ -325,11 +296,13 @@ def ibm(request):
 
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
-        if zycus.objects.filter(number2=pymob2).exists():
-            zycus.objects.filter(number2=pymob2).update(confirmation=1)
+        if virtusa.objects.filter(number2=pymob2).exists():
+            virtusa.objects.filter(number2=pymob2).update(confirmation=1)
             messages.success(request, f"Presence confirmed for {pymob2}")
             return render(request, 'tpo/ibm.html')
         else:
             messages.error(request, f"The number {pymob2} is not registered")
             return render(request, 'tpo/ibm.html')
 
+def Tolearn(request):
+    return render(request,'tpo/Tolearn.html')

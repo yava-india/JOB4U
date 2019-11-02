@@ -4,6 +4,17 @@ from django.db import models
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
 
+class virtusa(models.Model):
+    # student_id = models.CharField(max_length=10, blank=True)
+    email = models.CharField(max_length=50)
+    name = models.CharField(max_length=30)
+    clg_name = models.CharField(max_length=100)
+    number2 = models.CharField(max_length=100)
+    degtype = models.CharField(max_length=15)
+    passyear = models.CharField(max_length=20)
+    branch = models.CharField(max_length=40)
+    confirmation = models.CharField(max_length=6, blank=True)
+
 class zycus(models.Model):
     firstname = models.CharField(max_length=60)
     lastname = models.CharField(max_length=60)
