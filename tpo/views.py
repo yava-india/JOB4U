@@ -18,42 +18,17 @@ from .models import virtusa
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
-from django.core.mail import EmailMessage
+# from django.core.mail import EmailMessage
 import csv
-import os
+# import os
 
 
-# if not os.path.isfile('./A_1_Salasar.csv'):
-# 	with open('A_1_Salasar.csv', 'w', newline='') as csvfile:
+
+
+# if not os.path.isfile('./lti.csv'):
+# 	with open('lti.csv', 'w', newline='') as csvfile:
 # 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Reporting Time','Profile'])
-
-# if not os.path.isfile('./Google.csv'):
-# 	with open('Google.csv', 'w', newline='') as csvfile:
-# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
-
-# if not os.path.isfile('./Headstrait.csv'):
-# 	with open('Headstrait.csv', 'w', newline='') as csvfile:
-# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
-
-# if not os.path.isfile('./Amazon.csv'):
-# 	with open('Amazon.csv', 'w', newline='') as csvfile:
-# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Slot'])
-
-# if not os.path.isfile('./ibm.csv'):
-# 	with open('Amazon.csv', 'w', newline='') as csvfile:
-# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch'])
-
-
-
-if not os.path.isfile('./lti.csv'):
-	with open('lti.csv', 'w', newline='') as csvfile:
-		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Qualification','10th Passing Year','10th Percentage','12th Passing Year','12th Percentage','Diploma Passing Year','Diploma Percentage','Aggregate Graduation Pointer','Degree Paassing Year','Nationality','TPO Name','TPO Number','TPO Email'])
+# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Qualification','10th Passing Year','10th Percentage','12th Passing Year','12th Percentage','Diploma Passing Year','Diploma Percentage','Aggregate Graduation Pointer','Degree Paassing Year','Nationality','TPO Name','TPO Number','TPO Email'])
 
 
 
@@ -179,42 +154,12 @@ def lti_db(request):
 
 
 def admin_panel(request):
-	if request.method == 'POST' and 'email_amazon_db' in request.POST:
-		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
-		msg.content_subtype = "html"
-		msg.attach_file('Amazon.csv')
-		msg.send()
-		messages.success(request, "Emailed Database.")
-	#return render(request, 'tpo/admin_panel.html')
-
-# 	elif request.method == 'POST' and 'email_google_db' in request.POST:
-# 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
-# 		msg.content_subtype = "html"
-# 		msg.attach_file('Google.csv')
-# 		msg.send()
-# 		messages.success(request, "Emailed Database.")
-# 	#return render(request, 'tpo/admin_panel.html')
-
-# 	elif request.method == 'POST' and 'a_1_Salasar_db' in request.POST:
-# 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
-# 		msg.content_subtype = "html"
-# 		msg.attach_file('A_1_Salasar.csv')
-# 		msg.send()
-# 		messages.success(request, "Emailed Database.")
-
 # 	elif request.method == 'POST' and 'ltiemail_db' in request.POST:
 # 		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER, ['vedantmh@gmail.com','amvichare@apsit.edu.in','tpo@apsit.edu.in'])
 # 		msg.content_subtype = "html"
 # 		msg.attach_file('lti.csv')
 # 		msg.send()
 # 		messages.success(request, "Emailed Database.")
-
-	elif request.method == 'POST' and 'email_headstrait_db' in request.POST:
-		msg = EmailMessage('database file', 'hello', settings.EMAIL_HOST_USER,['vedantmh@gmail.com'])
-		msg.content_subtype = "html"
-		msg.attach_file('Headstrait.csv')
-		msg.send()
-		messages.success(request, "Emailed Database.")
 	return render(request, 'tpo/admin_panel.html')
 
 
@@ -306,3 +251,5 @@ def ibm(request):
 
 def Tolearn(request):
     return render(request,'tpo/Tolearn.html')
+
+

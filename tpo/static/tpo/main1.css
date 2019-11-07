@@ -10,6 +10,20 @@ body{
   width: 100%;
 }
 
+.image1-lti{
+  display: inline-block;
+  /* float: left; */
+  /* width: 700px; */
+  /*padding: 10px;*/
+}
+
+.image1-lti img{
+  /*height: 500px;*/
+  height: 400px;
+  width: 600px;
+  /*width: auto;*/
+}
+
 .container img{
   width: 200px;
   height: 200px;
