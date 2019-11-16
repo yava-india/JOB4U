@@ -4,6 +4,30 @@ from django.db import models
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
 
+class infosys15nov(models.Model):
+    firstname = models.CharField(max_length=60, blank=True)
+    lastname = models.CharField(max_length=60, blank=True)
+    number2 = models.CharField(max_length=100, blank=True)
+    email = models.CharField(max_length=50, blank=True)
+    clg_name = models.CharField(max_length=100, blank=True)
+    branch = models.CharField(max_length=40, blank=True)
+    # slot = models.CharField(max_length=40, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+class lti20nov(models.Model):
+    slot = models.CharField(max_length=50)
+    email = models.CharField(max_length=50)
+    name = models.CharField(max_length=30)
+    clg_name = models.CharField(max_length=100)
+    number2 = models.CharField(max_length=100)
+    degtype = models.CharField(max_length=15)
+    branch = models.CharField(max_length=40)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+class lti12result(models.Model):
+    name = models.CharField(max_length=50)
+    clg_name = models.CharField(max_length=100)
+
 class virtusa(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)
     email = models.CharField(max_length=50)

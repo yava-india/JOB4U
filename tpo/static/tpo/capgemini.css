@@ -250,15 +250,6 @@ header{
   /* height: auto; */
 }
 
-.virtresultimage{
-    width:100%;
-    text-align: center;
-}
-
-.virtresultimage img{
-    max-width:100%;
-}
-
 .companyLogolti{
   /* width: 250px; */
   width: 300px;
@@ -279,8 +270,8 @@ header{
 
 .companyLogolti{
   /* width: 250px; */
-  width: auto;
-  height: 150px;
+  width: 300px;
+  height: 200px;
   background-color: white;
   /* height: auto; */
 }
@@ -307,7 +298,7 @@ header{
 .image1 img{
   /*height: 500px;*/
   height: auto;
-  width: 550px;
+  width: 840px;
   /*width: auto;*/
 }
 
@@ -321,7 +312,7 @@ header{
 .image2 img{
   /*height: 500px;*/
   height: auto;
-  width: 550px;
+  width: 750px;
   /*width: auto;*/
 }
 
@@ -329,13 +320,13 @@ header{
   display: inline-block;
   /* float: left; */
   /* width: 700px; */
-  /*padding: 10px;*/
+  padding: 10px;
 }
 
 .image1-lti img{
   /*height: 500px;*/
-  height: 400px;
-  width: 600px;
+  height: 600px;
+  width: 840px;
   /*width: auto;*/
 }
 
@@ -349,7 +340,7 @@ header{
 .image2-lti img{
   /*height: 500px;*/
   height: 600px;
-  width: 550px;
+  width: 750px;
   /*width: auto;*/
 }
 
@@ -400,7 +391,7 @@ footer a{
   color: black;
 }
 
-@media (max-width: 840px){
+@media(max-width: 770px){
 
   .container img{
     width: 100%;
@@ -484,10 +475,6 @@ footer a{
  .resultTable td{
     padding: 0px;
     font-size: 12px;
- }
-
- .companyLogolti{
-     width: 100%;
  }
 
 }

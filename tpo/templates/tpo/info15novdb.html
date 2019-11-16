@@ -1,0 +1,57 @@
+{% extends "tpo/base.html"%}
+
+{% block content %}
+
+		{% if user.is_authenticated %}
+
+<h4>Total registrations:{{count}}</h4>
+<h4>Confirmed Presence by:{{count2}}</h4>
+<!--<h4>Total Apsit registrations:{{apsitcount}}</h4>-->
+<!--<h4>Total Apsit confirmations:{{apsitconf}}</h4>-->
+
+<ul>
+	<table border=2>
+		<thead>
+			<tr>
+				<th width = "20%"><p>First Name<p></th>
+				<th width = "20%"><p>Last Name<p></th>
+				<th width = "20%"><p>Mobile Number<p></th>
+				<th width = "20%"><p>Email<p></th>
+				<th width = "20%"><p>College Name<p></th>
+				<th width = "20%"><p>Branch<p></th>
+				<!--<th width = "20%"><p>Qualification<p></th>-->
+				<!--<th width = "20%"><p>Slot<p></th>-->
+				<th width = "20%"><p>Confirmation<p></th>
+
+			</tr>
+    	</thead>
+    	<tbody>
+
+		{% for j in studentdb %}
+		<tr>
+		<td>{{ j.firstname }}</td>
+		<td>{{ j.lastname }}</td>
+		<td>{{ j.number2 }}</td>
+		<td>{{ j.email }}</td>
+		<td>{{ j.clg_name }}</td>
+		<td>{{ j.branch}}</td>
+		<!--<td>{{ j.degtype}}</td>-->
+		<!--<td>{{ j.slot}}</td>-->
+		<td>{{ j.confirmation }}</td>
+		</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+<ul>
+
+  		{% else %}
+  		<form action="administrator/" method="POST">
+  		{% csrf_token %}
+		<input class = "button2" type="submit" value="Log in first" name="Submit" />
+		</form>
+
+  		{% endif %}
+
+{% endblock content %}
+
+

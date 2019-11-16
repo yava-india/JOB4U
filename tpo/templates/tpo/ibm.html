@@ -45,7 +45,7 @@
 <div id="first">
 	<div class = "container"  >
 		<!--<img   src= {% static 'tpo/company2.png' %} height=80 width=260 >-->
-		<h3 class="companyName"> Virtusa campus drive</h3>
+		<h3 class="companyName"> Infosys campus drive</h3>
 	</div>
 			{% if messages %}
 	    {% for message in messages %}
@@ -60,6 +60,7 @@
 <!--</div>-->
 
 	<div class="floatLeft  onlyCenter">
+    <!--<div>-->
 		<h5  > Registration Confirmation</h5>
 
 		<form method="POST" class="box">
@@ -83,23 +84,31 @@
 				{% csrf_token %}
 
 				<p>
-				    <input type="text"  name="Student_Name" placeholder="Name" required></p>
-				<!--<p>-->
-				<!--    <input type="text"  name="Student_Name2" placeholder="Last Name" required></p>-->
-				<!--<p>-->
+				    <input type="text"  name="Student_Name" placeholder="First Name" required></p>
+				<p>
+				    <input type="text"  name="Student_Name2" placeholder="Last Name" required></p>
+				<p>
 				    <input type="number" name="Mobile Number" placeholder="Mobile Number" required></p>
 				<p>
 				    <input type="email" name="Email" placeholder="Email" required></p>
 				<p>
 				    <input type="text" name="College_Name" placeholder="College Name" required></p>
-				<!--<p>-->
-				<!--    <input type="text" list="slots" name="Slot" placeholder="Slot" required></p>-->
+
 				<p>
 			        <input type="text" list="branches" name="Branch" placeholder="Branch" required></p>
 				<p>
-				<input type="text" name="Deg_type" list="deg" placeholder="Degree" required></p>
-				<p>
-				<input type="number" name="Passyear" list="pass" placeholder="Passing Year" required></p>
+				<!--<p>-->
+				<!--    <input type="radio"  name="Slot" value="Slot 1" required>Slot 1</p>-->
+<!--            <div>-->
+<!--			    <select class="quali"  name="Slot">-->
+<!--		        <option value="Slot 1">Slot 1</option>-->
+<!--		        <option value="Slot 2">Slot 2</option>-->
+<!--		        <option value="Slot 3">Slot 3</option>-->
+<!--		        </select>-->
+<!--`           </div>-->
+				<!--<input type="text" name="Deg_type" list="deg" placeholder="Degree" required></p>-->
+				<!--<p>-->
+				<!--<input type="number" name="Passyear" list="pass" placeholder="Passing Year" required></p>-->
 
 				<button class="button2 " type="submit" name="register"> Register </button>
 
@@ -133,7 +142,8 @@
 
     </datalist>
 
-	</div><!--END OF floatRight-->
+	</div>
+	<!--END OF floatRight-->
 
 	<div class="clear1"></div>
 

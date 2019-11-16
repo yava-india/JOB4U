@@ -17,6 +17,22 @@ body{
   /*padding: 10px;*/
 }
 
+.quali{
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    border: 2px black solid;
+}
+
+.radioButton{
+   width: 100px;
+   margin-top: 15px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: 'Source Sans Pro', sans-serif;
+   height: 30px;
+}
+
 .image1-lti img{
   /*height: 500px;*/
   height: 400px;
@@ -179,12 +195,9 @@ cursor: pointer;
     text-align: left;
   }
 
-.quali{
-    width: 300px;
-    padding: 10px;
-    background-color: white;
-    border: 2px black solid;
-}
+  .quali{
+    max-width: 220px;
+  }
 
 .radioButton{
    width: 100px;
@@ -195,21 +208,21 @@ cursor: pointer;
 }
 
 .box input[type = "text"], input[type = "email"],input[type = "number"]{
-    width: 250px;
+    width: 220px;
 }
 
 .box input[type = "text"]:focus{
-    width: 300px;
+    width: 280px;
     border-color: #2ecc71;
 }
 
 .box input[type = "email"]:focus{
-    width: 300px;
+    width: 280px;
     border-color: #2ecc71;
 }
 
 .box input[type = "number"]:focus{
-    width: 300px;
+    width: 280px;
     border-color: #2ecc71;
 }
 

@@ -15,6 +15,9 @@ from .models import finalinfosys
 from .models import finallistinfosys
 from .models import zycus
 from .models import virtusa
+from .models import lti20nov
+from .models import lti12result
+from .models import infosys15nov
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -46,19 +49,41 @@ def administrator(request):
 def thank(request):
 	return render(request, 'tpo/result.html')
 
+def quality(request):
+    return render(request,'tpo/quality.html')
+
 def Infosys(request):
     return render(request,'tpo/infosys.html')
 
 def harm(request):
     return render(request,'tpo/harm.html')
 
+def cap(request):
+    return render(request,'tpo/capgemini.html')
+
+def cap21(request):
+    return render(request,'tpo/capgemini21.html')
+
+def virtresult(request):
+    return render(request,'tpo/virtresult.html')
+
+def cgdiv(request):
+    return render(request,'tpo/cgdiv.html')
+
 def Infofinalresult(request):
     studentdb = finalinfosys.objects.all()
     return render(request,'tpo/infoclglist.html', {'studentdb':studentdb})
 
+def Lti12result(request):
+    studentdb = lti12result.objects.all()
+    return render(request,'tpo/ltiresult.html', {'studentdb':studentdb})
+
 def Infofinalnameresult(request):
     studentdb = finallistinfosys.objects.all()
     return render(request,'tpo/infofinalnamelist.html', {'studentdb':studentdb})
+
+def Info15novresult(request):
+    return render(request,'tpo/info15novresult.html')
 
 def IBmresult(request):
     studentdb = IbmResult.objects.all()
@@ -109,6 +134,18 @@ def headstraitdb(request):
 	count = Headstrait.objects.all().count()
 	count2 = Headstrait.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/database.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def info15novdb(request):
+	studentdb = infosys15nov.objects.all()
+	count = infosys15nov.objects.all().count()
+	count2 = infosys15nov.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/info15novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def lti20db(request):
+	studentdb = lti20nov.objects.all()
+	count = lti20nov.objects.all().count()
+	count2 = lti20nov.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti20db.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def ibmdatabase(request):
 	studentdb = IBM.objects.all()
@@ -215,38 +252,34 @@ def ibm(request):
 
     if request.method == 'POST' and 'register' in request.POST:
         pyfname = request.POST['Student_Name']
-        # pysname = request.POST['Student_Name2']
+        pysname = request.POST['Student_Name2']
         pymob = request.POST['Mobile Number']#[0:10]
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
         pybranch = request.POST['Branch']
-        pydeg = request.POST['Deg_type']
-        pypass = request.POST['Passyear']
+        # pydeg = request.POST['Deg_type']
+        # pyslot = request.POST['Slot']
 
-        if virtusa.objects.filter(number2=pymob).exists():
+        if infosys15nov.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if virtusa.objects.filter(email=pyemail).exists():
+        if infosys15nov.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = virtusa(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, degtype=pydeg, passyear=pypass, confirmation=1)
+        data2 = infosys15nov(firstname=pyfname, lastname=pysname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch,  confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
-        # with open('ibm.csv', 'a', newline='') as csvfile:
-        #     filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        #     filewriter.writerow([pyname, pymob, pyemail, pyclgname, pybranch])
-        # email(pyemail)
         return render(request, 'tpo/ibm.html')
 
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
-        if virtusa.objects.filter(number2=pymob2).exists():
-            virtusa.objects.filter(number2=pymob2).update(confirmation=1)
+        if infosys15nov.objects.filter(number2=pymob2).exists():
+            infosys15nov.objects.filter(number2=pymob2).update(confirmation=1)
             messages.success(request, f"Presence confirmed for {pymob2}")
             return render(request, 'tpo/ibm.html')
         else:
-            messages.error(request, f"The number {pymob2} is not registered")
+            messages.error(request, f"The number {pymob2} is not registered, try entering 0{pymob2} or 91{pymob2}")
             return render(request, 'tpo/ibm.html')
 
 def Tolearn(request):

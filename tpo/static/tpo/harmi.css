@@ -250,6 +250,15 @@ header{
   /* height: auto; */
 }
 
+.virtresultimage{
+    width:100%;
+    text-align: center;
+}
+
+.virtresultimage img{
+    max-width:100%;
+}
+
 .companyLogolti{
   /* width: 250px; */
   width: 300px;
@@ -391,7 +400,7 @@ footer a{
   color: black;
 }
 
-@media (max-width: 670px){
+@media (max-width: 840px){
 
   .container img{
     width: 100%;
