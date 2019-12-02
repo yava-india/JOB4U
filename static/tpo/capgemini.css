@@ -55,6 +55,32 @@ header{
   position: relative;
 }
 
+.rucontainer{
+  margin: auto;
+  width: 80%;
+  /* border: 2px solid black; */
+  /* height: 500px; */
+}
+
+.rucontainer p{
+  letter-spacing: 3px;
+  /* font-family:'Russo One', sans-serif; */
+  /* color: #b4ff46; */
+  cursor: default
+  /* padding: 0px;
+  margin: 0px; */
+}
+
+.rucontainer iframe{
+  width: 80%;
+  height:500px;
+  /* background-color: black; */
+  /* padding: 15px; */
+  margin: 15px;
+  margin-top: 25px;
+  /* height: 300px; */
+}
+
 .containerFK-lti{
   margin:0px;
    /*background-color: #0000b3;*/

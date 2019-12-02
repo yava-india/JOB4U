@@ -18,6 +18,8 @@ from .models import virtusa
 from .models import lti20nov
 from .models import lti12result
 from .models import infosys15nov
+from .models import cap20nov
+from .models import lti28nov
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -58,10 +60,16 @@ def Infosys(request):
 def harm(request):
     return render(request,'tpo/harm.html')
 
-def cap(request):
+def ltionlymap(request):
+    return render(request,'tpo/ltionlymap.html')
+
+def wiproonlymap(request):
+    return render(request,'tpo/wiproonlymap.html')
+
+def paytm(request):
     return render(request,'tpo/capgemini.html')
 
-def cap21(request):
+def bitwise(request):
     return render(request,'tpo/capgemini21.html')
 
 def virtresult(request):
@@ -84,6 +92,15 @@ def Infofinalnameresult(request):
 
 def Info15novresult(request):
     return render(request,'tpo/info15novresult.html')
+
+def cap19novdata(request):
+    return render(request,'tpo/capgemdata19nov.html')
+
+def cap20novresult(request):
+    return render(request,'tpo/cap20novresult.html')
+
+def cap25novresult(request):
+    return render(request,'tpo/cap25nov.html')
 
 def IBmresult(request):
     studentdb = IbmResult.objects.all()
@@ -134,6 +151,18 @@ def headstraitdb(request):
 	count = Headstrait.objects.all().count()
 	count2 = Headstrait.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/database.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def cap20db(request):
+	studentdb = cap20nov.objects.all()
+	count = cap20nov.objects.all().count()
+	count2 = cap20nov.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/cap20novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def lti2811db(request):
+	studentdb = lti28nov.objects.all()
+	count = lti28nov.objects.all().count()
+	count2 = lti28nov.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def info15novdb(request):
 	studentdb = infosys15nov.objects.all()
@@ -252,34 +281,35 @@ def ibm(request):
 
     if request.method == 'POST' and 'register' in request.POST:
         pyfname = request.POST['Student_Name']
-        pysname = request.POST['Student_Name2']
+        # pysname = request.POST['Student_Name2']
         pymob = request.POST['Mobile Number']#[0:10]
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
-        pybranch = request.POST['Branch']
+        # pybranch = request.POST['Branch']
         # pydeg = request.POST['Deg_type']
-        # pyslot = request.POST['Slot']
+        pyslot = request.POST['Slot']
+        pyref = request.POST['Referral']
 
-        if infosys15nov.objects.filter(number2=pymob).exists():
+        if lti28nov.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if infosys15nov.objects.filter(email=pyemail).exists():
+        if lti28nov.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = infosys15nov(firstname=pyfname, lastname=pysname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch,  confirmation=1)
+        data2 = lti28nov(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, slot=pyslot, refid=pyref,  confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         return render(request, 'tpo/ibm.html')
 
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
-        if infosys15nov.objects.filter(number2=pymob2).exists():
-            infosys15nov.objects.filter(number2=pymob2).update(confirmation=1)
+        if lti28nov.objects.filter(number2=pymob2).exists():
+            lti28nov.objects.filter(number2=pymob2).update(confirmation=1)
             messages.success(request, f"Presence confirmed for {pymob2}")
             return render(request, 'tpo/ibm.html')
         else:
-            messages.error(request, f"The number {pymob2} is not registered, try entering 0{pymob2} or 91{pymob2}")
+            messages.error(request, f"The number {pymob2} is not registered")
             return render(request, 'tpo/ibm.html')
 
 def Tolearn(request):

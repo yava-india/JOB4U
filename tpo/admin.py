@@ -4,12 +4,12 @@ from django.contrib import admin
 # from tpo.models import IBM7oct
 # from tpo.models import infosys15oct
 # from tpo.models import infosys16oct
-from tpo.models import infosys15nov
+from tpo.models import lti28nov
 # from tpo.models import A_1_Salasar
 # from tpo.models import Lti_23_oct
 # from tpo.models import lti20nov
 
-admin.site.register(infosys15nov)
+admin.site.register(lti28nov)
 # admin.site.register(zycus)
 # admin.site.register(IBM)
 # admin.site.register(infosys15oct)
