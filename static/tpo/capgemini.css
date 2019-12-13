@@ -98,10 +98,23 @@ header{
 }
 
 .FaisalKhan{
+  display: inline-block;
   margin:auto;
   /* margin-top: 100px; */
   text-align: center;
-  width: 80%;
+  width: 100%;
+  text-shadow: 1.7px 1.7px black;
+  /* margin-bottom: 25px; */
+  padding-bottom: 15px;
+}
+
+.associationWtih{
+    line-height:inherit;
+  display: inline-block;
+  margin:auto;
+  /* margin-top: 100px; */
+  text-align: center;
+  width: 45%;
   text-shadow: 1.7px 1.7px black;
   /* margin-bottom: 25px; */
   padding-bottom: 15px;
@@ -142,6 +155,26 @@ header{
 }
 
 .FaisalKhan p{
+  cursor: default;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.associationwtihjpg{
+  background-color: white;
+  /*border-radius: 50%;*/
+  width: auto;
+  height: 100px;
+  margin: 100px;
+  /*padding: 100px;*/
+  /* display: block; */
+  margin-top: 50px;
+  /*border: 5px solid black;*/
+}
+
+.associationWtih p{
   cursor: default;
   color: white;
   font-family: 'Muli', sans-serif;
@@ -351,8 +384,8 @@ header{
 
 .image1-lti img{
   /*height: 500px;*/
-  height: 600px;
-  width: 840px;
+  height: 181px;
+  width: 730px;
   /*width: auto;*/
 }
 
@@ -489,8 +522,21 @@ footer a{
     padding-top: 40px;
  }
 
+ .FaisalKhan{
+     display:block;
+ }
+
+.associationWtih{
+     display:block;
+ }
+
  .faisalKhanjpg{
     width: 150px;
+ }
+
+ .associationwtihjpg{
+    width: 150px;
+    margin: 10px;
  }
 
  .resultTable p{

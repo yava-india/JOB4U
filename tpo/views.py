@@ -20,6 +20,8 @@ from .models import lti12result
 from .models import infosys15nov
 from .models import cap20nov
 from .models import lti28nov
+from .models import bit9nov
+from .models import swab12dec
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -69,7 +71,7 @@ def wiproonlymap(request):
 def paytm(request):
     return render(request,'tpo/capgemini.html')
 
-def bitwise(request):
+def swabhav(request):
     return render(request,'tpo/capgemini21.html')
 
 def virtresult(request):
@@ -157,6 +159,18 @@ def cap20db(request):
 	count = cap20nov.objects.all().count()
 	count2 = cap20nov.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/cap20novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def swab1212db(request):
+	studentdb = swab12dec.objects.all()
+	count = swab12dec.objects.all().count()
+	count2 = swab12dec.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def bit912db(request):
+	studentdb = bit9nov.objects.all()
+	count = bit9nov.objects.all().count()
+	count2 = bit9nov.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def lti2811db(request):
 	studentdb = lti28nov.objects.all()
@@ -285,31 +299,37 @@ def ibm(request):
         pymob = request.POST['Mobile Number']#[0:10]
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
-        # pybranch = request.POST['Branch']
+        pybranch = request.POST['Branch']
         # pydeg = request.POST['Deg_type']
-        pyslot = request.POST['Slot']
-        pyref = request.POST['Referral']
+        # pyslot = request.POST['Slot']
+        # pyref = request.POST['Referral']
 
-        if lti28nov.objects.filter(number2=pymob).exists():
+        if swab12dec.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if lti28nov.objects.filter(email=pyemail).exists():
+        if swab12dec.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = lti28nov(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, slot=pyslot, refid=pyref,  confirmation=1)
+        data2 = swab12dec(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch,  confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         return render(request, 'tpo/ibm.html')
 
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
-        if lti28nov.objects.filter(number2=pymob2).exists():
-            lti28nov.objects.filter(number2=pymob2).update(confirmation=1)
-            messages.success(request, f"Presence confirmed for {pymob2}")
+        pyemail = request.POST['confemail']
+        if (swab12dec.objects.filter(number2=pymob2).exists()) and pymob2!="":
+            swab12dec.objects.filter(number2=pymob2).update(confirmation=1)
+            messages.success(request, f"Presence confirmed")
+            return render(request, 'tpo/ibm.html')
+
+        elif (swab12dec.objects.filter(email=pyemail).exists()) and pyemail!="":
+            swab12dec.objects.filter(email=pyemail).update(confirmation=1)
+            messages.success(request, f"Presence confirmed")
             return render(request, 'tpo/ibm.html')
         else:
-            messages.error(request, f"The number {pymob2} is not registered")
+            messages.error(request, f"Not registered")
             return render(request, 'tpo/ibm.html')
 
 def Tolearn(request):

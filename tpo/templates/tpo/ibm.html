@@ -45,7 +45,7 @@
 <div id="first">
 	<div class = "container"  >
 		<!--<img   src= {% static 'tpo/company2.png' %} height=80 width=260 >-->
-		<h3 class="companyName"> LTI campus drive</h3>
+		<h3 class="companyName"> Swabhav Techlabs campus drive</h3>
 	</div>
 			{% if messages %}
 	    {% for message in messages %}
@@ -59,24 +59,28 @@
 <!--<img  src="{% static 'tpo/virtEligibility.png'%}" alt="Virtusa">-->
 <!--</div>-->
 
-	<!--<div class="floatLeft  onlyCenter">-->
+	<div class="floatLeft  onlyCenter">
     <!--<div>-->
-	<!--	<h5  > Registration Confirmation</h5>-->
+		<h5  > Registration Confirmation</h5>
 
-	<!--	<form method="POST" class="box">-->
-	<!--		{% csrf_token %}-->
-	<!--		<p>-->
-	<!--		    <input type="number" name="confmob"  placeholder="Mobile Number" >-->
-	<!--		</p>-->
+		<form method="POST" class="box">
+			{% csrf_token %}
+			<p>
+			    <input type="number" name="confmob"  placeholder="Mobile Number" >
+			</p>
+			<p>OR</p>
+			<p>
+			    <input type="email" name="confemail"  placeholder="Email" >
+			</p>
 
-	<!--		<button class = "button1" type="submit" name="confirm"> Confirm Presence</button>-->
+			<button class = "button1" type="submit" name="confirm"> Confirm Presence</button>
 
-	<!--		</form>-->
+			</form>
 
-	<!--</div>-->
+	</div>
 	<!--END OF floatLeft-->
 
-	<div class = "companyName" >
+	<div class = "floatRight onlyCenter" >
 
 			<h5>New  Registration </h5>
 
@@ -95,23 +99,23 @@
 				<p>
 				    <input type="text" name="College_Name" placeholder="College Name" required></p>
 
-				<!--<p>-->
-			 <!--       <input type="text" list="branches" name="Branch" placeholder="Branch" required></p>-->
-				<!--<p>-->
-				<!--<p>-->
+				<p>
+			        <input type="text" list="branches" name="Branch" placeholder="Branch" required></p>
+				<p>
+				</p>
 				<!--    <input type="radio"  name="Slot" value="Slot 1" required>Slot 1</p>-->
-            <div>
-			    <select class="quali"  name="Slot">
-		        <option value="Slot 1">Slot 1</option>
-		        <option value="Slot 2">Slot 2</option>
-		        <option value="Slot 3">Slot 3</option>
-		        <option value="Slot 3">Slot 4</option>
-		        <option value="Slot 3">Slot 5</option>
-		        </select>
-           </div>
+       <!--     <div>-->
+			    <!--<select class="quali"  name="Slot">-->
+		     <!--   <option value="Slot 1">Slot 1</option>-->
+		     <!--   <option value="Slot 2">Slot 2</option>-->
+		     <!--   <option value="Slot 3">Slot 3</option>-->
+		     <!--   <option value="Slot 4">Slot 4</option>-->
+		     <!--   <option value="Slot 5">Slot 5</option>-->
+		     <!--   </select>-->
+       <!--    </div>-->
            <p></p>
-           <p>
-				    <input type="text" name="Referral" placeholder="Referral ID" required></p>
+        <!--   <p>-->
+				    <!--<input type="text" name="Referral" placeholder="Referral ID" required></p>-->
 
             <p></p>
 				<!--<input type="text" name="Deg_type" list="deg" placeholder="Degree" required></p>-->

@@ -4,6 +4,18 @@ from django.db import models
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
 
+class swab12dec(models.Model):
+    # student_id = models.CharField(max_length=10, blank=True)
+    email = models.CharField(max_length=50)
+    name = models.CharField(max_length=30)
+    number2 = models.CharField(max_length=100)
+    clg_name = models.CharField(max_length=100, blank=True)
+    # degtype = models.CharField(max_length=15)
+    # passyear = models.CharField(max_length=20)
+    branch = models.CharField(max_length=40, blank=True)
+    # slot = models.CharField(max_length=40, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
+
 class lti28nov(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)
     email = models.CharField(max_length=50)
@@ -14,6 +26,17 @@ class lti28nov(models.Model):
     # passyear = models.CharField(max_length=20)
     slot = models.CharField(max_length=40)
     refid = models.CharField(max_length=40)
+    confirmation = models.CharField(max_length=6, blank=True)
+
+class bit9nov(models.Model):
+    # student_id = models.CharField(max_length=10, blank=True)
+    email = models.CharField(max_length=50)
+    name = models.CharField(max_length=30)
+    number2 = models.CharField(max_length=100)
+    clg_name = models.CharField(max_length=100)
+    # degtype = models.CharField(max_length=15)
+    # passyear = models.CharField(max_length=20)
+    slot = models.CharField(max_length=40)
     confirmation = models.CharField(max_length=6, blank=True)
 
 class cap20nov(models.Model):
