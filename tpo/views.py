@@ -335,4 +335,5 @@ def ibm(request):
 def Tolearn(request):
     return render(request,'tpo/Tolearn.html')
 
-
+def capgemini8jan(request):
+    return render(request,'tpo/capgemini8jan.html')

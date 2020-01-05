@@ -32,6 +32,7 @@ urlpatterns = [
     path('swabhav12decdb',views.swab1212db ,name='tpo-ibmdb'),
     path('bit9decdb',views.bit912db ,name='tpo-ibmdb'),
     path('cap20novdb',views.cap20db ,name='tpo-ibmdb'),
+    path('capgemini8jan',views.capgemini8jan ,name='tpo-ibmdb'),
     path('lti28novdb',views.lti2811db ,name='tpo-mdb'),
     path('virtusadb',views.virtusadatabase ,name='tpo-ibmdb'),
     path('zycusdb',views.zycusdatabase ,name='tpo-ibmdb'),

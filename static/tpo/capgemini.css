@@ -403,6 +403,35 @@ header{
   /*width: auto;*/
 }
 
+.image1-capgemini{
+  display: block;
+  /* float: left; */
+  /* width: 700px; */
+  padding: 10px;
+}
+
+.image1-capgemini img{
+  /*height: 500px;*/
+  height: 370px;
+  /*width: 500px;*/
+  /*width: auto;*/
+  margin-bottom:20px;
+}
+
+.image2-capgemini{
+  display: block;
+  /* float: left; */
+  /* width: 700px; */
+  padding: 10px;
+}
+
+.image2-capgemini img{
+  /*height: 500px;*/
+  height: 180px;
+  /*width: 250px;*/
+  /*width: auto;*/
+}
+
 .clear{
   clear: both;
 }
