@@ -485,6 +485,10 @@ header{
   width: 33%;
 }
 
+.udcontainer .ltiimage{
+    height: 150px;
+}
+
 /* .udCompany3 img{
   width: 100%;
 } */

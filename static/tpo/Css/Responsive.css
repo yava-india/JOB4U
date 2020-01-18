@@ -109,6 +109,11 @@
     width: auto;
   }
 
+  .udcontainer .hclimage{
+      width:100%;
+      height: 160px;
+  }
+
   .companyName{
     font-size: 20px;
   }

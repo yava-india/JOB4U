@@ -22,6 +22,8 @@ from .models import cap20nov
 from .models import lti28nov
 from .models import bit9nov
 from .models import swab12dec
+from .models import zycus11jan
+from .models import cap8jan
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -92,17 +94,17 @@ def Infofinalnameresult(request):
     studentdb = finallistinfosys.objects.all()
     return render(request,'tpo/infofinalnamelist.html', {'studentdb':studentdb})
 
-def Info15novresult(request):
+def zycusaptilist(request):
     return render(request,'tpo/info15novresult.html')
 
 def cap19novdata(request):
-    return render(request,'tpo/capgemdata19nov.html')
+    return render(request,'tpo/cap1030.html')
 
 def cap20novresult(request):
     return render(request,'tpo/cap20novresult.html')
 
 def cap25novresult(request):
-    return render(request,'tpo/cap25nov.html')
+    return render(request,'tpo/zycusvedant.html')
 
 def IBmresult(request):
     studentdb = IbmResult.objects.all()
@@ -170,6 +172,18 @@ def bit912db(request):
 	studentdb = bit9nov.objects.all()
 	count = bit9nov.objects.all().count()
 	count2 = bit9nov.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def zycus11jandb(request):
+	studentdb = zycus11jan.objects.all()
+	count = zycus11jan.objects.all().count()
+	count2 = zycus11jan.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def cap8jandb(request):
+	studentdb = cap8jan.objects.all()
+	count = cap8jan.objects.all().count()
+	count2 = cap8jan.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def lti2811db(request):
@@ -300,34 +314,34 @@ def ibm(request):
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
         pybranch = request.POST['Branch']
-        # pydeg = request.POST['Deg_type']
+        pydeg = request.POST['Deg_type']
         # pyslot = request.POST['Slot']
         # pyref = request.POST['Referral']
 
-        if swab12dec.objects.filter(number2=pymob).exists():
+        if zycus11jan.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if swab12dec.objects.filter(email=pyemail).exists():
+        if zycus11jan.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = swab12dec(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch,  confirmation=1)
+        data2 = zycus11jan(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, degtype=pydeg, confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         return render(request, 'tpo/ibm.html')
 
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
-        pyemail = request.POST['confemail']
-        if (swab12dec.objects.filter(number2=pymob2).exists()) and pymob2!="":
-            swab12dec.objects.filter(number2=pymob2).update(confirmation=1)
+        # pyemail = request.POST['confemail']
+        if (zycus11jan.objects.filter(number2=pymob2).exists()) and pymob2!="":
+            zycus11jan.objects.filter(number2=pymob2).update(confirmation=1)
             messages.success(request, f"Presence confirmed")
             return render(request, 'tpo/ibm.html')
 
-        elif (swab12dec.objects.filter(email=pyemail).exists()) and pyemail!="":
-            swab12dec.objects.filter(email=pyemail).update(confirmation=1)
-            messages.success(request, f"Presence confirmed")
-            return render(request, 'tpo/ibm.html')
+        # elif (zycus11jan.objects.filter(email=pyemail).exists()) and pyemail!="":
+        #     zycus11jan.objects.filter(email=pyemail).update(confirmation=1)
+        #     messages.success(request, f"Presence confirmed")
+        #     return render(request, 'tpo/ibm.html')
         else:
             messages.error(request, f"Not registered")
             return render(request, 'tpo/ibm.html')
@@ -337,3 +351,12 @@ def Tolearn(request):
 
 def capgemini8jan(request):
     return render(request,'tpo/capgemini8jan.html')
+
+def capgemini10jan(request):
+    return render(request,'tpo/capgemini10jan.html')
+
+# def ycus11jan(request):
+#     return render(request,'tpo/zycus11jan.html')
+
+def lti14jan(request):
+    return render(request,'tpo/lti14jan.html')
