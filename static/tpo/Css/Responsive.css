@@ -1,5 +1,35 @@
 @media (max-width: 670px) {
 
+    .part1{
+    top: 70px;
+    }
+
+    .part2{
+    top: 240px;
+    }
+
+    .job4ulogo{
+    height: 120px;
+    width: 120px;
+    }
+
+    .apsitlogo{
+    height: 150px;
+    width: 150px;
+    }
+
+    .text1 p{
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    word-spacing: 0.3em;
+    }
+
+    .text2 p{
+    font-size: 22px;
+    letter-spacing: 0.15em;
+    word-spacing: 0.2em;
+    }
+
    .vgtop{
     height: 250px;
   }
