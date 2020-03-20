@@ -24,6 +24,7 @@ from .models import bit9nov
 from .models import swab12dec
 from .models import zycus11jan
 from .models import cap8jan
+from .models import virt11mar
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
@@ -76,7 +77,7 @@ def paytm(request):
 def swabhav(request):
     return render(request,'tpo/capgemini21.html')
 
-def virtresult(request):
+def capgresult(request):
     return render(request,'tpo/virtresult.html')
 
 def cgdiv(request):
@@ -97,8 +98,11 @@ def Infofinalnameresult(request):
 def zycusaptilist(request):
     return render(request,'tpo/info15novresult.html')
 
+def wonderbiz(request):
+    return render(request,'tpo/WonderBizResults.html')
+
 def cap19novdata(request):
-    return render(request,'tpo/cap1030.html')
+    return render(request,'tpo/virt10mar.html')
 
 def cap20novresult(request):
     return render(request,'tpo/cap20novresult.html')
@@ -166,6 +170,12 @@ def swab1212db(request):
 	studentdb = swab12dec.objects.all()
 	count = swab12dec.objects.all().count()
 	count2 = swab12dec.objects.filter(confirmation='1').count()
+	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+def virt1103db(request):
+	studentdb = virt11mar.objects.all()
+	count = virt11mar.objects.all().count()
+	count2 = virt11mar.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def bit912db(request):
@@ -313,19 +323,20 @@ def ibm(request):
         pymob = request.POST['Mobile Number']#[0:10]
         pyemail = request.POST['Email']#[0:30]
         pyclgname = request.POST['College_Name']#[0:40]
-        pybranch = request.POST['Branch']
-        pydeg = request.POST['Deg_type']
-        # pyslot = request.POST['Slot']
+        # pybranch = request.POST['Branch']
+        # pydeg = request.POST['Deg_type']
+        # pyyear = request.POST['Passyear']
         # pyref = request.POST['Referral']
+        pyslot = request.POST['Slot']
 
-        if zycus11jan.objects.filter(number2=pymob).exists():
+        if virt11mar.objects.filter(number2=pymob).exists():
             messages.error(request, f"{pymob} already registered, use another")
             return render(request, 'tpo/ibm.html')
-        if zycus11jan.objects.filter(email=pyemail).exists():
+        if virt11mar.objects.filter(email=pyemail).exists():
             messages.error(request, f"{pyemail} already registered, use another")
             return render(request, 'tpo/ibm.html')
 
-        data2 = zycus11jan(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname, branch=pybranch, degtype=pydeg, confirmation=1)
+        data2 = virt11mar(name=pyfname, number2=pymob, email=pyemail, clg_name=pyclgname,slot=pyslot, confirmation=1)
         data2.save()
         messages.success(request, "Successfully registered.")
         return render(request, 'tpo/ibm.html')
@@ -333,8 +344,8 @@ def ibm(request):
     if request.method == 'POST' and 'confirm' in request.POST:
         pymob2 = request.POST['confmob']
         # pyemail = request.POST['confemail']
-        if (zycus11jan.objects.filter(number2=pymob2).exists()) and pymob2!="":
-            zycus11jan.objects.filter(number2=pymob2).update(confirmation=1)
+        if (virt11mar.objects.filter(number2=pymob2).exists()) and pymob2!="":
+            virt11mar.objects.filter(number2=pymob2).update(confirmation=1)
             messages.success(request, f"Presence confirmed")
             return render(request, 'tpo/ibm.html')
 
@@ -358,5 +369,5 @@ def capgemini10jan(request):
 # def ycus11jan(request):
 #     return render(request,'tpo/zycus11jan.html')
 
-def lti14jan(request):
+def ibm27feb(request):
     return render(request,'tpo/lti14jan.html')

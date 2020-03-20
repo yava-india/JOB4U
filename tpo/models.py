@@ -3,6 +3,19 @@ from django.db import models
 # from django.contrib.auth.models import User
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
+class virt11mar(models.Model):
+    # student_id = models.CharField(max_length=10, blank=True)
+    # slot = models.CharField(max_length=40, blank=True)
+    name = models.CharField(max_length=30)
+    clg_name = models.CharField(max_length=100, blank=True)
+    email = models.CharField(max_length=50, blank=True)
+    number2 = models.CharField(max_length=100)
+    # degtype = models.CharField(max_length=15)
+    # passyear = models.CharField(max_length=20)
+    # branch = models.CharField(max_length=40, blank=True)
+    slot = models.CharField(max_length=40, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
+
 class zycus11jan(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)
     # slot = models.CharField(max_length=40, blank=True)
@@ -35,8 +48,8 @@ class swab12dec(models.Model):
     number2 = models.CharField(max_length=100)
     clg_name = models.CharField(max_length=100, blank=True)
     # degtype = models.CharField(max_length=15)
-    # passyear = models.CharField(max_length=20)
     branch = models.CharField(max_length=40, blank=True)
+    passyear = models.CharField(max_length=20, blank=True)
     # slot = models.CharField(max_length=40, blank=True)
     confirmation = models.CharField(max_length=6, blank=True)
 

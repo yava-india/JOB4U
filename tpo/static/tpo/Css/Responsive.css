@@ -1,5 +1,10 @@
 @media (max-width: 670px) {
 
+    .udcontainer .weirddisplay{
+    display = block;
+    padding-bottom = 20px;
+    }
+
     .part1{
     top: 70px;
     }

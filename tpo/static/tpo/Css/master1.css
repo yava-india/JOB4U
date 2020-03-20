@@ -197,7 +197,7 @@ header{
 
 .part1{
     position: absolute;
-    top: 120px;
+    top: 180px;
     text-align:center;
     width:100%;
     margin:auto;
@@ -599,6 +599,12 @@ header{
   border-radius: 20px;
   background-color: green;
 }
+
+.udcontainer .weirddisplay{
+ display = none;
+ /*padding-bottom = 20px;*/
+}
+
 
 /*                    END OF UPCOMING-DRIVES                   */
 
