@@ -1,4 +1,5 @@
 from django.urls import path
+# from .import views
 from .import views
 from django.contrib.auth import views as auth_views
 urlpatterns = [
@@ -6,7 +7,8 @@ urlpatterns = [
     path('admin_panel', views.admin_panel, name='tpo-admin-panel'),
     #path('database', views.database, name='tpo-database'),
     path('', views.index, name='tpo-index'),
-    # path('temp', views.index, name='tpo-index'),
+    path('robots.txt', views.index, name='tpo-index'),
+    path('temp', views.webcsv10may, name='csv-index'),
     path('lti', views.ltionlymap, name='tpo-lti'),
     path('Wipro', views.wiproonlymap, name='tpo-lti'),
     # path('lti', views.newlti, name='tpo-lti'),
@@ -35,7 +37,8 @@ urlpatterns = [
     path('cap20novdb',views.cap20db ,name='tpo-ibmdb'),
     path('capgemini8jan',views.capgemini8jan ,name='tpo-ibmdb'),
     path('capgemini10jan',views.capgemini10jan ,name='tpo-ibmdb'),
-    path('Virtusa',views.ibm ,name='tpo-ibmdb'),
+    path('cc',views.webinar ,name='tpo-ibmdb'),
+    path('web10maydb',views.web1005db ,name='tpo-ibmdb'),
     path('Lti14jandb',views.zycus11jandb ,name='tpo-ibmdb'),
     path('Ibm',views.ibm27feb ,name='tpo-ibmdb'),
     path('lti28novdb',views.lti2811db ,name='tpo-mdb'),

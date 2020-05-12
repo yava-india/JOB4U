@@ -1,0 +1,188 @@
+.*{
+	text-align: center;
+	box-sizing: border-box;
+}
+
+.Container{
+	text-align: center;
+	margin: auto;
+	width: 70%;
+	border-bottom: solid 2px #eee;
+	margin-bottom: 40px;
+}
+
+.MainImage{
+	max-height: 200px;
+	max-width: 250px;
+	margin-bottom: 30px;
+}
+
+
+.topicText{
+	font-family: 'Lato','Helvetica','Arial';
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+
+.SideImage{
+	padding: 60px 0px;
+	max-height: 250px;
+	max-width: 300px;
+	/*margin-bottom: 10px; */
+	margin: auto;
+}
+
+.forMobile{
+    display: none;
+}
+
+.notforMobile{
+    display: block;
+}
+
+.floatLeft{
+	float: left;
+	width: 70%;
+}
+
+.floatRight{
+	float: right;
+	width: 30%;
+}
+
+.clear{
+	clear: both;
+}
+
+.floatLeft1{
+	float: left;
+	width: 30%;
+}
+
+.floatRight1{
+	float: right;
+	width: 70%;
+}
+
+.Descriptions{
+	margin-bottom: 15px;
+	text-align: left;
+	font-family: 'Lato','Helvetica','Arial';
+	/*font-family: 'Lato','Helvetica','Arial';*/
+}
+
+.floatLeft2{
+	float: left;
+	width: 45%;
+}
+
+.floatRight2{
+	float: right;
+	width: 45%;
+}
+
+.formElements{
+	text-align: left;
+}
+
+
+.formElements input{
+	width: 90%;
+	color: #232333;
+	height: 32px;
+    line-height: 32px;
+    border-width: 1px;
+    border-color: #babacc;
+	border-radius: 8px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-family: 'Lato','Helvetica','Arial';
+
+}
+
+.quali{
+    width: 90%;
+	color: #232333;
+	height: 32px;
+    line-height: 32px;
+    background-color: white;
+    border-width: 1px;
+    border-color: #babacc;
+	border-radius: 8px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	font-family: 'Lato','Helvetica','Arial';
+
+}
+
+.required{
+	text-align: left;
+	margin:20px;
+}
+
+.registerButton{
+	/*height: 30px;
+	/*max-width: auto;*/
+	font-family: 'Lato','Helvetica','Arial';
+	margin-top: 30px;
+	line-height: 38px;
+    padding: 5px 35px;
+    font-size: 18px;
+	width: 200px;
+	border-radius: 8px;
+	margin-bottom: 30px;
+	background-color: #0e71eb;
+    border-color: #0e71eb;
+    color: #fff;
+}
+
+/* Style all font awesome icons */
+.fa{
+	margin: 10px;
+ 	padding: 9px 4px;
+ 	font-size: 30px;
+ 	width: 50px;
+ 	text-align: center;
+  	text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+	opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  	background: #3B5998;
+  /*border-radius: 50%;*/
+ 	color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+ 	background: #55ACEE;
+  	color: white;
+  /*border-radius: 50%;*/
+}
+
+.fa-linkedin {
+  	background: #0e76a8;
+  /*border-radius: 50%;*/
+ 	color: white;
+}
+
+.fa-instagram {
+ 	/*background: #405DE6;*/
+	color: red;
+  	border: solid 1px red;
+}
+
+/* Twitter */
+.fa-youtube {
+ 	background: #c4302b;
+  	color: white;
+  /*border-radius: 50%;*/
+}
+

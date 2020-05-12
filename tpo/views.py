@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib import admin
+
 from .models import Google
 from .models import Headstrait
 from .models import Amazon
@@ -25,11 +27,15 @@ from .models import swab12dec
 from .models import zycus11jan
 from .models import cap8jan
 from .models import virt11mar
+from .models import web29apr
 from django.core.mail import send_mail
 from django.conf import settings
 from django.contrib import messages
 # from django.core.mail import EmailMessage
 import csv
+from django.http import HttpResponse
+from django.core.exceptions import PermissionDenied
+from django.contrib.admin.utils import label_for_field
 # import os
 
 
@@ -166,17 +172,46 @@ def cap20db(request):
 	count2 = cap20nov.objects.filter(confirmation='1').count()
 	return render(request, 'tpo/cap20novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
+
+def web1005db(request):
+    studentdb = web29apr.objects.all()
+    count = web29apr.objects.all().count()
+    if request.method == 'POST' and 'csv' in request.POST:
+        return download_csv(admin, request, studentdb)
+    return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count})
+    # if request.method == 'POST' and 'csv' in request.POST:
+    #     studentdb = web29apr.objects.all()
+    #     return download_csv(admin, request, studentdb)
+
+def return_lti_csv(request, studentdb):
+    if request.method == 'POST' and 'csv' in request.POST:
+        return download_csv(admin, request, studentdb)
+
+#virt11mar
+
 def swab1212db(request):
-	studentdb = swab12dec.objects.all()
-	count = swab12dec.objects.all().count()
-	count2 = swab12dec.objects.filter(confirmation='1').count()
-	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+    studentdb = swab12dec.objects.all()
+    count = swab12dec.objects.all().count()
+    count2 = swab12dec.objects.filter(confirmation='1').count()
+    if request.method == 'POST' and 'csv' in request.POST:
+        return download_csv(admin, request, studentdb)
+    return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+
+# def virt1103db(request):
+# 	studentdb = bit9nov.objects.all()
+# 	count = bit9nov.objects.all().count()
+# 	count2 = bit9nov.objects.filter(confirmation='1').count()
+# 	if request.method == 'POST' and 'csv' in request.POST:
+# 	    return download_csv(admin, request, studentdb)
+#     return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def virt1103db(request):
-	studentdb = virt11mar.objects.all()
-	count = virt11mar.objects.all().count()
-	count2 = virt11mar.objects.filter(confirmation='1').count()
-	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
+    studentdb = virt11mar.objects.all()
+    count = virt11mar.objects.all().count()
+    count2 = virt11mar.objects.filter(confirmation='1').count()
+    if request.method == 'POST' and 'csv' in request.POST:
+        return download_csv(admin, request, studentdb)
+    return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def bit912db(request):
 	studentdb = bit9nov.objects.all()
@@ -200,6 +235,7 @@ def lti2811db(request):
 	studentdb = lti28nov.objects.all()
 	count = lti28nov.objects.all().count()
 	count2 = lti28nov.objects.filter(confirmation='1').count()
+# 	data = download_csv(admin, request, studentdb)
 	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 def info15novdb(request):
@@ -255,7 +291,29 @@ def lti_db(request):
 	count = Lti_23_oct.objects.all().count()
 	return render(request, 'tpo/ltidb.html', {'studentdb': studentdb, 'count': count})
 
+def download_csv(modeladmin, request, queryset):
+    if not request.user.is_staff:
+        raise PermissionDenied
+    # queryset = model.objects.all()
+    # dbname = model.__name__
+    opts = queryset.model._meta
+    # model = queryset.model
+    response = HttpResponse()
+    # force download.
+    response['Content-Disposition'] = f'attachment;filename=db.csv'
+    # the csv writer
+    writer = csv.writer(response)
+    field_names = [field.name for field in opts.fields]
+    # Write a first row with header information
+    writer.writerow(field_names)
+    # Write data rows
+    for obj in queryset:
+        writer.writerow([getattr(obj, field, None) for field in field_names])
+    return response
+# download_csv.short_description = "Download selected as csv"
 
+def webcsv10may(request):
+    return download_csv(admin, request, web29apr)
 
 def admin_panel(request):
 # 	elif request.method == 'POST' and 'ltiemail_db' in request.POST:
@@ -356,6 +414,39 @@ def ibm(request):
         else:
             messages.error(request, f"Not registered")
             return render(request, 'tpo/ibm.html')
+
+def webinar(request):
+    if request.method == 'GET':
+        return render(request, 'tpo/Webinar.html')
+
+    if request.method == 'POST':
+        pyfname = request.POST['Student_Name']
+        pysname = request.POST['Student_Name2']
+        pymob = request.POST['Mobile Number']#[0:10]
+        pyemail = request.POST['Email']#[0:30]
+        pyemail2 = request.POST['Emaill']
+        # pyclgname = request.POST['College_Name']#[0:40]
+        pyorg = request.POST['Organization']
+        pycity = request.POST['City']
+        pystream = request.POST['Stream']
+        # pyref = request.POST['Referral']
+        # pyslot = request.POST['Slot']
+
+        if web29apr.objects.filter(number2=pymob).exists():
+            messages.error(request, f"{pymob} already registered, use another")
+            return render(request, 'tpo/webfailure.html')
+        if web29apr.objects.filter(email=pyemail).exists():
+            messages.error(request, f"{pyemail} already registered, use another")
+            return render(request, 'tpo/webfailure.html')
+        if pyemail != pyemail2:
+            messages.error(request, f"Emails do not match")
+            return render(request, 'tpo/webfailure.html')
+
+        data2 = web29apr(name=pyfname, lastname=pysname, number2=pymob, email=pyemail, clg_name=pyorg, city=pycity, qualification=pystream)
+        data2.save()
+        messages.success(request, "Successfully registered.")
+        return render(request, 'tpo/Webinar.html')
+
 
 def Tolearn(request):
     return render(request,'tpo/Tolearn.html')

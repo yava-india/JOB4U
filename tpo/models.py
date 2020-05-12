@@ -3,6 +3,18 @@ from django.db import models
 # from django.contrib.auth.models import User
 # from django.core.validators import MinValueValidator, MaxValueValidator
 
+class web29apr(models.Model):
+    name = models.CharField(max_length=60, blank=True)
+    lastname = models.CharField(max_length=60, blank=True)
+    number2 = models.CharField(max_length=100, blank=True)
+    email = models.CharField(max_length=50, blank=True)
+    clg_name = models.CharField(max_length=100, blank=True)
+    city = models.CharField(max_length=100, blank=True)
+    qualification = models.CharField(max_length=100, blank=True)
+    # branch = models.CharField(max_length=40, blank=True)
+    # slot = models.CharField(max_length=40, blank=True)
+    confirmation = models.CharField(max_length=6, blank=True)
+
 class virt11mar(models.Model):
     # student_id = models.CharField(max_length=10, blank=True)
     # slot = models.CharField(max_length=40, blank=True)

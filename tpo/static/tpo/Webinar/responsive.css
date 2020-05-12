@@ -1,0 +1,52 @@
+@media(max-width: 750px){
+
+    .forMobile{
+        display: block;
+    }
+
+    .notforMobile{
+        display: none;
+    }
+
+	.floatLeft{
+		float: none;
+		width: 100%;
+	}
+
+    .quali{
+        width: 90%;
+    }
+
+	.floatRight{
+		float: none;
+		width: 100%;
+	}
+	.floatLeft1{
+		float: none;
+		width: 100%;
+	}
+
+	.floatRight1{
+		float: none;
+		width: 100%;
+	}
+
+	.floatLeft2{
+		float: none;
+		width: 100%;
+	}
+
+	.floatRight2{
+		float: none;
+		width: 100%;
+	}
+
+	.fa{
+		margin: 10px 4px;
+	}
+
+	.Descriptions{
+		text-align: center;
+	}
+
+}

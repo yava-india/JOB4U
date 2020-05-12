@@ -1,0 +1,105 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>JOB4U Webinar</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'tpo/Webinar/style.css' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'tpo/Webinar/responsive.css' %}">
+	<title>job4u.info</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<div class = "Container">
+		<br>
+		<!-- <div><img src="{ %static "tpo/Webinar/Screenshot (19).png" %}" class = "MainImage"></div> -->
+
+		<a href="https://www.facebook.com/job4u.info/" class="fa fa-facebook" target="_blank"></a>
+		<a href="https://twitter.com/u_job4?lang=en" class="fa fa-twitter" target="_blank"></a>
+		<a href="https://www.linkedin.com/in/apsitthane/" class="fa fa-linkedin" target="_blank"></a>
+		<a href="https://www.instagram.com/job4u_info/?hl=en" class="fa fa-instagram" target="_blank"></a>
+		<a href="https://www.youtube.com/channel/UCUNUss0IyyYNaiDhNsOyBGQ" class="fa fa-youtube" target="_blank"></a>
+
+
+
+
+	</div>
+
+	<div class = "Container">
+
+
+        <div class = "forMobile">
+			<img src="{% static 'tpo/Webinar/Screenshot (19).png' %}"  class = "SideImage">
+		</div>
+
+    <div class = "Container">
+{% if messages %}
+	    {% for message in messages %}
+  <div class="alert alert-{{ message.tags }}">
+			{{ message }}
+	</div>
+	    {% endfor %}
+			{% endif %}
+		<form method="POST" class = "notforMobile">
+{% csrf_token %}
+
+			<div class="floatLeft2">
+
+				<div class="formElements">
+					<label><strong>First name</strong></label><span style="color: red">*</span><br>
+					<input name="Student_Name" type="text" id="fname" maxlength="64" required>
+				</div>
+
+                <div class="formElements">
+					<label><strong>Last name</strong></label><span style="color: red">*</span>
+					<input name="Student_Name2" type="text" id="lname" maxlength="64" required>
+				</div>
+
+				<div class="formElements">
+					<label><strong>Email Address</strong></label><span style="color: red">*</span><br>
+					<input name="Email" type="text" id="email" maxlength="100" required>
+				</div>
+
+	 		</div>
+
+
+			<div class="floatRight2 formElements">
+
+				<div class="formElements">
+					<label><strong>Confirm Email Address</strong></label><span style="color: red">*</span><br>
+					<input name="Emaill" type="text" id="cemail" maxlength="100" required>
+				</div>
+
+				<div class="formElements">
+					<label><strong>Phone</strong></label><span style="color: red">*</span><br>
+					<input name="Mobile Number" type="text" id="phone" maxlength="10" required>
+				</div>
+
+				<div class="formElements">
+					<label><strong>College/Organization</strong></label><span style="color: red">*</span><br>
+					<input name="Organization" type="text" id="organization" maxlength="150" required>
+				</div>
+
+	 		</div>
+
+
+			<div class="clear" ></div>
+
+<div class="required"><span style="color: red">*</span> Required information</div>
+
+		<button class="registerButton">Register</button>
+		</form>
+
+	</div>
+
+
+
+</body>
+</html>
