@@ -1,6 +1,6 @@
 # JOB4U
 
-This is code for www.job4u.info website
+This is code for www.job4u.infos website
 
 step1 : Install GitHub Desktop
 	
