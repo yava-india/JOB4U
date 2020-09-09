@@ -21,23 +21,15 @@ import csv
 from django.http import HttpResponse
 from django.core.exceptions import PermissionDenied
 from django.contrib.admin.utils import label_for_field
-# import os
 
 
-# if not os.path.isfile('./lti.csv'):
-# 	with open('lti.csv', 'w', newline='') as csvfile:
-# 		filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
-# 		filewriter.writerow(['Student_Name', 'Mobile Number','Email','College_Name','Branch','Qualification','10th Passing Year','10th Percentage','12th Passing Year','12th Percentage','Diploma Passing Year','Diploma Percentage','Aggregate Graduation Pointer','Degree Paassing Year','Nationality','TPO Name','TPO Number','TPO Email'])
 
 def download_csv(modeladmin, request, queryset):
-    if not request.user.is_staff:
+    if not request.user.is_staff:#to check user authentication
         raise PermissionDenied
-    # queryset = model.objects.all()
-    # dbname = model.__name__
-    opts = queryset.model._meta
-    # model = queryset.model
+    opts = queryset.model._meta#to get all metadata
     response = HttpResponse()
-    # force download.
+    # force download
     response['Content-Disposition'] = f'attachment;filename=db.csv'
     # the csv writer
     writer = csv.writer(response)
@@ -49,7 +41,7 @@ def download_csv(modeladmin, request, queryset):
         writer.writerow([getattr(obj, field, None) for field in field_names])
     return response
 
-#
+
 def webinar(request):
     if request.method == 'GET':
         return render(request, 'tpo/Webinar.html')
@@ -115,8 +107,6 @@ def returndb(request, db):
 	return render(request, 'tpo/lti28novdb.html', {'studentdb':studentdb,'count':count,'count2':count2})
 
 
-
-
 def web1005db(request):
     studentdb = web29apr.objects.all()
     count = web29apr.objects.all().count()
@@ -152,7 +142,8 @@ def admin_panel(request):
 	return render(request, 'tpo/admin_panel.html')
 
 
-
+# ibm function is template function build page for on campus attendence
+# ibm.html is template with all necessary fields
 def ibm(request):
     if request.method == 'GET':
         return render(request, 'tpo/ibm.html')
@@ -201,8 +192,6 @@ def index(request):
 
 def administrator(request):
 	return render(request, 'tpo/administrator.html')
-
-# ----------------- Results -------------------------------------
 
 def returnresult(request, db):
     studentdb = db.objects.all()
