@@ -49,7 +49,7 @@ def download_csv(modeladmin, request, queryset):
         writer.writerow([getattr(obj, field, None) for field in field_names])
     return response
 
-
+#
 def webinar(request):
     if request.method == 'GET':
         return render(request, 'tpo/Webinar.html')
@@ -83,26 +83,11 @@ def webinar(request):
         return render(request, 'tpo/Webinar.html')
 
 def email(pyemail):
-    subject = 'Thank you for registering on our site'
-    message = ' it  means a world to us '
+    subject = 'Thank you for registering on our Job4U'
+    message = 'Further details will be emailed to you soon.'
     email_from = settings.EMAIL_HOST_USER
     recipient_list = [pyemail,]
     send_mail(subject, message, email_from, recipient_list)
-
-
-def index(request):
-	return render(request, 'tpo/index.html')
-
-
-def administrator(request):
-	return render(request, 'tpo/administrator.html')
-
-# ----------------- Results -------------------------------------
-
-def returnresult(request, db):
-    studentdb = db.objects.all()
-    return render(request,'tpo/ltiresult.html', {'studentdb':studentdb})
-
 
 
 
@@ -207,3 +192,18 @@ def ibm(request):
         else:
             messages.error(request, f"Not registered")
             return render(request, 'tpo/ibm.html')
+
+
+
+def index(request):
+	return render(request, 'tpo/index.html')
+
+
+def administrator(request):
+	return render(request, 'tpo/administrator.html')
+
+# ----------------- Results -------------------------------------
+
+def returnresult(request, db):
+    studentdb = db.objects.all()
+    return render(request,'tpo/ltiresult.html', {'studentdb':studentdb})
