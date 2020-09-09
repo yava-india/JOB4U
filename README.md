@@ -33,10 +33,12 @@ step5 :	Open mysql in cmd
 step6 : Create database in mysql and edit database file with your database username , password 
 
 	create database mydatabase;
-step6 :run project by(should be inside myproject directory):
+		
+## Deployment:
 
-	python manage.py makemigrations (to find the changes to db)
 
-	python manage.py migrate  (appy the changes to db)
+	python3 manage.py makemigrations (to find the changes to be made to database)
 
-	python manage.py runserver 
+	python3 manage.py migrate  (appy the changes to database)
+
+	python3 manage.py runserver 
