@@ -1,12 +1,28 @@
 # JOB4U
 
-This is code for www.job4u.info website
+## About
+This repository is source code of www.job4u.info website. The aim is to build a website for college training and placement company called Job4U. It is mostly comprised of registeration pages for on-campus placement drives and webinars, placement results,etc. It has an custom admin panel with authentiaction system to access database. It uses MySQL as database.
 
-step1 : Install GitHub Desktop
-	
-	https://desktop.github.com/
-step2 : Clone tpo_website repo using GitHub Desktop
+### Prerequisites
+* Python 3.0+
+* Django 2.0+
+* MySQL 5.0+
 
+### Installing
+
+Get the project up and running locally in just 3 easy steps.
+
+1. Create a personal Fork of this repository.
+
+2. **Clone** the fork with HTTPS, using your local terminal to a preferred location, and **cd** into the project.
+
+```bash
+git clone https://github.com/yava-india/JOB4U.git
+remote: Enumerating objects: 113, done.
+remote: Counting objects: 100% (113/113), done.
+remote: Compressing objects: 100% (80/80), done.
+Receiving objects: 100% (2845/2845), 12.52 MiB | 5.21 MiB/s, done.
+```
 step3 : Run requirements.txt(inside project) file to create supporting environments
 
     pip install -r requirements.txt
