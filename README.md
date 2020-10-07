@@ -1,4 +1,7 @@
 # JOB4U
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![GitHub repo size](https://img.shields.io/github/repo-size/yava-india/JOB4U)
+![GitHub issues](https://img.shields.io/github/issues-raw/yava-india/JOB4U)
 
 ## About
 This repository is source code of www.job4u.info website. The aim is to build a website for college training and placement company called Job4U. It is mostly comprised of registeration pages for on-campus placement drives and webinars, placement results,etc. It has an custom admin panel with authentiaction system to access database. It uses MySQL as database.
